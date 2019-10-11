@@ -11,7 +11,6 @@ class PokerTests(unittest.TestCase):
         self.assertEqual(5, cardValue("5H"))
         self.assertEqual(10, cardValue("10H"))
 
-# a test for high card
     def test_highCard(self):
         self.assertEqual("4D", highCard("3H 2D 4D"))
         self.assertEqual("KD", highCard("3H KD 2D 4D"))
