@@ -33,6 +33,8 @@ def cardValue(card) :
     else :
         return int(card[0])
 
+# test
+# comments that pair check finds pairs
 def pairCheck(hand) :
     values = cardValueList(hand)
     for card,count in checkFrequency(values).items() :
