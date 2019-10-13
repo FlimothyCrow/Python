@@ -21,14 +21,14 @@ class PokerTests(unittest.TestCase):
         self.assertEqual("pair of 4", pairCheck("4H 9S KC 4D AS"))
         self.assertEqual(None, pairCheck("3H 9S KC 4D AS"))
         self.assertEqual("three of a kind 8", pairCheck("8H 8S C 4D AS"))
-        #self.assertEqual(13, pairCheck("KS KD KC KH 4C"))
+        self.assertEqual("four of a kind 13", pairCheck("KS KD KC KH 4C"))
 
     def test_checkFrequency(self):
         self.assertEqual({4:3, 9:1}, checkFrequency([4,9,4, 4]))
 
     def test_orderCheck(self):
-        self.assertEqual(True, orderCheck("2D 3S 4C 5S 6H"))
-        self.assertEqual(True, orderCheck("JS AD KC QH 10S"))
+        self.assertEqual("straight 2 through 6", orderCheck("2D 3S 4C 5S 6H"))
+        self.assertEqual("straight 10 through 14", orderCheck("JS AD KC QH 10S"))
         self.assertEqual(None, orderCheck("JS AD KC QH 9S"))
 
     def test_cardValueCheck(self):
@@ -39,8 +39,10 @@ class PokerTests(unittest.TestCase):
         self.assertEqual(None, suitList("8H AH 3S JH KH"))
 
     def test_pokerHands(self):
-        self.assertEqual("straight", pokerHands("3D 4C 5S 6H 7C"))
+        self.assertEqual("straight 3 through 7", pokerHands("3D 4C 5S 6H 7C"))
         self.assertEqual("pair of 10", pokerHands("10D 10C 8S KC AH"))
         self.assertEqual("H", pokerHands("3H AH QH 7H 6H"))
         self.assertEqual("S", pokerHands("3S AS QS 7S 6S"))
-        #self.assertEqual("three of a kind 8", pokerHands("8S 8C 8D 2D 3S"))
+        self.assertEqual("three of a kind 8", pokerHands("8S 8C 8D 2D 3S"))
+        self.assertEqual("four of a kind 9", pokerHands("9S 9C 9D 2D 9S"))
+        self.assertEqual("straight flush", pokerHands("3H 4H 5H 7H 6H"))
