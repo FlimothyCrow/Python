@@ -37,7 +37,7 @@ def pairCheck(hand) :
     values = cardValueList(hand)
     for card,count in checkFrequency(values).items() :
         if count == 2 :
-            return card
+            return "pair of %s" % card
 
 def orderCheck(hand) :
     newList = sorted(cardValueList(hand))
@@ -52,3 +52,14 @@ def suitList(hand) :
     for suit,count in suits.items():
         if count == 5:
             return suit
+
+def pokerHands(hand) :
+    if suitList(hand) : #flush
+        return suitList(hand)
+    if pairCheck(hand) : #pair
+        return pairCheck(hand)
+    if orderCheck(hand): #straight
+        return "straight"
+
+
+#return "pair of %s" % pairCheck(hand)
