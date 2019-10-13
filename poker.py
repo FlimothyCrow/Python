@@ -37,11 +37,11 @@ def pairCheck(hand) :
     values = cardValueList(hand)
     for card,count in checkFrequency(values).items() :
         if count == 2 :
-            return "pair of %s" %card
+            return "pair of {}" .format(card)
         if count == 3 :
-            return "three of a kind %s" %card
+            return "three of a kind {}" .format(card)
         if count == 4 :
-            return "four of a kind %s" %card
+            return "four of a kind {}" .format(card)
 
 def orderCheck(hand) :
     newList = sorted(cardValueList(hand))
