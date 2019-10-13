@@ -33,9 +33,14 @@ def cardValue(card) :
     else :
         return int(card[0])
 
+# FOR DOESN'T WORK ON DICTIONARIES
+# ITEMS CONVERTS INTO A LIST (PROB OF TUPLES)
 def pairCheck(hand) :
     values = cardValueList(hand)
-    for card,count in checkFrequency(values).items() :
+    freqDict = checkFrequency(values)
+    for card,count in freqDict.items() :
+        if (2 in (dict.values(freqDict))) and (3 in (dict.values(freqDict))) :
+            return "full house", max(freqDict.keys()), min(freqDict.keys())
         if count == 2 :
             return "pair of {}" .format(card)
         if count == 3 :
@@ -69,4 +74,7 @@ def pokerHands(hand) :
         return orderCheck(hand)
 
 
-#print(pairCheck("3D 3C 4H 4D 4S"))
+
+    
+
+
