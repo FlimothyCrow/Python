@@ -48,3 +48,4 @@ class PokerTests(unittest.TestCase):
         self.assertEqual("four of a kind 9", pokerHands("9S 9C 9D 2D 9S"))
         self.assertEqual(('straight 3 through 7', 'H'), pokerHands("3H 4H 5H 7H 6H"))
         self.assertEqual(('full house', 9, 5), pairCheck("9S 9C 5D 5H 9D"))
+        self.assertEqual(('high card', '10D'), pokerHands("10D 2C 8S 3C 5H"))

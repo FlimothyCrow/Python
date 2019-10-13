@@ -68,11 +68,12 @@ def pokerHands(hand) :
             return orderCheck(hand),suitList(hand)
     if suitList(hand) : #flush
         return suitList(hand)
-    if pairCheck(hand) : #2, 3 or 4 of a kind
+    if pairCheck(hand) : #2, 3 or 4 of a kind, full house
         return pairCheck(hand)
     if orderCheck(hand): #straight
         return orderCheck(hand)
-
+    else :
+        return "high card", highCard(hand)
 
 
     
