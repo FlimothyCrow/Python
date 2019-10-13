@@ -68,3 +68,4 @@ def pokerHands(hand) :
     if orderCheck(hand): #straight
         return orderCheck(hand)
 
+#testing for push
