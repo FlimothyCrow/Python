@@ -58,9 +58,9 @@ def suitList(hand) :
             return suit
 
 def pokerHands(hand) :
-    if suitList(hand) :
+    if suitList(hand) : #straight flush
         if orderCheck(hand) :
-            return "straight flush"
+            return orderCheck(hand),suitList(hand)
     if suitList(hand) : #flush
         return suitList(hand)
     if pairCheck(hand) : #2, 3 or 4 of a kind
@@ -68,4 +68,5 @@ def pokerHands(hand) :
     if orderCheck(hand): #straight
         return orderCheck(hand)
 
-#testing for push 3
+
+#print(pairCheck("3D 3C 4H 4D 4S"))
