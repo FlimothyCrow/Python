@@ -23,17 +23,27 @@ def updateGame(game, move, player):
 
 updateGame(beginBoard, [0,0], 1)
 
-"""""
+def printGame(game) :
+    for row in game :
+        print(row)
+
+
 def moveValid(game, move) :
     return True
 
-def gameOver(game) :
-    return False
+def playerMove(name):
+    print("Player", name, "pick a move using row/col coordinates, e.g. 1,1 or 4,12")
+    return list(map(int, input().split(",")))
+
+
+playerMove("Flim")
+
+"""""
 
 def playGame():
     game = [[0,0,0,0],
-            [0,1,2,0]
-            [0,2,1,0],
+            [0,0,0,0],
+            [0,0,0,0],
             [0,0,0,0]]
     currentPlayer = 1
     while True:
@@ -53,5 +63,5 @@ def playGame():
                 else :
                     currentPlayer = 1
 
-
- playGame() """
+"""""
+#playGame()
