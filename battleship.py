@@ -1,3 +1,4 @@
+import copy
 """""
 def playerMove(name):
     print("Player ", name, " pick a move using row/col coordinates, e.g. 1,1 or 4,12")
@@ -8,37 +9,50 @@ def printGame(game):
         print(row)
 
 """""
-
+"""""
 beginBoard = [[0, 0, 0, 0],
               [0, 0, 0, 0],
               [0, 0, 0, 0],
               [0, 0, 0, 0]]
+"""""
+shipsBoard = [[0, 2, 0, 0],
+              [0, 2, 0, 0],
+              [0, 0, 0, 0],
+              [0, 0, 2, 2]]
 
 
 
 def updateGame(game, move, player):
     [row, col] = move
-    game[row][col] = player
-    return game
+    newGame = copy.deepcopy(game)
+    newGame[row][col] = player
+    return newGame
 
-updateGame(beginBoard, [0,0], 1)
+#updateGame(beginBoard, [0,0], 1)
 
 def printGame(game) :
     for row in game :
         print(row)
 
 
-def moveValid(game, move) :
-    return True
+def moveValid(game, move) : # remember (move) == player-entered coordinates
+    x, y = move
+    if game[x][y] == 0:
+      return True
 
+"""""
+moveValid([[0,0,0,0],
+            [0,0,0,0],
+            [0,0,0,0],
+            [0,0,0,0]], [0,0])
+"""""
 def playerMove(name):
     print("Player", name, "pick a move using row/col coordinates, e.g. 1,1 or 4,12")
     return list(map(int, input().split(",")))
+# remember that playerMove doesn't need to update the game
+# its only purpose is to extract the move data from the user
+# that data can be returned to another function
 
-
-playerMove("Flim")
-
-"""""
 
 def playGame():
     game = [[0,0,0,0],
@@ -54,14 +68,13 @@ def playGame():
         else :
             game = updateGame(game, move, currentPlayer)
             printGame(game)
-            if gameOver(game):
-                print("someone won")
-                return
-            else :
-                if currentPlayer == 1:
-                    currentPlayer = 2
-                else :
-                    currentPlayer = 1
 
-"""""
+# wait until completion for player 2
 #playGame()
+"""""
+a = [[1,2,3,4], [5,6,7,8], [0,0,0,0],[0,0,0,0]]
+b = [8,9]
+var0, var1, var2, var3 = a
+
+print(var1)
+"""""
