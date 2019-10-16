@@ -34,8 +34,8 @@ class battleshipTests(unittest.TestCase):
                       [0, 0, 0, 0],
                       [0, 0, 0, 0]]
 
-        self.assertEqual(None, moveValid(emptyBoard, [0,0]))
-        self.assertEqual(True, moveValid(emptyBoard, [0,1]))
+        self.assertEqual(None, hitMiss(emptyBoard, [0, 0]))
+        self.assertEqual(True, hitMiss(emptyBoard, [0, 1]))
 # how to clone an object
 #
 

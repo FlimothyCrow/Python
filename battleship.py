@@ -35,7 +35,7 @@ def printGame(game) :
         print(row)
 
 
-def moveValid(game, move) : # remember (move) == player-entered coordinates
+def hitMiss(game, move) : # remember (move) == player-entered coordinates
     x, y = move
     if game[x][y] == 0:
       return True
@@ -55,17 +55,18 @@ def playerMove(name):
 
 
 def playGame():
-    game = [[0,0,0,0],
+    game = [[0,0,1,0],
             [0,0,0,0],
             [0,0,0,0],
             [0,0,0,0]]
     currentPlayer = 1
     while True:
         move = playerMove(currentPlayer)
-        if not moveValid(game, move) :
+        if hitMiss(game, move) :
             print ("Invalid move, try again")
             continue
         else :
+            print("Hit!")
             game = updateGame(game, move, currentPlayer)
             printGame(game)
 
@@ -78,3 +79,4 @@ var0, var1, var2, var3 = a
 
 print(var1)
 """""
+playGame()
