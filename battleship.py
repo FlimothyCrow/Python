@@ -25,7 +25,7 @@ def printGame(game) :
 
 def moveValid(game, move) :
     x, y = move
-    if game[x][y] == 1 :
+    if game[x][y] == 9 :
         return False
     else:
         return True
@@ -38,7 +38,8 @@ def hitMiss(game, move) : # remember (move) == player-entered coordinates
       return True
 
 def playerMove(name):
-    print("Player", name, "pick a move using row/col coordinates, e.g. 1,1 or 4,12")
+    print("Player", name, "pick a move using row/col coordinates, e.g. 1,1"
+                          "\nRemember, 8 = miss, and 9 = hit")
     return list(map(int, input().split(",")))
 # remember that playerMove doesn't need to update the game
 # its only purpose is to extract the move data from the user
@@ -57,12 +58,14 @@ def playGame():
 
             if hitMiss(game, move) :
                 print("Hit!")
-                game = updateGame(game, move, currentPlayer)
+                game = updateGame(game, move, 9)
                 printGame(game)
             else :
                 print("Miss")
+                game = updateGame(game, move, 8)
+                printGame(game)
         else :
-            print("Invalid move, try again")
+            print("That space was already attempted")
 
 # wait until completion for player 2
 #playGame()
