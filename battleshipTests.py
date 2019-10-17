@@ -28,8 +28,8 @@ class battleshipTests(unittest.TestCase):
                          updateGame(emptyBoard, [3,0], 1))
 
 
-    def test_moveValid(self):
-        emptyBoard = [[1, 0, 0, 0],
+    def test_hitMiss(self):
+        emptyBoard = [[2, 0, 0, 0],
                       [0, 0, 0, 0],
                       [0, 0, 0, 0],
                       [0, 0, 0, 0]]
@@ -38,6 +38,10 @@ class battleshipTests(unittest.TestCase):
         self.assertEqual(True, hitMiss(emptyBoard, [0, 1]))
 # how to clone an object
 #
-
-
+    def test_moveValid(self):
+        emptyBoard = [[1, 0, 0, 0],
+                      [0, 0, 0, 0],
+                      [0, 0, 0, 0],
+                      [0, 0, 0, 0]]
+        self.assertEqual(False, moveValid(emptyBoard, [0,0]))
 

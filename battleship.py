@@ -1,26 +1,14 @@
 import copy
-"""""
-def playerMove(name):
-    print("Player ", name, " pick a move using row/col coordinates, e.g. 1,1 or 4,12")
-    return list(map(int, input().split(",")))
 
-def printGame(game):
-    for row in game:
-        print(row)
-
-"""""
-"""""
 beginBoard = [[0, 0, 0, 0],
               [0, 0, 0, 0],
               [0, 0, 0, 0],
               [0, 0, 0, 0]]
-"""""
+
 shipsBoard = [[0, 2, 0, 0],
               [0, 2, 0, 0],
               [0, 0, 0, 0],
               [0, 0, 2, 2]]
-
-
 
 def updateGame(game, move, player):
     [row, col] = move
@@ -35,17 +23,20 @@ def printGame(game) :
         print(row)
 
 
+def moveValid(game, move) :
+    x, y = move
+    if game[x][y] == 1 :
+        return False
+    else:
+        return True
+
+moveValid(shipsBoard, [0,0])
+
 def hitMiss(game, move) : # remember (move) == player-entered coordinates
     x, y = move
-    if game[x][y] == 0:
+    if game[x][y] == 2:
       return True
 
-"""""
-moveValid([[0,0,0,0],
-            [0,0,0,0],
-            [0,0,0,0],
-            [0,0,0,0]], [0,0])
-"""""
 def playerMove(name):
     print("Player", name, "pick a move using row/col coordinates, e.g. 1,1 or 4,12")
     return list(map(int, input().split(",")))
@@ -55,20 +46,23 @@ def playerMove(name):
 
 
 def playGame():
-    game = [[0,0,1,0],
+    game = [[2,0,0,0],
             [0,0,0,0],
             [0,0,0,0],
             [0,0,0,0]]
     currentPlayer = 1
     while True:
         move = playerMove(currentPlayer)
-        if hitMiss(game, move) :
-            print ("Invalid move, try again")
-            continue
+        if moveValid(game, move) :
+
+            if hitMiss(game, move) :
+                print("Hit!")
+                game = updateGame(game, move, currentPlayer)
+                printGame(game)
+            else :
+                print("Miss")
         else :
-            print("Hit!")
-            game = updateGame(game, move, currentPlayer)
-            printGame(game)
+            print("Invalid move, try again")
 
 # wait until completion for player 2
 #playGame()
