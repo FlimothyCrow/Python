@@ -51,20 +51,25 @@ def playGame():
     while True:
         move = playerMove(currentPlayer)
         if moveValid(shipsBoard, move) :
-
             if hitMiss(shipsBoard, move) :
                 print("Hit!")
-                shipsBoard = updateGame(playerBoard, move, 9)
+                playerBoard = updateGame(playerBoard, move, 9)
                 printGame(playerBoard)
             else :
                 print("Miss")
-                shipsBoard = updateGame(playerBoard, move, 8)
+                playerBoard = updateGame(playerBoard, move, 8)
                 printGame(playerBoard)
         else :
             print("That space was already attempted")
 
+# shouldn't updateGame be redefining shipsBoard within playGame?
+# currently we're printing an updated playerBoard, but NOT redefining it
+# hitMiss is only giving us good data until we make a hit
+# if we attempt the same coordinate, we get a correct failure from moveValid
+# after that, everything registers as miss
+
 # wait until completion for player 2
-#playGame()
+playGame()
 """""
 a = [[1,2,3,4], [5,6,7,8], [0,0,0,0],[0,0,0,0]]
 b = [8,9]
@@ -72,7 +77,7 @@ var0, var1, var2, var3 = a
 
 print(var1)
 """""
-playGame()
+
 
 """""
 if shipsBoard[0][1] == beginBoard[0][1] :
