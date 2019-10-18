@@ -1,14 +1,5 @@
 import copy
 
-beginBoard = [[0, 0, 0, 0],
-              [0, 0, 0, 0],
-              [0, 0, 0, 0],
-              [0, 0, 0, 0]]
-
-shipsBoard = [[0, 2, 0, 0],
-              [0, 2, 0, 0],
-              [0, 0, 0, 0],
-              [0, 0, 2, 2]]
 
 def updateGame(game, move, player):
     [row, col] = move
@@ -30,7 +21,7 @@ def moveValid(game, move) :
     else:
         return True
 
-moveValid(shipsBoard, [0,0])
+#moveValid(shipsBoard, [0,0])
 
 def hitMiss(game, move) : # remember (move) == player-entered coordinates
     x, y = move
@@ -47,23 +38,28 @@ def playerMove(name):
 
 
 def playGame():
-    game = [[2,0,0,0],
-            [0,0,0,0],
-            [0,0,0,0],
-            [0,0,0,0]]
+    playerBoard = [[0, 0, 0, 0],
+                   [0, 0, 0, 0],
+                   [0, 0, 0, 0],
+                   [0, 0, 0, 0]]
+
+    shipsBoard = [[2,0,0,0],
+                  [2,0,0,0],
+                  [0,0,0,0],
+                  [0,0,2,2]]
     currentPlayer = 1
     while True:
         move = playerMove(currentPlayer)
-        if moveValid(game, move) :
+        if moveValid(shipsBoard, move) :
 
-            if hitMiss(game, move) :
+            if hitMiss(shipsBoard, move) :
                 print("Hit!")
-                game = updateGame(game, move, 9)
-                printGame(game)
+                shipsBoard = updateGame(shipsBoard, move, 9)
+                printGame(shipsBoard)
             else :
                 print("Miss")
-                game = updateGame(game, move, 8)
-                printGame(game)
+                shipsBoard = updateGame(shipsBoard, move, 8)
+                printGame(shipsBoard)
         else :
             print("That space was already attempted")
 
@@ -77,3 +73,10 @@ var0, var1, var2, var3 = a
 print(var1)
 """""
 playGame()
+
+"""""
+if shipsBoard[0][1] == beginBoard[0][1] :
+    print(True)
+else :
+    print(None)
+"""""
