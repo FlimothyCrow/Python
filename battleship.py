@@ -3,7 +3,7 @@ import copy
 
 def updateGame(game, move, player):
     [row, col] = move
-    newGame = copy.deepcopy(game)
+    newGame = game
     newGame[row][col] = player
     return newGame
 
@@ -54,12 +54,12 @@ def playGame():
 
             if hitMiss(shipsBoard, move) :
                 print("Hit!")
-                shipsBoard = updateGame(shipsBoard, move, 9)
-                printGame(shipsBoard)
+                shipsBoard = updateGame(playerBoard, move, 9)
+                printGame(playerBoard)
             else :
                 print("Miss")
-                shipsBoard = updateGame(shipsBoard, move, 8)
-                printGame(shipsBoard)
+                shipsBoard = updateGame(playerBoard, move, 8)
+                printGame(playerBoard)
         else :
             print("That space was already attempted")
 
