@@ -36,11 +36,9 @@ def playerMove(name):
 # its only purpose is to extract the move data from the user
 # that data can be returned to another function
 
-def gameOver(game) :
+def gameContinue(game) :
     data = any(0 in sublist for sublist in game)
     return data
-
-
 
 
 def playGame():
@@ -56,17 +54,20 @@ def playGame():
     currentPlayer = 1
     while True:
         move = playerMove(currentPlayer)
-        if moveValid(shipsBoard, move) :
-            if hitMiss(shipsBoard, move) :
-                print("Hit!")
-                playerBoard = updateGame(playerBoard, move, 9)
-                printGame(playerBoard)
+        if gameContinue(playerBoard):
+            if moveValid(shipsBoard, move) :
+                if hitMiss(shipsBoard, move) :
+                    print("Hit!")
+                    playerBoard = updateGame(playerBoard, move, 9)
+                    printGame(playerBoard)
+                else :
+                    print("Miss")
+                    playerBoard = updateGame(playerBoard, move, 8)
+                    printGame(playerBoard)
             else :
-                print("Miss")
-                playerBoard = updateGame(playerBoard, move, 8)
-                printGame(playerBoard)
+                print("That space was already attempted")
         else :
-            print("That space was already attempted")
+            print("No more possible moves")
 
 # shouldn't updateGame be redefining shipsBoard within playGame?
 # currently we're printing an updated playerBoard, but NOT redefining it
