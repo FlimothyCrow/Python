@@ -36,6 +36,12 @@ def playerMove(name):
 # its only purpose is to extract the move data from the user
 # that data can be returned to another function
 
+def gameOver(game) :
+    data = any(0 in sublist for sublist in game)
+    return data
+
+
+
 
 def playGame():
     playerBoard = [[0, 0, 0, 0],
@@ -69,17 +75,23 @@ def playGame():
 # after that, everything registers as miss
 
 # wait until completion for player 2
-playGame()
+
+#playGame()
+
+
+
+
+
+
 """""
 a = [[1,2,3,4], [5,6,7,8], [0,0,0,0],[0,0,0,0]]
 b = [8,9]
 var0, var1, var2, var3 = a
 
 print(var1)
-"""""
 
+----------------
 
-"""""
 if shipsBoard[0][1] == beginBoard[0][1] :
     print(True)
 else :

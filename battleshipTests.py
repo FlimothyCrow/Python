@@ -45,3 +45,13 @@ class battleshipTests(unittest.TestCase):
                       [0, 0, 0, 0]]
         self.assertEqual(False, moveValid(emptyBoard, [0,0]))
 
+    # def test_playGame(self): WHAT'S THE BEST WAY TO TEST THIS?
+
+
+    def test_gameOver(self):
+        emptyBoard = [[1, 0, 0, 0],
+                      [0, 0, 0, 0],
+                      [0, 0, 0, 0],
+                      [0, 0, 0, 0]]
+        self.assertEqual(True, gameOver(emptyBoard))
+
