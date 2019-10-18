@@ -80,21 +80,3 @@ def playGame():
 playGame()
 
 
-
-
-
-
-"""""
-a = [[1,2,3,4], [5,6,7,8], [0,0,0,0],[0,0,0,0]]
-b = [8,9]
-var0, var1, var2, var3 = a
-
-print(var1)
-
-----------------
-
-if shipsBoard[0][1] == beginBoard[0][1] :
-    print(True)
-else :
-    print(None)
-"""""
