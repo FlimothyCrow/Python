@@ -55,7 +55,7 @@ def playGame():
     while True:
         move = playerMove(currentPlayer)
         if gameContinue(playerBoard):
-            if moveValid(shipsBoard, move) :
+            if moveValid(playerBoard, move) :
                 if hitMiss(shipsBoard, move) :
                     print("Hit!")
                     playerBoard = updateGame(playerBoard, move, 9)
@@ -77,7 +77,7 @@ def playGame():
 
 # wait until completion for player 2
 
-#playGame()
+playGame()
 
 
 
