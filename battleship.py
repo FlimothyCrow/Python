@@ -44,7 +44,7 @@ def playerMove(name):
 # its only purpose is to extract the move data from the user
 # that data can be returned to another function
 
-def gameContinue(game):
+def gameOver(game):
     data = any(0 in sublist for sublist in game)
     return data
 
@@ -73,7 +73,7 @@ def playGame():
     currentPlayer = 1
     while True:
         move = playerMove(currentPlayer)
-        if gameContinue(playerBoard1):
+        if gameOver(playerBoard1):
             if moveValid(playerBoard1, move):
                 if hitMiss(shipsBoard1, move):
                     print("Hit!")
@@ -147,31 +147,31 @@ def playerMove(name):
 # its only purpose is to extract the move data from the user
 # that data can be returned to another function
 
-def gameContinue(game):
+def gameOver(game):
     newGroup = [y for x in game for y in x]
     if newGroup.count(9) == 4 :
-        return False
-    else :
         return True
+    else :
+        return False
 
 
 def run(currentPlayer, playerBoard, shipsBoard):
-
     move = playerMove(currentPlayer)
-    if gameContinue(playerBoard):
-        if moveValid(playerBoard, move):
-            if hitMiss(shipsBoard, move):
-                print("Hit!")
-                playerBoard = updateGame(playerBoard, move, 9)
-                printGame(playerBoard)
-            else:
-                print("Miss")
-                playerBoard = updateGame(playerBoard, move, 8)
-                printGame(playerBoard)
+    if moveValid(playerBoard, move):
+        if hitMiss(shipsBoard, move):
+            print("Hit!")
+            playerBoard = updateGame(playerBoard, move, 9)
+            printGame(playerBoard)
+            if gameOver(playerBoard):
+                    print(currentPlayer, "is the winner!")
         else:
-            print("That space was already attempted")
+            print("Miss")
+            playerBoard = updateGame(playerBoard, move, 8)
+            printGame(playerBoard)
     else:
-        print(currentPlayer, "is the winner!")
+        print("That space was already attempted")
+
+
 
 def playGame():
     playerBoard1 = [[0, 0, 0, 0],
@@ -196,11 +196,12 @@ def playGame():
 
     while True:
       run(1, playerBoard1, shipsBoard1)
-#      run(2, playerBoard2, shipsBoard2)
+      run(2, playerBoard2, shipsBoard2)
 
 # can we build it so that an attempted invalid move restarts that turn?
-# the victory conditional from gameContinue only prints after a "failed" move
-# right now gameContinue is based on having 4 hits, shouldn't that vary?
+# the victory conditional from gameOver only prints after a "failed" move
+# right now gameOver is based on having 4 hits, shouldn't that vary?
+# can we put meat in moveValid so the game doesn't crash with string inputs?
 
 playGame()
 
