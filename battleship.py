@@ -150,7 +150,7 @@ def playerMove(name):
 def gameContinue(game):
     newGroup = [y for x in game for y in x]
     if newGroup.count(9) == 4 :
-        return None
+        return False
     else :
         return True
 
@@ -171,7 +171,7 @@ def run(currentPlayer, playerBoard, shipsBoard):
         else:
             print("That space was already attempted")
     else:
-        print("No more possible moves")
+        print(currentPlayer, "is the winner!")
 
 def playGame():
     playerBoard1 = [[0, 0, 0, 0],
@@ -180,34 +180,29 @@ def playGame():
                    [0, 0, 0, 0]]
 
     shipsBoard1 = [[2, 0, 0, 0],
-                  [2, 0, 0, 0],
-                  [0, 0, 0, 0],
-                  [0, 0, 2, 2]]
+                   [2, 0, 0, 0],
+                   [0, 0, 0, 0],
+                   [0, 0, 2, 2]]
 
     playerBoard2 = [[0, 0, 0, 0],
-                   [0, 0, 0, 0],
-                   [0, 0, 0, 0],
-                   [0, 0, 0, 0]]
+                    [0, 0, 0, 0],
+                    [0, 0, 0, 0],
+                    [0, 0, 0, 0]]
 
     shipsBoard2 = [[0, 0, 0, 0],
                    [0, 2, 2, 0],
-                   [0, 2, 2, 0],
-                   [0, 0, 0, 0]]
+                   [0, 0, 0, 0],
+                   [0, 2, 2, 0]]
 
     while True:
       run(1, playerBoard1, shipsBoard1)
-      run(2, playerBoard2, shipsBoard2)
+#      run(2, playerBoard2, shipsBoard2)
 
+# can we build it so that an attempted invalid move restarts that turn?
+# the victory conditional from gameContinue only prints after a "failed" move
+# right now gameContinue is based on having 4 hits, shouldn't that vary?
 
-# shouldn't updateGame be redefining shipsBoard within playGame?
-# currently we're printing an updated playerBoard, but NOT redefining it
-# hitMiss is only giving us good data until we make a hit
-# if we attempt the same coordinate, we get a correct failure from moveValid
-# after that, everything registers as miss
-
-# wait until completion for player 2
-
-#playGame()
+playGame()
 
 
 
