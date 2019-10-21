@@ -39,10 +39,15 @@ class battleshipTests(unittest.TestCase):
     # def test_playGame(self): WHAT'S THE BEST WAY TO TEST THIS?
 
 
-    def test_gameOver(self):
+    def test_gameContinue(self):
         emptyBoard = [[1, 0, 0, 0],
                       [0, 0, 0, 0],
                       [0, 0, 0, 0],
                       [0, 0, 0, 0]]
-        self.assertEqual(True, gameContinue(emptyBoard))
 
+        fullBoard = [[1, 0, 0, 0],
+                      [9, 9, 9, 9],
+                      [0, 0, 0, 0],
+                      [0, 0, 0, 0]]
+        self.assertEqual(True, gameContinue(emptyBoard))
+        self.assertEqual(None, gameContinue(fullBoard))
