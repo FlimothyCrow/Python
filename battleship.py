@@ -49,28 +49,39 @@ def gameContinue(game):
 
 
 def playGame():
-    playerBoard = [[0, 0, 0, 0],
+    playerBoard1 = [[0, 0, 0, 0],
                    [0, 0, 0, 0],
                    [0, 0, 0, 0],
                    [0, 0, 0, 0]]
 
-    shipsBoard = [[2, 0, 0, 0],
+    shipsBoard1 = [[2, 0, 0, 0],
                   [2, 0, 0, 0],
                   [0, 0, 0, 0],
                   [0, 0, 2, 2]]
+
+    playerBoard2 = [[0, 0, 0, 0],
+                   [0, 0, 0, 0],
+                   [0, 0, 0, 0],
+                   [0, 0, 0, 0]]
+
+    shipsBoard2 = [[0, 0, 0, 0],
+                   [0, 2, 2, 0],
+                   [0, 2, 2, 0],
+                   [0, 0, 0, 0]]
+
     currentPlayer = 1
     while True:
         move = playerMove(currentPlayer)
-        if gameContinue(playerBoard):
-            if moveValid(playerBoard, move):
-                if hitMiss(shipsBoard, move):
+        if gameContinue(playerBoard1):
+            if moveValid(playerBoard1, move):
+                if hitMiss(shipsBoard1, move):
                     print("Hit!")
-                    playerBoard = updateGame(playerBoard, move, 9)
-                    printGame(playerBoard)
+                    playerBoard1 = updateGame(playerBoard1, move, 9)
+                    printGame(playerBoard1)
                 else:
                     print("Miss")
-                    playerBoard = updateGame(playerBoard, move, 8)
-                    printGame(playerBoard)
+                    playerBoard1 = updateGame(playerBoard1, move, 8)
+                    printGame(playerBoard1)
             else:
                 print("That space was already attempted")
         else:
@@ -86,3 +97,4 @@ def playGame():
 # wait until completion for player 2
 
 playGame()
+
