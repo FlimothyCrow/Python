@@ -4,11 +4,13 @@ def listRange(start, stop):
 
 
 def wordChanger(numbers, target, replace):
-    for (i, item) in enumerate(numbers) :
-            if item % target == 0 :
-                numbers[i] = replace
-    return numbers
-
+    newList = []
+    for num in numbers :
+        if num % target == 0 :
+            newList.append(replace)
+        else :
+            newList.append(num)
+    return newList
 
 
 def listMutate(numbers, target1, replace1, target2, replace2):
@@ -16,6 +18,5 @@ def listMutate(numbers, target1, replace1, target2, replace2):
     wordChanger(mutation, target2, replace2)
 
 
-#listMutate([1, 2, 3, 4, 5, 6, 7, 8], 3, "jerk", 2, "schmo")
-
+listMutate([1, 2, 3, 4, 5, 6, 7, 8], 3, "jerk", 2, "schmo")
 
