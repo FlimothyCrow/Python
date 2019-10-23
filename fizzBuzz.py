@@ -1,7 +1,4 @@
 def listRange(start, stop):
-    for i in range (start, stop) :
-        print(i, end=", ")
+    return list(range(start, stop))
 
 
-
-#listRange(1, 11)
