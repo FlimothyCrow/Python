@@ -8,7 +8,7 @@ def wordChanger(numbers, target, replace):
             numbers[i] = replace
             return numbers
 
-# this program should take start, stop, and two replacers
+# this program should take start, stop, target and replacer
 # it will call listRange once and wordChanger twice
 # then print the result
 
@@ -16,6 +16,6 @@ def listMutate(start, stop, target, replace):
     numbers = listRange(start, stop)
     print(wordChanger(numbers, target, replace))
 
-listMutate(1, 4, 3, "schmo")
+#listMutate(1, 21, 3, "fizz")
 
 
