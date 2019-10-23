@@ -11,10 +11,10 @@ def wordChanger(numbers, target, replace):
 
 
 
-def listMutate(start, stop, target, replace):
-    numbers = listRange(start, stop)
-    print(wordChanger(numbers, target, replace))
-
-#listMutate(1, 21, 3, "fizz")
+def listMutate(numbers, target1, replace1):
+    mutation = wordChanger(numbers, target1, replace1)
 
 
+listMutate([1, 2, 3, 4, 5, 6, 7, 8], 3, "jerk")
+
+#def multipleMutate(start, stop) :
