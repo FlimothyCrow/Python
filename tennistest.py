@@ -11,6 +11,7 @@ class tennistest(unittest.TestCase):
         self.assertEqual("love forty", tennis(0, 3))
         self.assertEqual("deuce", tennis(3, 3))
 
+
     def test_score(self):
         self.assertEqual("love", score(0))
         self.assertEqual("fifteen", score(1))
@@ -22,3 +23,7 @@ class tennistest(unittest.TestCase):
         self.assertEqual(None, victory(3, 1))
         self.assertEqual(None, victory(6, 7))
         self.assertEqual(None, victory(1, 0))
+
+    def test_whoWins(self):
+        self.assertEqual("player 1", whoWins(1, 0))
+        self.assertEqual("player 2", whoWins(1, 3))
