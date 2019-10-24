@@ -28,5 +28,5 @@ def tennis(p1, p2) :
     else :
         return score(p1) + " " + score(p2)
 
-tennis(4,3)
+
 
