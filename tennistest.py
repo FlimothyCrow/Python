@@ -21,4 +21,4 @@ class tennistest(unittest.TestCase):
         self.assertEqual(True, victory(4, 2))
         self.assertEqual(None, victory(3, 1))
         self.assertEqual(None, victory(6, 7))
-        self.assertEqual(None, victory(0, 2))
+        self.assertEqual(None, victory(1, 0))

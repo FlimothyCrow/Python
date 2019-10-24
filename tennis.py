@@ -15,8 +15,11 @@ def victory(p1, p2) :
 
 
 def tennis(p1, p2) :
-    if p1 and p2 > 2 :
-        return "deuce"
+    if victory(p1, p2) :
+        print("victory")
+    elif p1 and p2 > 2 :
+        if p1 == p2 :
+            return "deuce"
     else :
         return score(p1) + " " + score(p2)
 
