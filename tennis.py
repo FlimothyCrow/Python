@@ -15,7 +15,6 @@ def victory(p1, p2) :
 
 
 def tennis(p1, p2) :
-    #if p1 -
     if p1 and p2 > 2 :
         return "deuce"
     else :
