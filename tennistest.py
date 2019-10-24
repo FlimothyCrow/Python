@@ -7,6 +7,8 @@ class tennistest(unittest.TestCase):
     def test_tennis(self):
         self.assertEqual("fifteen love", tennis(1,0))
         self.assertEqual("fifteen thirty", tennis(1,2))
+        self.assertEqual("forty thirty", tennis(3, 2))
+        self.assertEqual("love forty", tennis(0, 3))
 
     def test_score(self):
         self.assertEqual("love", score(0))
