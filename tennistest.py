@@ -9,9 +9,15 @@ class tennistest(unittest.TestCase):
         self.assertEqual("fifteen thirty", tennis(1,2))
         self.assertEqual("forty thirty", tennis(3, 2))
         self.assertEqual("love forty", tennis(0, 3))
+        self.assertEqual("deuce", tennis(3, 3))
 
     def test_score(self):
         self.assertEqual("love", score(0))
         self.assertEqual("fifteen", score(1))
         self.assertEqual("thirty", score(2))
         self.assertEqual("forty", score(3))
+
+    def test_advantage(self):
+        self.assertEqual(True, victory(4, 2))
+        self.assertEqual(None, victory(3, 1))
+        self.assertEqual(None, victory(6, 7))
