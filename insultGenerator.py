@@ -9,16 +9,14 @@ modern = ["dickheaded", "illiterate", "vegan", "instagram", "pumpkin spice", "si
 
 shakespeare = ["goatish", "milk-livered", "poorly born", "tardy-gaited", "yeasty", "ill-nurtured"]
 
-# we need three numbers
-# we need to figure out how to test for random
 # we need to refer to each list and pull the element into a string (with enumerate maybe?)
 # insultGenerator will take a string name and pull an element at random
+# could we set it to choose from the lists in a random order?
 
 def insultGenerator(set0, set1, set2) :
     finalInsult = (random.choice(set0))
     finalInsult = finalInsult + " " + (random.choice(set1))
     finalInsult = finalInsult + " " + (random.choice(set2))
     print(finalInsult)
-
 
 insultGenerator(modern, shakespeare, nouns)
