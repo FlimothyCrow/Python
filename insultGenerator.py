@@ -1,7 +1,7 @@
 import random
 
 def randomNumber() :
-    return random.randint(1,5)
+    return random.randint(1,9)
 
 #nouns = ["schmuck", "apple-john", "swine", "jerk", "Spaniard", "coconut", "goatherd"]
 
@@ -40,7 +40,7 @@ def parseInsult(row, inputText):
 def insultPuller(row0, row1, row2) :
     print((row0[randomNumber()]), row1[randomNumber()], row2[randomNumber()])
 
-def insultGenerator():
+def insultGenerator(howMany):
     f = open("insults.txt", "r")
     contents = f.read()
 
@@ -48,6 +48,7 @@ def insultGenerator():
     modern = parseInsult(1, contents)
     shakespeare = parseInsult(2, contents)
 
-    for i in range(10) :
+    for i in range(howMany) :
         insultPuller(nouns, modern, shakespeare)
 
+insultGenerator(10)
