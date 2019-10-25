@@ -17,7 +17,8 @@ shakespeareAdjectives = ["goatish", "milk-livered", "poorly born"]
 def insultGenerator(set0, set1, set2) :
     finalInsult = (random.choice(set0))
     finalInsult = finalInsult + " " + (random.choice(set1))
+    finalInsult = finalInsult + " " + (random.choice(set2))
     print(finalInsult)
 
 
-insultGenerator(modernAdjectives, nouns, 1)
+insultGenerator(modernAdjectives, shakespeareAdjectives, nouns)
