@@ -3,11 +3,11 @@ import random
 def randomNumber() :
     return random.randint(1,10)
 
-nouns = ["schmuck", "apple-john", "swine"]
+nouns = ["schmuck", "apple-john", "swine", "jerk", "Spaniard", "coconut", "goatherd"]
 
-modernAdjectives = ["dickheaded", "illiterate", "vegan"]
+modern = ["dickheaded", "illiterate", "vegan", "instagram", "pumpkin spice", "simple", "antivax"]
 
-shakespeareAdjectives = ["goatish", "milk-livered", "poorly born"]
+shakespeare = ["goatish", "milk-livered", "poorly born", "tardy-gaited", "yeasty", "ill-nurtured"]
 
 # we need three numbers
 # we need to figure out how to test for random
@@ -21,4 +21,4 @@ def insultGenerator(set0, set1, set2) :
     print(finalInsult)
 
 
-insultGenerator(modernAdjectives, shakespeareAdjectives, nouns)
+insultGenerator(modern, shakespeare, nouns)
