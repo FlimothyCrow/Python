@@ -38,17 +38,17 @@ def parseInsult(row, inputText):
     return final
 
 def insultPuller(row0, row1, row2) :
-    print((row0[randomNumber()]), row1[randomNumber()], row2[randomNumber()])
+    return (row0[randomNumber()]), row1[randomNumber()], row2[randomNumber()]
 
 def insultGenerator(howMany):
     f = open("insults.txt", "r")
     contents = f.read()
-
+    
     nouns = parseInsult(0, contents)
     modern = parseInsult(1, contents)
     shakespeare = parseInsult(2, contents)
 
     for i in range(howMany) :
-        insultPuller(nouns, modern, shakespeare)
+        print(insultPuller(nouns, modern, shakespeare))
 
 insultGenerator(10)
