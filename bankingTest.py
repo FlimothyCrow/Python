@@ -28,5 +28,5 @@ class bankingTest(unittest.TestCase):
         #print(inputTwo)
 
     def test_entryValidator(self):
-        self.assertEqual(True, entryValidator(123456789))
-        self.assertEqual(None, entryValidator(12345678))
+        self.assertEqual(True, entryValidator([1, 2, 3, 4, 5, 6, 7, 8, 9]))
+        #self.assertEqual(True, entryValidator([1, 2, 3, 4, 5, 6, 7, 8, 9]))
