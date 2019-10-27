@@ -27,3 +27,6 @@ class bankingTest(unittest.TestCase):
         self.assertEqual(0, parseEntries(1, 0, inputTwo))
         #print(inputTwo)
 
+    def test_entryValidator(self):
+        self.assertEqual(True, entryValidator(123456789))
+        self.assertEqual(None, entryValidator(12345678))

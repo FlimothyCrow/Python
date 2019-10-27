@@ -3,7 +3,6 @@ one = ["   ",
        "  |",
        "   "]
 
-
 two = [" _ ",
        " _|",
        "|_ ",
@@ -79,11 +78,27 @@ def parseEntries(entry, digit, txt) :
         return 0
 
 
-def numberDecoder() :
+def textReader() :
     f = open("bankInput.txt", "r")
     contents = f.read()
-    print(contents)
+    return contents
+
+def entryValidator(account) :
+    if len(str(account)) == 9 :
+     return True
+
+
+
+#print("012345678"[0])
+
+
+
+
+
 
 # 0 = 0-4
 # 1 = 4-8
 # 2 = 8-12
+
+# one function as a list (int)
+# another for single digits
