@@ -84,11 +84,10 @@ def textReader() :
     return contents
 
 def entryValidator(d) :
-    #n = abs(account)
     if len(d) == 9 :
-        if (abs(d[0]) + 1 * abs(d[1]) + 2 * abs(d[2]) + 3 *
-            abs(d[3]) + 4 * abs(d[4]) + 5 * abs(d[5]) + 6 *
-            abs(d[6]) + 7 * abs(d[7]) + 8 * abs(d[8])) % 11 == 0 :
+        if (abs(d[8]) + 2 * abs(d[7]) + 3 * abs(d[6]) + 4 *
+            abs(d[5]) + 5 * abs(d[4]) + 6 * abs(d[3]) + 7 *
+            abs(d[2]) + 8 * abs(d[1]) + 9 * abs(d[0])) % 11 == 0 :
             return True
 
 
