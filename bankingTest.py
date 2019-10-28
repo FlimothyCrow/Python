@@ -9,11 +9,11 @@ class bankingTest(unittest.TestCase):
         inputTwo = ("    _  _     _  _  _  _  _ \n"+
                     "  | _| _||_||_ |_   ||_||_|\n"+
                     "  ||_  _|  | _||_|  ||_| _|\n"+
-                    "                           \n"+
+                    "\n"+
                     " _ \n"+
                     "| |\n"+
                     "|_|\n"+
-                    "   ")
+                    "\n")
 
         self.assertEqual(1, parseEntries(0, 0, inputTwo))
         self.assertEqual(2, parseEntries(0, 1, inputTwo))
@@ -35,11 +35,14 @@ class bankingTest(unittest.TestCase):
         account = ("    _  _     _  _  _  _  _ \n"+
                    "  | _| _||_||_ |_   ||_||_|\n"+
                    "  ||_  _|  | _||_|  ||_| _|\n"+
-                   "                           \n"+
+                   "\n"+
                    "    _  _  _  _  _  _     _ \n"+
                    "|_||_|| || ||_   |  |  ||_ \n"+
                    "  | _||_||_||_|  |  |  | _|\n"+
-                   "                             ")
+                   "\n")
 
         self.assertEqual("123456789", accountNumbers(account, 0))
         self.assertEqual("490067715 error message", accountNumbers(account, 1))
+
+    #def test_accountPrinter(self):
+        #self.assertEqual("123456789", accountPrinter(account))

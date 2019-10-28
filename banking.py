@@ -1,52 +1,61 @@
+things =  ("    _  _     _  _  _  _  _ \n" +
+           "  | _| _||_||_ |_   ||_||_|\n" +
+           "  ||_  _|  | _||_|  ||_| _|\n" +
+           "                           \n" +
+           "    _  _  _  _  _  _     _ \n" +
+           "|_||_|| || ||_   |  |  ||_ \n" +
+           "  | _||_||_||_|  |  |  | _|\n" +
+           "                             ")
+
 one = ["   ",
        "  |",
        "  |",
-       "   "]
+       ""]
 
 two = [" _ ",
        " _|",
        "|_ ",
-       "   "]
+       ""]
 
 three = [" _ ",
          " _|",
          " _|",
-         "   "]
+         ""]
 
 four = ["   ",
         "|_|",
         "  |",
-        "   "]
+        ""]
 
 five = [" _ ",
         "|_ ",
         " _|",
-        "   "]
+        ""]
 
 six =  [" _ ",
         "|_ ",
         "|_|",
-        "   "]
+        ""]
 
 seven = [" _ ",
          "  |",
          "  |",
-         "   "]
+         ""]
 
 eight = [" _ ",
          "|_|",
          "|_|",
-         "   "]
+         ""]
 
 nine = [" _ ",
         "|_|",
         " _|",
-        "   "]
+        ""]
 
 zero = [" _ ",
         "| |",
         "|_|",
-        "   "]
+        ""]
 
 def parseEntries(entry, digit, txt) :
     final = []
@@ -90,21 +99,23 @@ def entryValidator(d) :
             abs(d[2]) + 8 * abs(d[1]) + 9 * abs(d[0])) % 11 == 0 :
             return True
 
-def accountNumbers(text, column) :
+def accountNumbers(text, account) :
     entry = []
     for number in range(9) :
-        entry.append(parseEntries(column, number, text))
+        entry.append(parseEntries(account, number, text))
     if entryValidator(entry) :
         return ''.join(map(str, entry))
     else :
         return ''.join(map(str, entry)) + " error message"
 
+def accountPrinter():
+    for i in range(2):
+        print(accountNumbers(textReader(), i))
 
-#def accountPrinter() :
+print(accountPrinter())
 
 
 
 
 
-# one function as a list (int)
-# another for single digits
+
