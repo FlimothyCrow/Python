@@ -83,12 +83,17 @@ def textReader() :
     contents = f.read()
     return contents
 
-def entryValidator(account) :
-    if len(account) == 9 :
-        if abs(account[0]) + abs(account[1]) == 3 :
+def entryValidator(d) :
+    #n = abs(account)
+    if len(d) == 9 :
+        if (abs(d[0]) + 1 * abs(d[1]) + 2 * abs(d[2]) + 3 *
+            abs(d[3]) + 4 * abs(d[4]) + 5 * abs(d[5]) + 6 *
+            abs(d[6]) + 7 * abs(d[7]) + 8 * abs(d[8])) % 11 == 0 :
             return True
 
-            #(d1+2*d2+3*d3+4*d4+5*d5+6*d6+7*d7+8*d8+9*d9) mod 11 = 0
+
+
+
 
 
 
