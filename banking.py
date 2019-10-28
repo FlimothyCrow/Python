@@ -90,23 +90,21 @@ def entryValidator(d) :
             abs(d[2]) + 8 * abs(d[1]) + 9 * abs(d[0])) % 11 == 0 :
             return True
 
+def accountNumbers(text, column) :
+    entry = []
+    for number in range(9) :
+        entry.append(parseEntries(column, number, text))
+    if entryValidator(entry) :
+        return ''.join(map(str, entry))
+    else :
+        return ''.join(map(str, entry)) + " error message"
+
+
+#def accountPrinter() :
 
 
 
 
-
-
-
-#print("012345678"[0])
-
-
-
-
-
-
-# 0 = 0-4
-# 1 = 4-8
-# 2 = 8-12
 
 # one function as a list (int)
 # another for single digits

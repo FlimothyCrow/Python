@@ -30,3 +30,16 @@ class bankingTest(unittest.TestCase):
     def test_entryValidator(self):
         self.assertEqual(True, entryValidator([1, 2, 3, 4, 5, 6, 7, 8, 9]))
         self.assertEqual(None, entryValidator([6, 6, 4, 3, 7, 1, 4, 9, 5]))
+
+    def test_accountNumbers(self):
+        account = ("    _  _     _  _  _  _  _ \n"+
+                   "  | _| _||_||_ |_   ||_||_|\n"+
+                   "  ||_  _|  | _||_|  ||_| _|\n"+
+                   "                           \n"+
+                   "    _  _  _  _  _  _     _ \n"+
+                   "|_||_|| || ||_   |  |  ||_ \n"+
+                   "  | _||_||_||_|  |  |  | _|\n"+
+                   "                             ")
+
+        self.assertEqual("123456789", accountNumbers(account, 0))
+        self.assertEqual("490067715 error message", accountNumbers(account, 1))
