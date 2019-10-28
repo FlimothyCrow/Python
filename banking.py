@@ -109,10 +109,11 @@ def accountNumbers(text, account) :
         return ''.join(map(str, entry)) + " error message"
 
 def accountPrinter():
+    f = open("vettedAccounts.txt", "w+")
     for i in range(2):
-        print(accountNumbers(textReader(), i))
+        f.write(accountNumbers(textReader(), i) + "\n")
 
-print(accountPrinter())
+accountPrinter()
 
 
 
