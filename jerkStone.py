@@ -28,12 +28,11 @@ def cardGenerator() :
 def startDeck() :
     deck = []
     for i in range(18) :
-        drawCard(deck, cardGenerator())
+        drawCard(deck)
     return deck
 
-def drawCard(playerHand, card) :
-    playerHand.append(card)
-    return playerHand
+def drawCard(state) :
+    return (state.get('deck'))[0]
 
 def playCard(playerHand, card) :
     playerHand.remove(card)
@@ -46,7 +45,7 @@ def dealDamage(state, damage) :
 
 
 
-#def updateGame(state) :
+
 
 
 
