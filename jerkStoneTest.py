@@ -6,7 +6,7 @@ class jerkStoneTest(unittest.TestCase):
 
 
     def test_drawCard(self):
-        self.assertEqual([1, 3, 5], [1, 2, 3, 4], drawCard([1, 3], [1, 2, 3, 4, 5], 5))
+        self.assertEqual([1, 3, 5], drawCard([1, 3], 5))
 
     def test_startDeck(self):
         self.assertEqual([1], startDeck())

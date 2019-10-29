@@ -21,14 +21,13 @@ def cardGenerator() :
 
 def startDeck() :
     deck = []
-    for i in range(21) :
+    for i in range(18) :
         drawCard(deck, cardGenerator())
     return deck
 
-def drawCard(playerHand, playerDeck, card) :
+def drawCard(playerHand, card) :
     playerHand.append(card)
-    playerDeck.remove(card)
-    return playerHand, playerDeck
+    return playerHand
 
 def playCard(playerHand, card) :
     playerHand.remove(card)
@@ -41,9 +40,15 @@ def dealDamage(playerHealth, damage) :
         return None
 
 def gamePlay() :
+    playerHand = [1, 2, 3]
     enemyHealth = 30
     playerDeck = (startDeck())
-    #drawCard(playerDeck, )
+    damage = abs(playerDeck[0])
+    drawCard(playerHand, playerDeck[0]) # this copies random card from pD -> pH
+    playerDeck.pop(0)
+    print(playerDeck)
+    print(playerHand)
 
 
-#gamePlay()
+
+gamePlay()
