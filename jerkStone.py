@@ -10,7 +10,7 @@ import random
 # then just pull a random card and put it into defined "hand"
 
 # mutating variables for each player's health
-
+#
 
 # def playCard(cardCost, damage)
      # player2Health = player2Health - damage
@@ -25,9 +25,10 @@ def startDeck() :
         drawCard(deck, cardGenerator())
     return deck
 
-def drawCard(playerHand, card) :
+def drawCard(playerHand, playerDeck, card) :
     playerHand.append(card)
-    return playerHand
+    playerDeck.remove(card)
+    return playerHand, playerDeck
 
 def playCard(playerHand, card) :
     playerHand.remove(card)
@@ -39,9 +40,10 @@ def dealDamage(playerHealth, damage) :
     else :
         return None
 
-
-
-#def gamePlay() :
+def gamePlay() :
+    enemyHealth = 30
+    playerDeck = (startDeck())
+    #drawCard(playerDeck, )
 
 
 #gamePlay()
