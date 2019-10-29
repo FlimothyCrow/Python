@@ -44,7 +44,6 @@ def gamePlay() :
     mana = 10
     enemyHealth = 30
     playerDeck = (startDeck())
-    damage = abs(playerDeck[0])
     drawCard(playerHand, playerDeck[0]) # this copies random card from pD -> pH
     playerDeck.pop(0)
     print("Your current hand is:\n", playerHand, "\nYou have {} cards left in your deck" .format(len(playerDeck)))
@@ -59,6 +58,7 @@ def gamePlay() :
     else :
         print("You don't have enough mana for that card, ya mook, try again")
         print("You now have {} mana remaining".format(mana))
+    print("You can play another card or you can end your turn")
 
 
 
