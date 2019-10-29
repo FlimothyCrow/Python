@@ -16,6 +16,12 @@ import random
      # player2Health = player2Health - damage
      # player1Mana = player1Mana - cardCost
 
+gameState = {'health': 30,
+             'mana': 10,
+             'hand':[1, 2, 3],
+             'deck':[3, 5, 7, 4, 3, 5, 8, 9, 9, 10, 10, 1, 2, 1]}
+
+
 def cardGenerator() :
     return random.randint(1, 11)
 
@@ -33,16 +39,15 @@ def playCard(playerHand, card) :
     playerHand.remove(card)
     return playerHand
 
-def dealDamage(playerHealth, damage) :
-    if playerHealth - damage > 0:
-        return playerHealth - damage
-    else :
-        return None
+def dealDamage(state, damage) :
+    damagePoints = (state.get('health')) - damage
+    state.update({'health': damagePoints})
+    return state
 
-def gameState() :
-    state = {'health': 30,
-                 'mana': 10,
-                 'hand':[1, 2, 3],
-                 'deck':[3, 5, 7, 4, 3, 5, 8, 9, 9, 10, 10, 1, 2, 1]}
-    print(state)
+
+
+#def updateGame(state) :
+
+
+
 
