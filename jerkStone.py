@@ -33,7 +33,15 @@ def playCard(playerHand, card) :
     playerHand.remove(card)
     return playerHand
 
-def gamePlay() :
+def dealDamage(playerHealth, damage) :
+    if playerHealth - damage > 0:
+        return playerHealth - damage
+    else :
+        return None
+
+
+
+#def gamePlay() :
 
 
 #gamePlay()
