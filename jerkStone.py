@@ -46,8 +46,7 @@ def gamePlay() :
     damage = abs(playerDeck[0])
     drawCard(playerHand, playerDeck[0]) # this copies random card from pD -> pH
     playerDeck.pop(0)
-    print(playerDeck)
-    print(playerHand)
+    print("Your current hand is:\n", playerHand, "\nYou have {} cards left" .format(len(playerDeck)))
 
 
 
