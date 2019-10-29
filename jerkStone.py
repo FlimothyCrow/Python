@@ -41,12 +41,16 @@ def dealDamage(playerHealth, damage) :
 
 def gamePlay() :
     playerHand = [1, 2, 3]
+
     enemyHealth = 30
     playerDeck = (startDeck())
     damage = abs(playerDeck[0])
     drawCard(playerHand, playerDeck[0]) # this copies random card from pD -> pH
     playerDeck.pop(0)
     print("Your current hand is:\n", playerHand, "\nYou have {} cards left" .format(len(playerDeck)))
+    playedCard = input("Which card would you like to play?")
+    print(playedCard)
+
 
 
 
