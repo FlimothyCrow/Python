@@ -29,10 +29,11 @@ def drawCard(playerHand, card) :
     playerHand.append(card)
     return playerHand
 
+def playCard(playerHand, card) :
+    playerHand.remove(card)
+    return playerHand
+
 def gamePlay() :
-    player1Hand = []
-    player2Hand = []
-    player1Hand.append(cardGenerator())
-    print(player1Hand)
+
 
 #gamePlay()
