@@ -41,16 +41,21 @@ def dealDamage(playerHealth, damage) :
 
 def gamePlay() :
     playerHand = [1, 2, 3]
-
+    mana = 10
     enemyHealth = 30
     playerDeck = (startDeck())
     damage = abs(playerDeck[0])
     drawCard(playerHand, playerDeck[0]) # this copies random card from pD -> pH
     playerDeck.pop(0)
-    print("Your current hand is:\n", playerHand, "\nYou have {} cards left" .format(len(playerDeck)))
+    print("Your current hand is:\n", playerHand, "\nYou have {} cards left in your deck" .format(len(playerDeck)))
     playedCard = input("Which card would you like to play?")
-    print(playedCard)
-
+    if int(playedCard) < mana :
+        mana = mana - int(playedCard)
+        print(playedCard)
+        print("You now have {} mana remaining" .format(mana))
+    else :
+        print("You don't have enough mana for that card, ya mook, try again")
+        print("You now have {} mana remaining".format(mana))
 
 
 
