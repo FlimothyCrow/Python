@@ -32,11 +32,9 @@ def startDeck() :
     return deck
 
 def drawCard(state) :
-    return (state.get('deck'))[0]
-
-def playCard(playerHand, card) :
-    playerHand.remove(card)
-    return playerHand
+    deck = state.get('deck')
+    del deck[0]
+    return state
 
 def dealDamage(state, damage) :
     damagePoints = (state.get('health')) - damage
