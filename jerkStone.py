@@ -58,3 +58,9 @@ loop
 /loop
 """
 #def stateController(state) :
+#    startDeck(state)
+
+
+
+#stateController(gameState)
+
