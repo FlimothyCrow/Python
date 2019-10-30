@@ -5,13 +5,19 @@ gameState = {'health': 30,
              'hand':[1, 2, 3],
              }
 
+gameState2 = {'health': 30,
+             'mana': 0,
+             'hand':[1, 2, 3],
+             'deck': [0, 5]}
+
+
 def cardGenerator() :
     return random.randint(1, 11)
 
 def startDeck(state) :
     drawnCards = []
     state["deck"] = drawnCards
-    for i in range(18) :
+    for i in range(7) :
         drawnCards.append(cardGenerator())
     return state
 
@@ -52,10 +58,7 @@ def statePrinter(state) :
     print(" Health {}\n".format(state.get('health')),
           "Mana {}\n" .format(state.get('mana')),
           "Cards {}\n".format(state.get('hand')),
-          "There are {} cards left in your deck".format(state.get(len('deck'))))
-
-
-#statePrinter(gameState)
+          "There are {} cards left in your deck".format(len(state.get('deck'))))
 
 """
 controller jobs
@@ -71,11 +74,11 @@ loop
 /loop
 """
 def stateController(state) :
-    startDeck(state)
+    deckState = startDeck(state)
     #firstCard = input("It's your turn. You can play a card or end your turn")
-    #print(firstCard)
-    statePrinter(state)
+    statePrinter(deckState)
 
 
 
-#stateController(gameState)
+
+stateController(gameState)
