@@ -44,6 +44,14 @@ def dealDamage(state, damage) :
     state.update({'health': damagePoints})
     return state
 
+def statePrinter(state) :
+    print(" Health {}\n".format(state.get('health')),
+          "Mana {}\n" .format(state.get('mana')),
+          "Cards {}\n".format(state.get('hand')))
+statePrinter(gameState)
+
+#'{0} in {1}'.format(unicode(self.author, 'utf-8'), unicode(self.publication, 'utf-8'))
+
 """
 controller jobs
 define current player
