@@ -18,6 +18,10 @@ def startDeck(state) :
 def drawCard(state) :
     deck = state.get('deck')
     hand = state.get('hand')
+    if state['mana'] < 10 :
+        state['mana'] = state['mana'] + 1
+    else :
+        state['mana'] = state['mana']
     if len(hand) >= 5 :
         del deck[0]
         return state
@@ -47,10 +51,11 @@ def dealDamage(state, damage) :
 def statePrinter(state) :
     print(" Health {}\n".format(state.get('health')),
           "Mana {}\n" .format(state.get('mana')),
-          "Cards {}\n".format(state.get('hand')))
-statePrinter(gameState)
+          "Cards {}\n".format(state.get('hand')),
+          "There are {} cards left in your deck".format(state.get(len('deck'))))
 
-#'{0} in {1}'.format(unicode(self.author, 'utf-8'), unicode(self.publication, 'utf-8'))
+
+#statePrinter(gameState)
 
 """
 controller jobs
@@ -65,10 +70,12 @@ loop
     switch player
 /loop
 """
-#def stateController(state) :
-#    startDeck(state)
+def stateController(state) :
+    startDeck(state)
+    #firstCard = input("It's your turn. You can play a card or end your turn")
+    #print(firstCard)
+    statePrinter(state)
 
 
 
 #stateController(gameState)
-
