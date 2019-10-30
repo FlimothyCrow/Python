@@ -39,14 +39,8 @@ def drawCard(state) :
 def playCard(state, card) :
     spent = state.get('mana') - card
     hand = state.get('hand')
-    if card in hand :
-        if state.get('mana') >= card :
-            hand.remove(card)
-            state.update({'mana': spent})
-        else :
-            return "mana"
-    else :
-        return "card"
+    hand.remove(card)
+    state.update({'mana': spent})
     return state
 
 def dealDamage(state, damage) :
@@ -59,6 +53,17 @@ def statePrinter(state) :
           "Mana {}\n" .format(state.get('mana')),
           "Cards {}\n".format(state.get('hand')),
           "There are {} cards left in your deck".format(len(state.get('deck'))))
+
+def validPlay(state, card) :
+    if card <= int(state['mana']) :
+        if card in state['hand'] :
+            return True
+        else :
+            return "card"
+    else :
+        return "mana"
+
+#statePrinter(gameState2)
 
 """
 controller jobs
@@ -75,10 +80,22 @@ loop
 """
 def stateController(state) :
     deckState = startDeck(state)
-    #firstCard = input("It's your turn. You can play a card or end your turn")
+    deckState = drawCard(deckState)
     statePrinter(deckState)
+    firstCard = input("It's your turn. You can play a card or end your turn")
+    if playCard(deckState, int(firstCard)) :
 
 
+        """
+        print("You don't have enough mana to play that card")
+    elif playCard(deckState, int(firstCard)) == "card" :
+        print("You don't have that card in your hand")
+    else:
+        deckState = playCard(deckState, int(firstCard))
+        """
+    statePrinter(deckState)
+    #nextCard = input("You can play another card, or type 'END' to end your turn")
 
+#assign new variable to each return
 
-stateController(gameState)
+#stateController(gameState)

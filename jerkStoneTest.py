@@ -25,9 +25,6 @@ class jerkStoneTest(unittest.TestCase):
                 'hand': [1, 2, 3, 8, 9],
                 'deck': [1, 2]}, drawCard(tooManyCards))
 
-    #def test_startDeck(self):
-        #self.assertEqual([1], startDeck())
-
     def test_playCard(self):
         newGameState = {'health': 30,
                         'mana': 2,
@@ -39,10 +36,6 @@ class jerkStoneTest(unittest.TestCase):
                         'hand': [2, 3],
                         'deck': [3, 5]}, playCard(newGameState, 1))
 
-        self.assertEqual("card", playCard(newGameState, 4))
-
-        self.assertEqual("mana", playCard(newGameState, 3)) # not enough mana
-
     def test_dealDamage(self):
         state = {'health': 30,
                  'mana': 10,
@@ -52,3 +45,12 @@ class jerkStoneTest(unittest.TestCase):
                           'mana': 10,
                           'hand': [1, 2, 3],
                           'deck': [4, 5, 7]}, dealDamage(state, 5))
+
+    def test_validPlay(self):
+        state1 = {'health': 30,
+                 'mana': 2,
+                 'hand': [8, 2, 3],
+                 'deck': [4, 5, 7]}
+        self.assertEqual(True, validPlay(state1, 2))
+        self.assertEqual("mana", validPlay(state1, 4))
+        self.assertEqual("card", validPlay(state1, 1))
