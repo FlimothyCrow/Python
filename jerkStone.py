@@ -33,6 +33,8 @@ def startDeck() :
 
 def drawCard(state) :
     deck = state.get('deck')
+    hand = state.get('hand')
+    hand.append(deck[0])
     del deck[0]
     return state
 

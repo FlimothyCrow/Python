@@ -12,7 +12,7 @@ class jerkStoneTest(unittest.TestCase):
 
         self.assertEqual({'health': 30,
                  'mana': 10,
-                 'hand': [1, 2, 3],
+                 'hand': [1, 2, 3, 3],
                  'deck': [5, 7, 4, 3, 5, 8, 9, 9, 10, 10, 1, 2, 1]}, drawCard(newGameState))
 
     def test_startDeck(self):
