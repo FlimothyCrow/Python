@@ -27,9 +27,11 @@ def drawCard(state) :
         return state
 
 def playCard(state, card) :
-    deck = state.get('deck')
-    if card in deck :
-        deck.remove(card)
+    spent = state.get('mana') - card
+    hand = state.get('hand')
+    if card in hand :
+        hand.remove(card)
+        state.update({'mana': spent})
     return state
 # modify mana state
 
