@@ -39,7 +39,9 @@ class jerkStoneTest(unittest.TestCase):
                         'hand': [2, 3],
                         'deck': [3, 5]}, playCard(newGameState, 1))
 
-        self.assertEqual(None, playCard(newGameState, 3))
+        self.assertEqual("card", playCard(newGameState, 4))
+
+        self.assertEqual("mana", playCard(newGameState, 3)) # not enough mana
 
 
 

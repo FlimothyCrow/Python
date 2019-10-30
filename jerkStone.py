@@ -34,7 +34,9 @@ def playCard(state, card) :
             hand.remove(card)
             state.update({'mana': spent})
         else :
-            return None
+            return "mana"
+    else :
+        return "card"
     return state
 
 def dealDamage(state, damage) :
