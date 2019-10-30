@@ -30,10 +30,12 @@ def playCard(state, card) :
     spent = state.get('mana') - card
     hand = state.get('hand')
     if card in hand :
-        hand.remove(card)
-        state.update({'mana': spent})
+        if state.get('mana') >= card :
+            hand.remove(card)
+            state.update({'mana': spent})
+        else :
+            return None
     return state
-# modify mana state
 
 def dealDamage(state, damage) :
     damagePoints = (state.get('health')) - damage
