@@ -36,7 +36,6 @@ def drawCard(state) :
         return state
 
 def playCard(state, card) :
-
     spent = state.get('mana') - int(card)
     hand = state.get('hand')
     hand.remove(int(card))
@@ -66,9 +65,9 @@ def validPlay(state, card) :
 # add AI health and decks in gameState
 #statePrinter(gameState2)
 
-def endTurn(state) :
+def endTurn(state, counter) :
     state = drawCard(state)
-    #state = restoreMana(state)
+    state = restoreMana(state, counter)
     # bleeding damage if deck == zero
     return state
 
@@ -84,7 +83,7 @@ def stateController2(state) :
         statePrinter(state)
         nextPlay = input("Pick a card")
         if nextPlay == "END" :
-            state = endTurn(state) # restore mana, draw card,
+            state = endTurn(state, counter) # restore mana, draw card,
         else:
                 state = playCard(state, nextPlay)
                 # if health == zero - > break
