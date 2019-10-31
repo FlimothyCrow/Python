@@ -33,7 +33,9 @@ def drawCard(state) :
 
 def validPlay(state, card) :
     if int(card) <= int(state['mana']) :
-        if card in state['hand'] :
+        print(state['hand'])
+        if int(card) in state['hand'] :
+            print("3")
             return True
 
 def dealDamage(state, damage) :
@@ -61,46 +63,30 @@ def endTurn(state) :
     return state
 
 def playCard(state, card) :
+    print("1")
     spent = state.get('mana') - int(card)
     hand = state.get('hand')
     if validPlay(state, card) :
         hand.remove(int(card))
         state.update({'mana': spent})
         state = dealDamage(state, int(card))
-
     return state
 
-print(playCard(gameState, 1))
+#print(playCard(gameState, 1))
 
 def stateController2(state) :
     state = startDeck(state)
     while True :
-        state['turn'] = state['turn'] + 1
         statePrinter(state)
         nextPlay = input("Pick a card")
         if nextPlay == "END" :
+            state['turn'] = state['turn'] + 1
             state = endTurn(state)
         else:
             state = playCard(state, nextPlay)
 
-# playCard does return and print correctly
-# the board is only printed with endTurn, not on playCard
-# when the loop ends, drawCard is called but playCard is not
-# input("END") causes invalid literal for in() with base 10
 # ONE LOOP ONE PRINT ONE INPUT
 # ghost recon
 
-#stateController2(gameState)
-
-def jerkController(state) :
-    state = playCard(gameState, 1)
-    return state
-
-#jerkController(gameState)
-
-def dummy(state, card) :
-    state = startDeck(state)
-    playCard(state, card)
-
-
+#practice the print trick
 #dummy(gameState, 1)
