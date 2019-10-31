@@ -1,6 +1,6 @@
 import random
 
-gameState = {'health': 30,
+gameState = {'health': 5,
              'mana': 1,
              'hand':[1, 2, 3],
              'turn':1,
@@ -62,12 +62,13 @@ def endTurn(state) :
     return state
 
 def playCard(state, card) :
-    spent = state.get('mana') - int(card)
-    hand = state.get('hand')
-    if validPlay(state, card) :
-        hand.remove(int(card))
-        state.update({'mana': spent})
-        state = dealDamage(state, int(card))
+    if card != "END" :
+        spent = state.get('mana') - int(card)
+        hand = state.get('hand')
+        if validPlay(state, card) :
+            hand.remove(int(card))
+            state.update({'mana': spent})
+            state = dealDamage(state, int(card))
     return state
 
 #print(playCard(gameState, 1))
@@ -78,8 +79,12 @@ def stateController2(state) :
         statePrinter(state)
         nextPlay = input("Pick a card")
         if nextPlay == "END" :
-            state['turn'] = state['turn'] + 1
-            state = endTurn(state)
+            if state['health'] > 0 :
+                state['turn'] = state['turn'] + 1
+                state = endTurn(state)
+            else :
+                print("GAME OVER MAN")
+                break
         else:
             state = playCard(state, nextPlay)
 
