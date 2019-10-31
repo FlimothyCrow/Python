@@ -62,8 +62,6 @@ def validPlay(state, card) :
             return "card"
     else :
         return "mana"
-# add AI health and decks in gameState
-#statePrinter(gameState2)
 
 def endTurn(state, counter) :
     health = state['health']
@@ -94,9 +92,5 @@ def stateController2(state) :
 # deal Damage attacks "player health"
 # update tests for dealDamage
 # valid play within playCard to return None, maybe add a "why turn failed" in endGame
-# build restoreMana
-# bleeding damage if deck == zero
-
-#stateController2(gameState)
 
 # ghost recon

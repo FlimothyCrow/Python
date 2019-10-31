@@ -31,7 +31,7 @@ class jerkStoneTest(unittest.TestCase):
                         'hand': [1, 2, 3],
                         'deck': [3, 5]}
 
-        self.assertEqual({'health': 30,
+        self.assertEqual({'health': 29,
                         'mana': 1,
                         'hand': [2, 3],
                         'deck': [3, 5]}, playCard(newGameState, 1))
