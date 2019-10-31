@@ -3,12 +3,14 @@ import random
 gameState = {'health': 30,
              'mana': 1,
              'hand':[1, 2, 3],
+             'turn':1,
              }
 
 gameState2 = {'health': 30,
              'mana': 1,
              'hand':[1, 2, 3],
-             'deck': [0, 5]}
+             'turn': 1,
+             'deck':[0, 5]}
 
 def cardGenerator() :
     return random.randint(1, 11)
@@ -51,16 +53,16 @@ def statePrinter(state) :
           "Cards {}\n".format(state.get('hand')),
           "There are {} cards left in your deck".format(len(state.get('deck'))))
 
-def endTurn(state, counter) :
+def endTurn(state) :
     health = state['health']
     state = drawCard(state)
-    state = restoreMana(state, counter)
+    state = restoreMana(state)
     if not state['deck']:
         state.update({'health': health - 1})
     return state
 
-def restoreMana(state, turnCounter) :
-    state['mana'] = turnCounter
+def restoreMana(state) :
+    state['mana'] = state['turn']
     return state
 
 def playCard(state, card) :
@@ -74,14 +76,14 @@ def playCard(state, card) :
     return state
 
 def stateController2(state) :
+    turnCount = state['turn']
     state = startDeck(state)
-    turnCount = 0
     while True :
         turnCount = turnCount + 1
         statePrinter(state)
         nextPlay = input("Pick a card")
         if nextPlay == "END" :
-            state = endTurn(state, turnCount)
+            state = endTurn(state)
         else:
             state = playCard(state, nextPlay)
 
@@ -90,5 +92,8 @@ def stateController2(state) :
 # input("END") causes invalid literal for in() with base 10
 # ONE LOOP ONE PRINT ONE INPUT
 # ghost recon
-stateController2(gameState)
+
+#turnCounter in gameState
+# add counter in endTurn
+#stateController2(gameState)
 
