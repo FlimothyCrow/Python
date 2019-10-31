@@ -75,18 +75,18 @@ def restoreMana(state, turnCounter) :
 
 def stateController2(state) :
     state = startDeck(state)
-    counter = 0
+    turnCount = 0
     while True :
-        counter = counter + 1
+        turnCount = turnCount + 1
         statePrinter(state)
         nextPlay = input("Pick a card")
         if nextPlay == "END" :
-            state = endTurn(state, counter) # restore mana, draw card,
+            state = endTurn(state, turnCount) # restore mana, draw card,
         else:
                 state = playCard(state, nextPlay)
                 # if health == zero - > break
 
 # ONE LOOP ONE PRINT ONE INPUT
-# valid play within playCard to return None, maybe add a "why turn failed" in endGame
-
 # ghost recon
+#stateController2(gameState)
+
