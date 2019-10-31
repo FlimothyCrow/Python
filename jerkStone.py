@@ -70,6 +70,8 @@ def playCard(state, card) :
 
     return state
 
+print(playCard(gameState, 1))
+
 def stateController2(state) :
     state = startDeck(state)
     while True :
@@ -81,14 +83,24 @@ def stateController2(state) :
         else:
             state = playCard(state, nextPlay)
 
+# playCard does return and print correctly
 # the board is only printed with endTurn, not on playCard
 # when the loop ends, drawCard is called but playCard is not
 # input("END") causes invalid literal for in() with base 10
 # ONE LOOP ONE PRINT ONE INPUT
 # ghost recon
 
-#turnCounter in gameState
-# add counter in endTurn
 #stateController2(gameState)
 
-#print(gameState['turn'])
+def jerkController(state) :
+    state = playCard(gameState, 1)
+    return state
+
+#jerkController(gameState)
+
+def dummy(state, card) :
+    state = startDeck(state)
+    playCard(state, card)
+
+
+#dummy(gameState, 1)
