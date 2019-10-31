@@ -79,8 +79,9 @@ class jerkStoneTest(unittest.TestCase):
 
     def test_endTurn(self):
         finishState = {'health': 30,
-                  'mana': 2,
+                  'mana': 4,
                   'hand': [8, 2, 3],
+                  'turn': 4,
                   'deck': [4, 5, 7]}
 
         finishStateBleed = {'health': 30,
@@ -88,12 +89,13 @@ class jerkStoneTest(unittest.TestCase):
                        'hand': [8, 2, 3, 1],
                        'deck': [1]}
 
-        self.assertEqual({'health': 30,
+        self.assertEqual({'health': 30, # this passes
                   'mana': 4,
                   'hand': [8, 2, 3, 4],
+                  'turn': 4,
                   'deck': [5, 7]}, endTurn(finishState))
 
-        self.assertEqual({'health': 29,
+        self.assertEqual({'health': 29, # this fails
                           'mana': 4,
                           'hand': [8, 2, 3, 1, 1],
                           'deck': []}, endTurn(finishStateBleed))

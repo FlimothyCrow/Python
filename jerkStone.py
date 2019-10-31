@@ -6,12 +6,6 @@ gameState = {'health': 30,
              'turn':1,
              }
 
-gameState2 = {'health': 30,
-             'mana': 1,
-             'hand':[1, 2, 3],
-             'turn': 1,
-             'deck':[0, 5]}
-
 def cardGenerator() :
     return random.randint(1, 11)
 
@@ -53,16 +47,17 @@ def statePrinter(state) :
           "Cards {}\n".format(state.get('hand')),
           "There are {} cards left in your deck".format(len(state.get('deck'))))
 
+def restoreMana(state) :
+    turn = state['turn']
+    state['mana'] = turn
+    return state
+
 def endTurn(state) :
     health = state['health']
     state = drawCard(state)
     state = restoreMana(state)
     if not state['deck']:
         state.update({'health': health - 1})
-    return state
-
-def restoreMana(state) :
-    state['mana'] = state['turn']
     return state
 
 def playCard(state, card) :
@@ -76,10 +71,9 @@ def playCard(state, card) :
     return state
 
 def stateController2(state) :
-    turnCount = state['turn']
     state = startDeck(state)
     while True :
-        turnCount = turnCount + 1
+        state['turn'] = state['turn'] + 1
         statePrinter(state)
         nextPlay = input("Pick a card")
         if nextPlay == "END" :
@@ -97,3 +91,4 @@ def stateController2(state) :
 # add counter in endTurn
 #stateController2(gameState)
 
+#print(gameState['turn'])
