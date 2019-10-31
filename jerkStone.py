@@ -35,7 +35,6 @@ def validPlay(state, card) :
     if int(card) <= int(state['mana']) :
         print(state['hand'])
         if int(card) in state['hand'] :
-            print("3")
             return True
 
 def dealDamage(state, damage) :
@@ -63,7 +62,6 @@ def endTurn(state) :
     return state
 
 def playCard(state, card) :
-    print("1")
     spent = state.get('mana') - int(card)
     hand = state.get('hand')
     if validPlay(state, card) :
@@ -87,6 +85,5 @@ def stateController2(state) :
 
 # ONE LOOP ONE PRINT ONE INPUT
 # ghost recon
-
+stateController2(gameState)
 #practice the print trick
-#dummy(gameState, 1)
