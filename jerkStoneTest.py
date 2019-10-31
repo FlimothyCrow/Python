@@ -54,3 +54,14 @@ class jerkStoneTest(unittest.TestCase):
         self.assertEqual(True, validPlay(state1, 2))
         self.assertEqual("mana", validPlay(state1, 4))
         self.assertEqual("card", validPlay(state1, 1))
+
+    def test_restoreMana(self):
+        manaState = {'health': 30,
+                  'mana': 2,
+                  'hand': [8, 2, 3],
+                  'deck': [4, 5, 7]}
+
+        self.assertEqual({'health': 30,
+                  'mana': 3,
+                  'hand': [8, 2, 3],
+                  'deck': [4, 5, 7]}, restoreMana(manaState, 3))
