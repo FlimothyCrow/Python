@@ -66,9 +66,11 @@ def validPlay(state, card) :
 #statePrinter(gameState2)
 
 def endTurn(state, counter) :
+    health = state['health']
     state = drawCard(state)
     state = restoreMana(state, counter)
-    # bleeding damage if deck == zero
+    if not state['deck']:
+        state.update({'health': health - 1})
     return state
 
 def restoreMana(state, turnCounter) :
