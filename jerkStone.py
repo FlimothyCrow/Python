@@ -38,9 +38,11 @@ def drawCard(state) :
 def playCard(state, card) :
     spent = state.get('mana') - int(card)
     hand = state.get('hand')
-    hand.remove(int(card))
-    state.update({'mana': spent})
-    state = dealDamage(state, int(card))
+    if validPlay(state, card) :
+        hand.remove(int(card))
+        state.update({'mana': spent})
+        state = dealDamage(state, int(card))
+        print("Invalid move")
     return state
 
 def dealDamage(state, damage) :
@@ -58,10 +60,6 @@ def validPlay(state, card) :
     if int(card) <= int(state['mana']) :
         if card in state['hand'] :
             return True
-        else :
-            return "card"
-    else :
-        return "mana"
 
 def endTurn(state, counter) :
     health = state['health']
@@ -89,8 +87,6 @@ def stateController2(state) :
                 # if health == zero - > break
 
 # ONE LOOP ONE PRINT ONE INPUT
-# deal Damage attacks "player health"
-# update tests for dealDamage
 # valid play within playCard to return None, maybe add a "why turn failed" in endGame
 
 # ghost recon

@@ -36,6 +36,11 @@ class jerkStoneTest(unittest.TestCase):
                         'hand': [2, 3],
                         'deck': [3, 5]}, playCard(newGameState, 1))
 
+        self.assertEqual({'health': 29,
+                          'mana': 1,
+                          'hand': [2, 3],
+                          'deck': [3, 5]}, playCard(newGameState, 2))
+
     def test_dealDamage(self):
         state = {'health': 30,
                  'mana': 10,
@@ -52,8 +57,8 @@ class jerkStoneTest(unittest.TestCase):
                  'hand': [8, 2, 3],
                  'deck': [4, 5, 7]}
         self.assertEqual(True, validPlay(state1, 2))
-        self.assertEqual("mana", validPlay(state1, 4))
-        self.assertEqual("card", validPlay(state1, 1))
+        self.assertEqual(None, validPlay(state1, 4))
+        self.assertEqual(None, validPlay(state1, 1))
 
     def test_restoreMana(self):
         manaState = {'health': 30,
