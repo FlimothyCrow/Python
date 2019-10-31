@@ -35,15 +35,10 @@ def drawCard(state) :
         del deck[0]
         return state
 
-def playCard(state, card) :
-    spent = state.get('mana') - int(card)
-    hand = state.get('hand')
-    if validPlay(state, card) :
-        hand.remove(int(card))
-        state.update({'mana': spent})
-        state = dealDamage(state, int(card))
-        print("Invalid move")
-    return state
+def validPlay(state, card) :
+    if int(card) <= int(state['mana']) :
+        if card in state['hand'] :
+            return True
 
 def dealDamage(state, damage) :
     damagePoints = (state.get('health')) - damage
@@ -55,11 +50,6 @@ def statePrinter(state) :
           "Mana {}\n" .format(state.get('mana')),
           "Cards {}\n".format(state.get('hand')),
           "There are {} cards left in your deck".format(len(state.get('deck'))))
-
-def validPlay(state, card) :
-    if int(card) <= int(state['mana']) :
-        if card in state['hand'] :
-            return True
 
 def endTurn(state, counter) :
     health = state['health']
@@ -73,6 +63,17 @@ def restoreMana(state, turnCounter) :
     state['mana'] = turnCounter
     return state
 
+def playCard(state, card) :
+    spent = state.get('mana') - int(card)
+    hand = state.get('hand')
+    if validPlay(state, card) :
+        hand.remove(int(card))
+        state.update({'mana': spent})
+        state = dealDamage(state, int(card))
+    else:
+        print("Invalid move")
+    return state
+
 def stateController2(state) :
     state = startDeck(state)
     turnCount = 0
@@ -80,13 +81,14 @@ def stateController2(state) :
         turnCount = turnCount + 1
         statePrinter(state)
         nextPlay = input("Pick a card")
-        if nextPlay == "END" :
-            state = endTurn(state, turnCount) # restore mana, draw card,
+        if nextPlay != "END" :
+            state = endTurn(state, turnCount)
         else:
-                state = playCard(state, nextPlay)
-                # if health == zero - > break
+            state = playCard(state, nextPlay)
 
+# when the loop ends, drawCard is called but playCard is not
+# playCard is not being called correctly on line 86
 # ONE LOOP ONE PRINT ONE INPUT
 # ghost recon
-#stateController2(gameState)
+stateController2(gameState)
 
