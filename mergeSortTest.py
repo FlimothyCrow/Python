@@ -10,4 +10,4 @@ class mergeSortTest(unittest.TestCase):
 
     def test_sortReverse(self):
         self.assertEqual([5, 4, 3, 2, 1], sortReverse([3, 4, 1, 5, 2]))
-
+        self.assertEqual([[3,0], [1,0], [0,3], [0,1]], sortReverse([[1,0], [3,0], [0,3], [0,1]]))
