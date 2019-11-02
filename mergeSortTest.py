@@ -13,3 +13,5 @@ class mergeSortTest(unittest.TestCase):
         self.assertEqual([5, 4, 3, 2, 1], sortReverse([3, 4, 1, 5, 2]))
         self.assertEqual([[3,0], [1,0], [0,3], [0,1]], sortReverse([[1,0], [3,0], [0,3], [0,1]]))
         self.assertEqual([[0, 1], [0, 0, 1], [0, 0, 0, 1]], sortReverse([[0, 1], [0, 0, 1], [0, 0, 0, 1]]))
+        #self.assertEqual(["x", "b", "a", 3, 1], sortReverse([1, "a", 9, "x", 3, "b"]))
+        self.assertEqual(["jerk store", "every time I die", "alphabet", "Curly's a dope"], sortReverse(["alphabet", "jerk store", "every time I die", "Curly's a dope"]))
