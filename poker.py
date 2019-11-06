@@ -21,6 +21,16 @@ class Hand:
         self.cards = Cards
 
 def makeCard(cardString) :
-    cardValue = int(cardString[:-1])
+    if cardString[0] == "K" :
+        cardValue = 13
+    elif cardString[0] == "A" :
+        cardValue = 14
+    elif cardString[0] == "Q":
+        cardValue = 12
+    elif cardString[0] == "J":
+        cardValue = 11
+    else :
+        cardValue = int(cardString[:-1])
     return Card(cardString[-1], cardValue)
+
 
