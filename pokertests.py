@@ -27,3 +27,6 @@ class PokerTests(unittest.TestCase):
         self.assertEqual("pair", matchCheck(makeHand("3S 3D QD 5H 8C")))
         self.assertEqual("three", matchCheck(makeHand("3S 3D QD 3H 8C")))
         self.assertEqual("four", matchCheck(makeHand("3S 3D QD 3H 3C")))
+
+    def test_inOrder(self):
+        self.assertEqual(True, inOrder(makeHand("2D 3C 4H 5H 6D")))

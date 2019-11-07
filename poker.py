@@ -70,6 +70,12 @@ def matchCheck(hand) :
         if value == 4 :
             return "four"
 
+def inOrder(hand) :
+    values = cardValues(hand)
+    return values
+
+
+
 
 
 
