@@ -72,7 +72,9 @@ def matchCheck(hand) :
 
 def inOrder(hand) :
     values = cardValues(hand)
-    return values
+    if values[4] - values[0] == 4 :
+        return "{} through {}" .format(values[0], values[4])
+
 
 
 
