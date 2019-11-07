@@ -33,4 +33,16 @@ def makeCard(cardString) :
         cardValue = int(cardString[:-1])
     return Card(cardString[-1], cardValue)
 
+def cardValues(cardString) :
+    values = []
+    cardString = cardString.split()
+    for card in cardString :
+        values.append(card[:-1])
+    return values
+
+def howManyLike(cardString) :
+
+
+def matchCheck(cardString) :
+    return cardString
 
