@@ -16,7 +16,9 @@ class Card:
         self.suit = suit
         self.value = value
 
-class Hand:
+class Hand: # add parameter called type
+    # def function deteremineHandType
+    # this constructor is a template to make new hands
     def __init__(self, Cards):
         self.cards = Cards
 
@@ -33,16 +35,24 @@ def makeCard(cardString) :
         cardValue = int(cardString[:-1])
     return Card(cardString[-1], cardValue)
 
-def cardValues(cardString) :
+# "factory function" that calls on Hand to create hand instance
+def makeHand(cardString) :
+    cardsList = []
+    cards = cardString.split()
+    for card in cards :
+        cardsList.append(makeCard(card))
+    return Hand(cardsList)
+
+# ========================================
+def cardValues(hand) :
     values = []
-    cardString = cardString.split()
-    for card in cardString :
-        values.append(card[:-1])
+    for card in hand.cards :
+        values.append(card.value)
     return values
 
-def howManyLike(cardString) :
+def howManyLike(hand) :
     count = {}
-    values = cardValues(cardString)
+    values = cardValues(hand)
     for value in values :
         if value in count :
             count[value] = count[value] + 1
@@ -50,6 +60,8 @@ def howManyLike(cardString) :
             count[value] = 1
     return count
 
-def matchCheck(cardString) :
+def matchCheck(hand) :
+    cardString = howManyLike(hand)
+#    if
     return cardString
 
