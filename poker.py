@@ -41,7 +41,14 @@ def cardValues(cardString) :
     return values
 
 def howManyLike(cardString) :
-
+    count = {}
+    values = cardValues(cardString)
+    for value in values :
+        if value in count :
+            count[value] = count[value] + 1
+        else :
+            count[value] = 1
+    return count
 
 def matchCheck(cardString) :
     return cardString
