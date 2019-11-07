@@ -61,7 +61,16 @@ def howManyLike(hand) :
     return count
 
 def matchCheck(hand) :
-    cardString = howManyLike(hand)
-#    if
-    return cardString
+    hand = howManyLike(hand).values()
+    for value in hand :
+        if value == 2 :
+            return "pair"
+        if value == 3 :
+            return "three"
+        if value == 4 :
+            return "four"
+
+
+
+
 
