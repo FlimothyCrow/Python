@@ -75,6 +75,10 @@ def inOrder(hand) :
     if values[4] - values[0] == 4 :
         return "{} through {}" .format(values[0], values[4])
 
+def highCard(hand) :
+    values = cardValues(hand)
+    return sorted(values)[-1]
+
 def suitCount(hand) :
     suits = {}
     for card in hand.cards :
@@ -83,10 +87,5 @@ def suitCount(hand) :
         else :
             suits[card.suit] = 1
     return suits
-suitCount((makeHand("AD 3C 4D KC 6H")))
 
-
-
-
-
-
+#def controller(hand) :

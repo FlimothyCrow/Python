@@ -37,3 +37,6 @@ class PokerTests(unittest.TestCase):
 
     def test_suitCount(self):
         self.assertEqual({"D": 2, "C": 2, "H": 1}, suitCount((makeHand("AD 3C 4D KC 6H"))))
+
+    def test_highCard(self):
+        self.assertEqual(12, highCard((makeHand("3D QD 2S 5H 7C"))))
