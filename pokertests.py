@@ -36,7 +36,8 @@ class PokerTests(unittest.TestCase):
         self.assertEqual("10 through 14", inOrder(makeHand("10C JD QD KS AC")))
 
     def test_suitCount(self):
-        self.assertEqual({"D": 2, "C": 2, "H": 1}, suitCount((makeHand("AD 3C 4D KC 6H"))))
+        #self.assertEqual({"D": 2, "C": 2, "H": 1}, suitCount((makeHand("AD 3C 4D KC 6H"))))
+        self.assertEqual("flush", suitCount((makeHand("AD 3D 4D KD 6D"))))
 
     def test_highCard(self):
         self.assertEqual(12, highCard((makeHand("3D QD 2S 5H 7C"))))
@@ -44,3 +45,5 @@ class PokerTests(unittest.TestCase):
     def test_controller(self):
         self.assertEqual("high card 9", controller(makeHand("3D 2S 8H 9H 5S")))
         self.assertEqual("pair", controller(makeHand("5D 2S 8H 9H 5S")))
+        self.assertEqual("three", controller(makeHand("5D 2S 5H 9H 5S")))
+        self.assertEqual("four", controller(makeHand("5D 5C 5H 9H 5S")))

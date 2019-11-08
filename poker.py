@@ -86,10 +86,14 @@ def suitCount(hand) :
             suits[card.suit] = suits[card.suit] + 1
         else :
             suits[card.suit] = 1
-    return suits
-
+    if 5 in suits.values() :
+        return "flush"
+"""
 def controller(hand) :
     if matchCheck(hand) :
         return matchCheck(hand)
+    elif
+
     else :
         return "high card {}" .format(highCard(hand))
+"""
