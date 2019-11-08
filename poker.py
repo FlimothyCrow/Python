@@ -88,4 +88,8 @@ def suitCount(hand) :
             suits[card.suit] = 1
     return suits
 
-#def controller(hand) :
+def controller(hand) :
+    if matchCheck(hand) :
+        return matchCheck(hand)
+    else :
+        return "high card {}" .format(highCard(hand))

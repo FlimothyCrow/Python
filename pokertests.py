@@ -40,3 +40,7 @@ class PokerTests(unittest.TestCase):
 
     def test_highCard(self):
         self.assertEqual(12, highCard((makeHand("3D QD 2S 5H 7C"))))
+
+    def test_controller(self):
+        self.assertEqual("high card 9", controller(makeHand("3D 2S 8H 9H 5S")))
+        self.assertEqual("pair", controller(makeHand("5D 2S 8H 9H 5S")))
