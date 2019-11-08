@@ -63,6 +63,8 @@ def howManyLike(hand) :
 def matchCheck(hand) :
     hand = howManyLike(hand).values()
     for value in hand :
+        if value == 2 and value == 3 :
+            return "full house"
         if value == 2 :
             return "pair"
         if value == 3 :
@@ -90,8 +92,12 @@ def suitCount(hand) :
         return "flush"
 
 def controller(hand) :
-    if matchCheck(hand) :
-        return matchCheck(hand)
+    if inOrder(hand) and suitCount(hand) :
+        return "straight flush"
+    elif inOrder(hand) :
+        return "straight"
+    elif matchCheck(hand) :
+        return matchCheck(hand) #2, 3 or 4
     elif suitCount(hand) :
         return "flush"
     else :
