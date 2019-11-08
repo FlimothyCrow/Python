@@ -7,10 +7,13 @@ class PokerTests(unittest.TestCase):
     def test_makeCard(self):
         card = makeCard("6S")
         card0 = makeCard("KD")
+        card1 = makeCard("3C")
         self.assertEqual(6, card.value)
         self.assertEqual("S", card.suit)
         self.assertEqual("D", card0.suit)
         self.assertEqual(13, card0.value)
+        self.assertEqual("C", card1.suit)
+        self.assertEqual(3, card1.value)
 
     def test_howManyLike(self):
         self.assertEqual({3: 2, 9: 1, 14: 1, 13: 1}, howManyLike(makeHand("AD KS 3D 9H 3C")))
@@ -31,3 +34,6 @@ class PokerTests(unittest.TestCase):
     def test_inOrder(self):
         self.assertEqual("2 through 6", inOrder(makeHand("2D 3C 4H 5H 6D")))
         self.assertEqual("10 through 14", inOrder(makeHand("10C JD QD KS AC")))
+
+    def test_suitCount(self):
+        self.assertEqual({"D": 2, "C": 2, "H": 1}, suitCount((makeHand("AD 3C 4D KC 6H"))))

@@ -17,7 +17,7 @@ class Card:
         self.value = value
 
 class Hand: # add parameter called type
-    # def function deteremineHandType
+    # def function determineHandType
     # this constructor is a template to make new hands
     def __init__(self, Cards):
         self.cards = Cards
@@ -75,7 +75,15 @@ def inOrder(hand) :
     if values[4] - values[0] == 4 :
         return "{} through {}" .format(values[0], values[4])
 
-
+def suitCount(hand) :
+    suits = {}
+    for card in hand.cards :
+        if card.suit in suits:
+            suits[card.suit] = suits[card.suit] + 1
+        else :
+            suits[card.suit] = 1
+    return suits
+suitCount((makeHand("AD 3C 4D KC 6H")))
 
 
 
