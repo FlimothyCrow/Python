@@ -63,13 +63,13 @@ def howManyLike(hand) :
 def matchCheck(hand) :
     hand = howManyLike(hand).values()
     for value in hand :
-        if value == 2 and value == 3 :
+        if 3 in hand and 2 in hand :
             return "full house"
-        if value == 2 :
+        elif value == 2 :
             return "pair"
-        if value == 3 :
+        elif value == 3 :
             return "three"
-        if value == 4 :
+        elif value == 4 :
             return "four"
 
 def inOrder(hand) :

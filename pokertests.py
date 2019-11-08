@@ -27,10 +27,10 @@ class PokerTests(unittest.TestCase):
         self.assertEqual("S", hand.cards[0].suit)
 
     def test_matchCheck(self):
+        self.assertEqual("full house", matchCheck(makeHand("3S 3D QD 3H QC")))
         self.assertEqual("pair", matchCheck(makeHand("3S 3D QD 5H 8C")))
         self.assertEqual("three", matchCheck(makeHand("3S 3D QD 3H 8C")))
         self.assertEqual("four", matchCheck(makeHand("3S 3D QD 3H 3C")))
-        self.assertEqual("full house", matchCheck(makeHand("3S 3D QD 3H QC")))
 
     def test_inOrder(self):
         self.assertEqual("2 through 6", inOrder(makeHand("2D 3C 4H 5H 6D")))
