@@ -47,3 +47,4 @@ class PokerTests(unittest.TestCase):
         self.assertEqual("pair", controller(makeHand("5D 2S 8H 9H 5S")))
         self.assertEqual("three", controller(makeHand("5D 2S 5H 9H 5S")))
         self.assertEqual("four", controller(makeHand("5D 5C 5H 9H 5S")))
+        self.assertEqual("flush", controller(makeHand("3D AD 9D 4D KD")))
