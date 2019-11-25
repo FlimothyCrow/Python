@@ -10,3 +10,6 @@ class PokerTests(unittest.TestCase):
 
         card0 = makeCard("10C")
         self.assertEqual(10, card0.value)
+
+        card1 = makeCard("QH")
+        self.assertEqual(12, card1.value)
