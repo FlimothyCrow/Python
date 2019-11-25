@@ -113,7 +113,7 @@ def accountPrinter():
     for i in range(2):
         f.write(accountNumbers(textReader(), i) + "\n")
 
-accountPrinter()
+#accountPrinter()
 
 
 
