@@ -3,6 +3,13 @@ class Card :
         self.value = value
         self.suit = suit
 
+class Hand :
+    def __init__(self, cards):
+        self.cards = cards
+        """self.card1 = card1
+        self.card2 = card2
+        self.card3 = card3
+        self.card4 = card4"""
 
 
 def makeCard(string) :
@@ -18,3 +25,8 @@ def makeCard(string) :
         cardValue = int(string[:-1])
     return Card(cardValue, string[-1])
 
+def makeHand(stringOfCards) :
+    cards = []
+    for card in stringOfCards.split(" ") :
+        cards.append(card)
+    return Hand(cards)

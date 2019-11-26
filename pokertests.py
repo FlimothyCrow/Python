@@ -19,3 +19,8 @@ class PokerTests(unittest.TestCase):
 
         card = makeCard("JS")
         self.assertEqual(11, card.value)
+
+    def test_makeHand(self):
+        hand = makeHand("KS 3D 5H 9H KD")
+        self.assertEqual("KS", hand.cards[0])
+        self.assertEqual("9H", hand.cards[3])
