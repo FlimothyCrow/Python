@@ -4,6 +4,7 @@ class Card :
         self.suit = suit
 
 
+
 def makeCard(string) :
     if string[0] == "A" :
         cardValue = 14
@@ -16,3 +17,4 @@ def makeCard(string) :
     else :
         cardValue = int(string[:-1])
     return Card(cardValue, string[-1])
+
