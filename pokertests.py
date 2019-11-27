@@ -51,3 +51,13 @@ class PokerTests(unittest.TestCase):
     def test_suitCounter1(self):
         hand = Hand([Card(10, "C"), Card(2, "C"), Card(4, "D"), Card(5, "D")])
         self.assertEqual({"C": 2, "D": 2}, suitCounter(hand))
+
+    def test_isStraight0(self):
+        hand = Hand([Card(2, "S"), Card(4, "C"), Card(3, "C"), Card(6, "D"), Card(5, "H")])
+        actual = isStraight(hand)
+        self.assertEqual("Straight 2 through 6", actual)
+
+    def test_isStraight1(self):
+        hand = Hand([Card(10, "S"), Card(14, "C"), Card(11, "C"), Card(13, "D"), Card(11, "H")])
+        actual = isStraight(hand)
+        self.assertEqual("Straight 10 through 14", actual)

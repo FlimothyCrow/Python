@@ -54,3 +54,10 @@ def suitCounter(hand) :
         else :
             suitsDict[card.suit] += 1
     return suitsDict
+
+
+def isStraight(hand) :
+    smallest = int(min(cardValues(hand)))
+    largest = int(max(cardValues(hand)))
+    if largest - smallest == 4 :
+        return "Straight {} through {}".format(smallest, largest)
