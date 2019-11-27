@@ -47,13 +47,15 @@ def cardCounter(hand) :
 
 
 def matchReturn(hand) :
-    values = cardCounter(hand)
-    for card in values.keys() :
-        if values[card] == 2 :
+    values = cardCounter(hand).values()
+    for card in values :
+        if card == 2 and card == 3 :
+            return "full house"
+        if card == 2 :
             return "pair"
-        elif values[card] == 3 :
+        elif card == 3 :
             return "three"
-        elif values[card] == 4 :
+        elif card == 4 :
             return "four"
 
 def suitCounter(hand) :
@@ -78,5 +80,6 @@ def highCard(hand) :
     return max(values)
 
 
-#def controller(hand) :
-    #if cardCounter(hand) ==
+def controller(hand) :
+    if matchReturn(hand) :
+        return matchReturn(hand)
