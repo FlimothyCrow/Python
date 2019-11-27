@@ -44,3 +44,13 @@ def matchCounter(hand) :
         else :
             cardsDict[value] += 1
     return cardsDict
+
+
+def suitCounter(hand) :
+    suitsDict = {}
+    for card in hand.cards :
+        if card.suit not in suitsDict :
+            suitsDict.update({card.suit : 1})
+        else :
+            suitsDict[card.suit] += 1
+    return suitsDict

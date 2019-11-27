@@ -36,6 +36,18 @@ class PokerTests(unittest.TestCase):
 # assert NO LOGIC
         self.assertEqual([13, 14, 3, 13], actual)
 
-    def test_matchCounter(self):
+    def test_matchCounter0(self):
         hand = Hand([Card(13, "S"), Card(14, "D"), Card(3, "D"), Card(13, "C")])
         self.assertEqual({13: 2, 14: 1, 3: 1}, matchCounter(hand))
+
+    def test_matchCounter1(self):
+        hand = Hand([Card(3, "S"), Card(3, "D"), Card(3, "C"), Card(14, "S")])
+        self.assertEqual({3: 3, 14 : 1}, matchCounter(hand))
+
+    def test_suitCounter0(self):
+        hand = Hand([Card(13, "C"), Card(3, "S"), Card(2, "S"), Card(13, "S")])
+        self.assertEqual({"S": 3, "C": 1}, suitCounter(hand))
+
+    def test_suitCounter1(self):
+        hand = Hand([Card(10, "C"), Card(2, "C"), Card(4, "D"), Card(5, "D")])
+        self.assertEqual({"C": 2, "D": 2}, suitCounter(hand))
