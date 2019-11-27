@@ -6,10 +6,6 @@ class Card :
 class Hand :
     def __init__(self, cards):
         self.cards = cards
-        """self.card1 = card1
-        self.card2 = card2
-        self.card3 = card3
-        self.card4 = card4"""
 
 
 def makeCard(string) :
@@ -25,8 +21,26 @@ def makeCard(string) :
         cardValue = int(string[:-1])
     return Card(cardValue, string[-1])
 
+
 def makeHand(stringOfCards) :
     cards = []
     for card in stringOfCards.split(" ") :
-        cards.append(card)
+        cards.append(makeCard(card))
     return Hand(cards)
+
+
+def cardValues(hand) :
+    values = []
+    for card in hand.cards :
+        values.append(card.value)
+    return values
+
+
+def matchCounter(hand) :
+    cardsDict = {}
+    for value in cardValues(hand) :
+        if value not in cardsDict.keys() :
+            cardsDict.update({value : 1})
+        else :
+            cardsDict[value] += 1
+    return cardsDict
