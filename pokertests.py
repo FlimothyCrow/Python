@@ -61,3 +61,13 @@ class PokerTests(unittest.TestCase):
         hand = Hand([Card(10, "S"), Card(14, "C"), Card(11, "C"), Card(13, "D"), Card(11, "H")])
         actual = isStraight(hand)
         self.assertEqual("Straight 10 through 14", actual)
+
+    def test_highCard(self):
+        hand = Hand([Card(10, "S"), Card(14, "C"), Card(9, "C"), Card(13, "D"), Card(11, "H")])
+        actual = highCard(hand)
+        self.assertEqual(14, actual)
+
+    def test_controller(self):
+        hand = Hand([Card(10, "S"), Card(10, "C"), Card(11, "C"), Card(13, "D"), Card(5, "H")])
+        actual = controller(hand)
+        self.assertEqual("Pair of 10s", actual)

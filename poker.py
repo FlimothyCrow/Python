@@ -61,3 +61,8 @@ def isStraight(hand) :
     largest = int(max(cardValues(hand)))
     if largest - smallest == 4 :
         return "Straight {} through {}".format(smallest, largest)
+
+
+def highCard(hand) :
+    values = cardValues(hand)
+    return max(values)
