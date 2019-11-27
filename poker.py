@@ -36,7 +36,7 @@ def cardValues(hand) :
     return values
 
 
-def matchCounter(hand) :
+def cardCounter(hand) :
     cardsDict = {}
     for value in cardValues(hand) :
         if value not in cardsDict.keys() :
@@ -45,6 +45,16 @@ def matchCounter(hand) :
             cardsDict[value] += 1
     return cardsDict
 
+
+def matchReturn(hand) :
+    values = cardCounter(hand)
+    for card in values.keys() :
+        if values[card] == 2 :
+            return "pair"
+        elif values[card] == 3 :
+            return "three"
+        elif values[card] == 4 :
+            return "four"
 
 def suitCounter(hand) :
     suitsDict = {}
@@ -66,3 +76,7 @@ def isStraight(hand) :
 def highCard(hand) :
     values = cardValues(hand)
     return max(values)
+
+
+#def controller(hand) :
+    #if cardCounter(hand) ==
