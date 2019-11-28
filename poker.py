@@ -3,6 +3,7 @@ class Card :
         self.value = value
         self.suit = suit
 
+
 class Hand :
     def __init__(self, cards):
         self.cards = cards
@@ -58,6 +59,7 @@ def matchReturn(hand) :
         elif card == 4 :
             return "four"
 
+
 def suitCounter(hand) :
     suitsDict = {}
     for card in hand.cards :
@@ -81,5 +83,9 @@ def highCard(hand) :
 
 
 def controller(hand) :
-    if matchReturn(hand) :
+    if 5 in suitCounter(hand).values() :
+        return "flush"
+    elif matchReturn(hand) :
         return matchReturn(hand)
+    elif isStraight(hand) :
+        return isStraight(hand)

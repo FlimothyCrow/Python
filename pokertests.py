@@ -95,7 +95,27 @@ class PokerTests(unittest.TestCase):
         actual = highCard(hand)
         self.assertEqual(14, actual)
     ###########
-    def test_controller(self):
+    def test_controller0(self):
         hand = Hand([Card(10, "S"), Card(10, "C"), Card(11, "C"), Card(13, "D"), Card(5, "H")])
         actual = controller(hand)
         self.assertEqual("pair", actual)
+
+    def test_controller1(self):
+        hand = Hand([Card(10, "S"), Card(10, "C"), Card(10, "C"), Card(13, "D"), Card(5, "H")])
+        actual = controller(hand)
+        self.assertEqual("three", actual)
+
+    def test_controller2(self):
+        hand = Hand([Card(10, "S"), Card(10, "C"), Card(10, "C"), Card(10, "D"), Card(5, "H")])
+        actual = controller(hand)
+        self.assertEqual("four", actual)
+
+    def test_controller3(self):
+        hand = Hand([Card(10, "S"), Card(10, "S"), Card(10, "S"), Card(10, "S"), Card(5, "S")])
+        actual = controller(hand)
+        self.assertEqual("flush", actual)
+
+    def test_controller4(self):
+        hand = Hand([Card(3, "C"), Card(4, "S"), Card(5, "S"), Card(6, "S"), Card(7, "S")])
+        actual = controller(hand)
+        self.assertEqual("Straight 3 through 7", actual)
