@@ -91,3 +91,11 @@ def controller(hand) :
         return isStraight(hand)
     else :
         return highCard(hand)
+
+
+def printer() :
+    cards = input("Choose five cards")
+    hand = makeHand(cards)
+    print(controller(hand))
+
+printer()
