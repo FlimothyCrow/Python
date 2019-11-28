@@ -65,11 +65,10 @@ class PokerTests(unittest.TestCase):
         actual = matchReturn(hand)
         self.assertEqual("four", actual)
 
-    """def test_matchReturn3(self):
-        hand = Hand([Card(5, "C"), Card(5, "H"), Card(2, "D"), Card(2, "S"), Card(2, "C")])
+    def test_matchReturn3(self):
+        hand = Hand([Card(5, "C"), Card(5, "H"), Card(2, "D"), Card(2, "S"), Card(2, "D")])
         actual = matchReturn(hand)
-        self.assertEqual("full house", actual)"""
-
+        self.assertEqual("full house", actual)
     ###########
     def test_suitCounter1(self):
         hand = Hand([Card(10, "C"), Card(2, "C"), Card(4, "D"), Card(5, "D")])
@@ -114,6 +113,8 @@ class PokerTests(unittest.TestCase):
         hand = Hand([Card(10, "S"), Card(10, "S"), Card(10, "S"), Card(10, "S"), Card(5, "S")])
         actual = controller(hand)
         self.assertEqual("flush", actual)
+#####################
+
 
     def test_controller4(self):
         hand = Hand([Card(3, "C"), Card(4, "S"), Card(5, "S"), Card(6, "S"), Card(7, "S")])

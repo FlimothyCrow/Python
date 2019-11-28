@@ -50,7 +50,7 @@ def cardCounter(hand) :
 def matchReturn(hand) :
     values = cardCounter(hand).values()
     for card in values :
-        if card == 2 and card == 3 :
+        if 2 in values and 3 in values :
             return "full house"
         if card == 2 :
             return "pair"
