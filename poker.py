@@ -89,3 +89,5 @@ def controller(hand) :
         return matchReturn(hand)
     elif isStraight(hand) :
         return isStraight(hand)
+    else :
+        return highCard(hand)

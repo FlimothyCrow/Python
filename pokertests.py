@@ -113,10 +113,14 @@ class PokerTests(unittest.TestCase):
         hand = Hand([Card(10, "S"), Card(10, "S"), Card(10, "S"), Card(10, "S"), Card(5, "S")])
         actual = controller(hand)
         self.assertEqual("flush", actual)
-#####################
-
 
     def test_controller4(self):
         hand = Hand([Card(3, "C"), Card(4, "S"), Card(5, "S"), Card(6, "S"), Card(7, "S")])
         actual = controller(hand)
         self.assertEqual("Straight 3 through 7", actual)
+
+    def test_controller5(self):
+        hand = Hand([Card(3, "C"), Card(4, "S"), Card(5, "S"), Card(6, "S"), Card(14, "S")])
+        actual = controller(hand)
+        self.assertEqual(14, actual)
+
