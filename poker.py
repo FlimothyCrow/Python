@@ -27,3 +27,19 @@ def makeHand(string) :
         hand.append(makeCard(card))
     return Hand(hand)
 
+def cardValues(hand) :
+    valuesList = []
+    for card in hand.cards :
+        valuesList.append(card.value)
+    return valuesList
+
+def pairFinder(hand) :
+    values = cardValues(hand)
+    pairs = {}
+    for value in values :
+        if value in pairs :
+            pairs[value] += 1
+        else :
+            pairs[value] = 1
+    return pairs
+
