@@ -43,6 +43,20 @@ def pairFinder(hand) :
             pairs[value] = 1
     return pairs
 
+def pairReturn(hand) :
+    matches = pairFinder(hand)
+    if 2 in matches.values() and 3 in matches.values():
+        return "full house"
+    if 2 in matches.values() and 2 in matches.values() :
+        return "two pair"
+    elif 2 in matches.values() :
+        return "pair"
+    elif 3 in matches.values() :
+        return "three"
+    elif 4 in matches.values() :
+        return "four"
+
+
 def suitCounter(hand) :
     suits = {}
     for card in hand.cards :
@@ -51,3 +65,4 @@ def suitCounter(hand) :
         else :
             suits[card.suit] = 1
     return suits
+
