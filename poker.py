@@ -66,6 +66,13 @@ def suitCounter(hand) :
             suits[card.suit] = 1
     return suits
 
+def checkStraight(hand) :
+    values = cardValues(hand)
+    lowestValue = min(values)
+    highestValue = max(values)
+    if highestValue - lowestValue == 4 :
+        return "straight {} through {}".format(lowestValue, highestValue)
+
 def highCard(hand) :
     values = cardValues(hand)
     return max(values)

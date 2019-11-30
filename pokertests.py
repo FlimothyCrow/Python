@@ -69,6 +69,11 @@ class PokerTests(unittest.TestCase):
         actual = highCard(hand)
         self.assertEqual(13, actual)
 ##########
+    def test_checkStraight(self):
+        hand = makeHand("7C 8H 9S 10H JS")
+        actual = checkStraight(hand)
+        self.assertEqual("straight 7 through 11", actual)
+##########
     def test_controller(self):
         hand = makeHand("3C 3S 9D 8C QH")
         actual = controller(hand)
