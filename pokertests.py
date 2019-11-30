@@ -49,20 +49,24 @@ class PokerTests(unittest.TestCase):
         actual = pairReturn(hand)
         self.assertEqual("four", actual)
 
-    def test_pairReturn3(self):
-        hand = makeHand("2C 9H 9C 2S KC")
-        actual = pairReturn(hand)
-        self.assertEqual("two pair", actual)
-
     def test_pairReturn4(self):
         hand = makeHand("2C 9H 9C 2S 9C")
         actual = pairReturn(hand)
         self.assertEqual("full house", actual)
+
+"""
+    def test_pairReturn3(self):
+        hand = makeHand("2C 9H 9C 2S KC")
+        actual = pairReturn(hand)
+        self.assertEqual("two pair", actual)
+"""
+
+
 ##########
-    def test_suitCounter(self):
-        hand = makeHand("3C 9C 8C KC JC")
-        actual = suitCounter(hand)
-        self.assertEqual({"C": 5}, actual)
+def test_suitCounter(self):
+    hand = makeHand("3C 9C 8C KC JC")
+    actual = suitCounter(hand)
+    self.assertEqual({"C": 5}, actual)
 ##########
     def test_highCard(self):
         hand = makeHand("3C 9C 2S 4H KS")
