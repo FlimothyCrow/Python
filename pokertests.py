@@ -34,4 +34,7 @@ class PokerTests(unittest.TestCase):
         actual = pairFinder(hand)
         self.assertEqual({3: 1, 9: 2, 13: 1, 2: 1}, actual)
 ##########
-
+    def test_suitCounter(self):
+        hand = makeHand("3C 9C 8C KC JC")
+        actual = suitCounter(hand)
+        self.assertEqual({"C": 5}, actual)

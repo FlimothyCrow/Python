@@ -43,3 +43,11 @@ def pairFinder(hand) :
             pairs[value] = 1
     return pairs
 
+def suitCounter(hand) :
+    suits = {}
+    for card in hand.cards :
+        if card.suit in suits :
+            suits[card.suit] += 1
+        else :
+            suits[card.suit] = 1
+    return suits
