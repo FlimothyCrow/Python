@@ -56,7 +56,6 @@ def pairReturn(hand) :
     elif 4 in matches.values() :
         return "four"
 
-
 def suitCounter(hand) :
     suits = {}
     for card in hand.cards :
@@ -77,5 +76,14 @@ def highCard(hand) :
     values = cardValues(hand)
     return max(values)
 
-#def controller(hand) :
-
+def controller(hand) :
+    if pairReturn(hand) :
+        return pairReturn(hand)
+    elif checkStraight(hand) and 5 in suitCounter(hand).values() :
+        return "straight flush"
+    elif checkStraight(hand) :
+        return checkStraight(hand)
+    elif 5 in suitCounter(hand).values() :
+        return "flush"
+    else :
+        return highCard(hand)
