@@ -66,3 +66,9 @@ def suitCounter(hand) :
             suits[card.suit] = 1
     return suits
 
+def highCard(hand) :
+    values = cardValues(hand)
+    return max(values)
+
+#def controller(hand) :
+
