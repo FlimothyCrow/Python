@@ -87,17 +87,12 @@ class PokerTests(unittest.TestCase):
     def test_controller(self):
         hand = makeHand("3C 3S 9D 8C QH")
         actual = controller(hand)
-        self.assertEqual("pair", actual)
+        self.assertEqual("pair 3", actual)
 
     def test_controller1(self):
         hand = makeHand("3C 4C 9C 8C QC")
         actual = controller(hand)
-        self.assertEqual("flush", actual)
-
-    def test_controller2(self):
-        hand = makeHand("3C 4C 9C 8C QC")
-        actual = controller(hand)
-        self.assertEqual("flush", actual)
+        self.assertEqual("flush C", actual)
 
     def test_controller3(self):
         hand = makeHand("3C 4C 5C 6C 7H")

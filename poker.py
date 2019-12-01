@@ -106,7 +106,7 @@ def controller(hand) :
     elif checkStraight(hand) :
         return checkStraight(hand)
     elif 5 in suitCounter(hand).values() :
-        return "flush"
+        return "flush {}".format(keyReturn(suitCounter(hand), 5))
     else :
         return highCard(hand)
 
