@@ -34,10 +34,14 @@ class PokerTests(unittest.TestCase):
         actual = pairFinder(hand)
         self.assertEqual({3: 1, 9: 2, 13: 1, 2: 1}, actual)
 ##########
+    def test_keyReturn(self):
+        matches = {14: 1, 10: 2, 3: 1}
+        self.assertEqual(10, keyReturn(matches, 2))
+##########
     def test_pairReturn(self):
         hand = makeHand("3C 9H 9C 2S KC")
         actual = pairReturn(hand)
-        self.assertEqual("pair", actual)
+        self.assertEqual("pair 9", actual)
 
     def test_pairReturn1(self):
         hand = makeHand("9C 9H 9C 2S KC")
@@ -59,10 +63,10 @@ class PokerTests(unittest.TestCase):
         actual = pairReturn(hand)
         self.assertEqual("two pair", actual)
 ##########
-def test_suitCounter(self):
-    hand = makeHand("3C 9C 8C KC JC")
-    actual = suitCounter(hand)
-    self.assertEqual({"C": 5}, actual)
+    def test_suitCounter(self):
+        hand = makeHand("3C 9C 8C KC JC")
+        actual = suitCounter(hand)
+        self.assertEqual({"C": 5}, actual)
 ##########
     def test_highCard(self):
         hand = makeHand("3C 9C 2S 4H KS")
@@ -85,7 +89,7 @@ def test_suitCounter(self):
         self.assertEqual("flush", actual)
 
     def test_controller2(self):
-        hand = makeHand("3H 4C 9C 8C QC")
+        hand = makeHand("3C 4C 9C 8C QC")
         actual = controller(hand)
         self.assertEqual("flush", actual)
 
@@ -103,3 +107,8 @@ def test_suitCounter(self):
         hand = makeHand("3C 4C 5C 6C QS")
         actual = controller(hand)
         self.assertEqual(12, actual)
+##########
+#    def test_handRank(self):
+ #       hand = makeHand("3H 3C 5H 9S QD")
+  #      actual = handRank(hand)
+   #     self.assertEqual("pair", actual.rank)

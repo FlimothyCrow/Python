@@ -7,6 +7,11 @@ class Hand :
     def __init__(self, cards):
         self.cards = cards
 
+class RankedHand :
+    def __init__(self, rank, tiebreaker):
+        self.rank = rank
+        self.tiebreaker = tiebreaker
+
 def makeCard(string) :
     if string[:-1] == "K" :
         cardValue = 13
@@ -43,6 +48,11 @@ def pairFinder(hand) :
             pairs[value] = 1
     return pairs
 
+def keyReturn(dictionary, targetValue) :
+    for key, value in dictionary.items():
+        if targetValue == value:
+            return key
+
 def pairReturn(hand) :
     matches = pairFinder(hand)
     twoCounter = 0
@@ -54,13 +64,11 @@ def pairReturn(hand) :
     elif twoCounter == 2 :
         return "two pair"
     elif 2 in matches.values() :
-        return "pair"
+        return "pair {}".format()
     elif 3 in matches.values() :
         return "three"
     elif 4 in matches.values() :
         return "four"
-
-
 
 def suitCounter(hand) :
     suits = {}
@@ -93,3 +101,7 @@ def controller(hand) :
         return "flush"
     else :
         return highCard(hand)
+
+#def handRank(hand) :
+    #handType = controller(hand)
+    #return RankedHand()
