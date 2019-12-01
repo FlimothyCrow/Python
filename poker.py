@@ -53,6 +53,13 @@ def keyReturn(dictionary, targetValue) :
         if targetValue == value:
             return key
 
+def findDuplicates(matchesDict) :
+    pairs = []
+    for key in matchesDict.keys() :
+        if matchesDict[key] == 2 :
+            pairs.append(key)
+    return pairs
+
 def pairReturn(hand) :
     matches = pairFinder(hand)
     twoCounter = 0
@@ -60,15 +67,15 @@ def pairReturn(hand) :
         if card.value == 2 :
             twoCounter += 1
     if 2 in matches.values() and 3 in matches.values():
-        return "full house"
+        return "full house {} {}".format(keyReturn(matches, 2), keyReturn(matches, 3))
     elif twoCounter == 2 :
         return "two pair"
     elif 2 in matches.values() :
-        return "pair {}".format()
+        return "pair {}".format(keyReturn(matches, 2))
     elif 3 in matches.values() :
-        return "three"
+        return "three {}".format(keyReturn(matches, 3))
     elif 4 in matches.values() :
-        return "four"
+        return "four {}".format(keyReturn(matches, 4))
 
 def suitCounter(hand) :
     suits = {}

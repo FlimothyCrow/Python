@@ -38,6 +38,12 @@ class PokerTests(unittest.TestCase):
         matches = {14: 1, 10: 2, 3: 1}
         self.assertEqual(10, keyReturn(matches, 2))
 ##########
+    def test_findDuplicates(self):
+        hand = makeHand("9H 9S QC QS 2D")
+        matches = pairFinder(hand)
+        actual = findDuplicates(matches)
+        self.assertEqual([9, 12], actual)
+##########
     def test_pairReturn(self):
         hand = makeHand("3C 9H 9C 2S KC")
         actual = pairReturn(hand)
@@ -46,17 +52,17 @@ class PokerTests(unittest.TestCase):
     def test_pairReturn1(self):
         hand = makeHand("9C 9H 9C 2S KC")
         actual = pairReturn(hand)
-        self.assertEqual("three", actual)
+        self.assertEqual("three 9", actual)
 
     def test_pairReturn2(self):
-        hand = makeHand("9C 9H 9C 9S KC")
+        hand = makeHand("AD AS AC AH KC")
         actual = pairReturn(hand)
-        self.assertEqual("four", actual)
+        self.assertEqual("four 14", actual)
 
     def test_pairReturn4(self):
         hand = makeHand("2C 9H 9C 2S 9C")
         actual = pairReturn(hand)
-        self.assertEqual("full house", actual)
+        self.assertEqual("full house 2 9", actual)
 
     def test_pairReturn3(self):
         hand = makeHand("2C 9H 9C 2S KC")
