@@ -45,16 +45,22 @@ def pairFinder(hand) :
 
 def pairReturn(hand) :
     matches = pairFinder(hand)
+    twoCounter = 0
+    for card in hand.cards :
+        if card.value == 2 :
+            twoCounter += 1
     if 2 in matches.values() and 3 in matches.values():
         return "full house"
-#    if 2 in matches.values() and 2 in matches.values() :
-#        return "two pair"
+    elif twoCounter == 2 :
+        return "two pair"
     elif 2 in matches.values() :
         return "pair"
     elif 3 in matches.values() :
         return "three"
     elif 4 in matches.values() :
         return "four"
+
+
 
 def suitCounter(hand) :
     suits = {}
