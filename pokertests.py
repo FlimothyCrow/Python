@@ -67,7 +67,7 @@ class PokerTests(unittest.TestCase):
     def test_pairReturn3(self):
         hand = makeHand("2C 9H 9C 2S KC")
         actual = pairReturn(hand)
-        self.assertEqual("two pair", actual)
+        self.assertEqual("two pair 2 9", actual)
 ##########
     def test_suitCounter(self):
         hand = makeHand("3C 9C 8C KC JC")

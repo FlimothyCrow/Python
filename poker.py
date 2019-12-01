@@ -61,6 +61,7 @@ def findDuplicates(matchesDict) :
     return pairs
 
 def pairReturn(hand) :
+    dup = findDuplicates(pairFinder(hand))
     matches = pairFinder(hand)
     twoCounter = 0
     for card in hand.cards :
@@ -69,7 +70,7 @@ def pairReturn(hand) :
     if 2 in matches.values() and 3 in matches.values():
         return "full house {} {}".format(keyReturn(matches, 2), keyReturn(matches, 3))
     elif twoCounter == 2 :
-        return "two pair"
+        return "two pair {} {}".format(dup[0], dup[1])
     elif 2 in matches.values() :
         return "pair {}".format(keyReturn(matches, 2))
     elif 3 in matches.values() :
