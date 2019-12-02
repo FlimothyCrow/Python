@@ -110,6 +110,7 @@ def controller(hand) :
     else :
         return highCard(hand)
 
-#def handRank(hand) :
-    #handType = controller(hand)
-    #return RankedHand()
+def handRank(hand) :
+    handType = controller(hand)
+    split = handType.split(" ")
+    return RankedHand(split[0], split[1])
