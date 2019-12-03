@@ -114,3 +114,8 @@ class PokerTests(unittest.TestCase):
         actual = handRank(hand)
         self.assertEqual("pair", actual.rank)
         self.assertEqual("3", actual.tiebreaker)
+
+    def test_handRank1(self):
+        hand = makeHand("6C 7D 8S 9H 10D")
+        actual = handRank(hand)
+        self.assertEqual("straight", actual.rank)
