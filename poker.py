@@ -1,3 +1,5 @@
+from enum import Enum
+
 class Card :
     def __init__(self, value, suit):
         self.value = value
@@ -11,6 +13,17 @@ class RankedHand :
     def __init__(self, rank, tiebreaker):
         self.rank = rank
         self.tiebreaker = tiebreaker
+
+class RankList(Enum) :
+    HC = 1
+    Pair = 2
+    TwoPair = 3
+    Three = 4
+    ST = 5
+    Flush = 6
+    FH = 7
+    Four = 8
+    SF = 9
 
 def makeCard(string) :
     if string[:-1] == "K" :
@@ -92,7 +105,7 @@ def checkStraight(hand) :
     lowestValue = min(values)
     highestValue = max(values)
     if highestValue - lowestValue == 4 :
-        return "straight {} through {}".format(lowestValue, highestValue)
+        return RankedHand(RankList.ST, int(highestValue))
 
 def highCard(hand) :
     values = cardValues(hand)
@@ -120,8 +133,6 @@ def handRank(hand) :
     else :
         return RankedHand(split[0], split[1])
 
-def compareHands(hand0, hand1) :
-    handTypes = {"SF": 9, "four": 8, "FH": 7, "flush": 6, "straight": 5, "three": 4,
-                 "twopair": 3, "pair": 2, "highcard": 1}
-    hand0 = handRank(hand0)
-    hand1 = handRank(hand1)
+#create class enumeration to equate strings and integers
+#rebuild pairReturn, checkStraight and highCard with enum
+#remove string manipulation from controller and merge with handRank
