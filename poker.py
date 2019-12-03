@@ -119,3 +119,9 @@ def handRank(hand) :
         return RankedHand(split[0], split[-1])
     else :
         return RankedHand(split[0], split[1])
+
+def compareHands(hand0, hand1) :
+    handTypes = {"SF": 9, "four": 8, "FH": 7, "flush": 6, "straight": 5, "three": 4,
+                 "twopair": 3, "pair": 2, "highcard": 1}
+    hand0 = handRank(hand0)
+    hand1 = handRank(hand1)
