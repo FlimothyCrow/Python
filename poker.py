@@ -113,4 +113,9 @@ def controller(hand) :
 def handRank(hand) :
     handType = controller(hand)
     split = handType.split(" ")
-    return RankedHand(split[0], split[1])
+    if "straight flush" in handType :
+        return RankedHand(split[0], split[1])
+    elif "straight" in handType :
+        return RankedHand(split[0], split[-1])
+    else :
+        return RankedHand(split[0], split[1])
