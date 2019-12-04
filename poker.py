@@ -110,7 +110,7 @@ def checkStraight(hand) :
 
 def highCard(hand) :
     values = cardValues(hand)
-    return max(values)
+    return RankedHand(RankList.HC, max(values))
 
 def controller(hand) :
     if pairReturn(hand) :

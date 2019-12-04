@@ -84,7 +84,9 @@ class PokerTests(unittest.TestCase):
     def test_highCard(self):
         hand = makeHand("3C 9C 2S 4H KS")
         actual = highCard(hand)
-        self.assertEqual(13, actual)
+        self.assertEqual(13, actual.tiebreaker)
+        self.assertEqual(RankList.HC, actual.rank)
+
 ##########
     def test_checkStraight(self):
         hand = makeHand("7C 8H 9S 10H JS")
@@ -95,7 +97,8 @@ class PokerTests(unittest.TestCase):
     def test_controller(self):
         hand = makeHand("3C 3S 9D 8C QH")
         actual = controller(hand)
-        self.assertEqual("pair 3", actual)
+        self.assertEqual(3, actual.tiebreaker)
+        self.assertEqual(RankList.Pair, actual.rank)
 
     def test_controller1(self):
         hand = makeHand("3C 4C 9C 8C QC")
@@ -106,7 +109,8 @@ class PokerTests(unittest.TestCase):
     def test_controller3(self):
         hand = makeHand("3C 4C 5C 6C 7H")
         actual = controller(hand)
-        self.assertEqual("straight 3 through 7", actual)
+        self.assertEqual(7, actual.tiebreaker)
+        self.assertEqual(RankList.ST, actual.rank)
 
     def test_controller4(self):
         hand = makeHand("3C 4C 5C 6C 7C")
