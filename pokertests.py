@@ -115,7 +115,8 @@ class PokerTests(unittest.TestCase):
     def test_controller4(self):
         hand = makeHand("3C 4C 5C 6C 7C")
         actual = controller(hand)
-        self.assertEqual("straight flush", actual)
+        self.assertEqual(RankList.SF, actual.rank)
+        self.assertEqual(7, actual.tiebreaker)
 
     def test_controller5(self):
         hand = makeHand("3C 4C 5C 6C QS")

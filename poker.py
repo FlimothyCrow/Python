@@ -116,7 +116,7 @@ def controller(hand) :
     if pairReturn(hand) :
         return pairReturn(hand)
     elif checkStraight(hand) and suitCounter(hand) :
-        return "straight flush"
+        return RankedHand(RankList.SF, checkStraight(hand).tiebreaker)
     elif checkStraight(hand) :
         return checkStraight(hand)
     elif suitCounter(hand) :
