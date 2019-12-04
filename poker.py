@@ -81,15 +81,15 @@ def pairReturn(hand) :
         if card.value == 2 :
             twoCounter += 1
     if 2 in matches.values() and 3 in matches.values():
-        return "full house {} {}".format(keyReturn(matches, 2), keyReturn(matches, 3))
+        return RankedHand(RankList.FH, keyReturn(matches, 3))
     elif twoCounter == 2 :
-        return "two pair {} {}".format(dup[0], dup[1])
+        return RankedHand(RankList.TwoPair, dup[1])
     elif 2 in matches.values() :
-        return "pair {}".format(keyReturn(matches, 2))
+        return RankedHand(RankList.Pair, keyReturn(matches, 2))
     elif 3 in matches.values() :
-        return "three {}".format(keyReturn(matches, 3))
+        return RankedHand(RankList.Three, keyReturn(matches, 3))
     elif 4 in matches.values() :
-        return "four {}".format(keyReturn(matches, 4))
+        return RankedHand(RankList.Four, keyReturn(matches, 4))
 
 def suitCounter(hand) :
     suits = {}
@@ -115,7 +115,7 @@ def highCard(hand) :
 def controller(hand) :
     if pairReturn(hand) :
         return pairReturn(hand)
-    elif checkStraight(hand) and 5 in suitCounter(hand).values() :
+    elif checkStraight(hand) and suitCounter(hand) :
         return "straight flush"
     elif checkStraight(hand) :
         return checkStraight(hand)
