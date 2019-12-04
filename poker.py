@@ -124,6 +124,3 @@ def controller(hand) :
     else :
         return highCard(hand)
 
-# resolve TwoPair bad return
-# rebuild compareHands
-# printer???
