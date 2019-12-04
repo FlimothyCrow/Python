@@ -77,13 +77,13 @@ def pairReturn(hand) :
     dup = findDuplicates(pairFinder(hand))
     matches = pairFinder(hand)
     twoCounter = 0
-    for card in hand.cards :
-        if card.value == 2 :
+    for card in dup :
+        if dup[card] == 2 :
             twoCounter += 1
     if 2 in matches.values() and 3 in matches.values():
         return RankedHand(RankList.FH, keyReturn(matches, 3))
     elif twoCounter == 2 :
-        return RankedHand(RankList.TwoPair, dup[1])
+        return RankedHand(RankList.TwoPair, next(iter(dup)))
     elif 2 in matches.values() :
         return RankedHand(RankList.Pair, keyReturn(matches, 2))
     elif 3 in matches.values() :

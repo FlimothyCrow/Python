@@ -75,6 +75,7 @@ class PokerTests(unittest.TestCase):
         self.assertEqual(RankList.TwoPair, actual.rank)
 # manually construct a class to discern which function is failing
 # now we now that pairReturn is the failure, not makeHand
+# we've eliminated findDuplicates as the cause
 
     def test_pairReturn5(self):
         hand = makeHand("3C 5S 3D 5C QH")
