@@ -72,7 +72,7 @@ class PokerTests(unittest.TestCase):
     def test_suitCounter(self):
         hand = makeHand("3C 9C 8C KC JC")
         actual = suitCounter(hand)
-        self.assertEqual({"C": 5}, actual)
+        self.assertEqual("C", actual)
 ##########
     def test_highCard(self):
         hand = makeHand("3C 9C 2S 4H KS")

@@ -98,7 +98,8 @@ def suitCounter(hand) :
             suits[card.suit] += 1
         else :
             suits[card.suit] = 1
-    return suits
+    if 5 in suits.values() :
+        return next(iter(suits))
 
 def checkStraight(hand) :
     values = cardValues(hand)
