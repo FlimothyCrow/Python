@@ -99,7 +99,7 @@ def suitCounter(hand) :
         else :
             suits[card.suit] = 1
     if 5 in suits.values() :
-        return next(iter(suits))
+        return RankedHand(RankList.Flush, next(iter(suits)))
 
 def checkStraight(hand) :
     values = cardValues(hand)
@@ -119,8 +119,8 @@ def controller(hand) :
         return "straight flush"
     elif checkStraight(hand) :
         return checkStraight(hand)
-    elif 5 in suitCounter(hand).values() :
-        return "flush {}".format(keyReturn(suitCounter(hand), 5))
+    elif suitCounter(hand) :
+        return suitCounter(hand)
     else :
         return highCard(hand)
 
