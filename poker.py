@@ -67,10 +67,10 @@ def keyReturn(dictionary, targetValue) :
             return key
 
 def findDuplicates(matchesDict) :
-    pairs = []
-    for key in matchesDict.keys() :
+    pairs = {}
+    for key in matchesDict :
         if matchesDict[key] == 2 :
-            pairs.append(key)
+            pairs[key] = 2
     return pairs
 
 def pairReturn(hand) :
@@ -124,16 +124,6 @@ def controller(hand) :
     else :
         return highCard(hand)
 
-def handRank(hand) :
-    handType = controller(hand)
-    split = handType.split(" ")
-    if "straight flush" in handType :
-        return RankedHand(split[0], split[1])
-    elif "straight" in handType :
-        return RankedHand(split[0], split[-1])
-    else :
-        return RankedHand(split[0], split[1])
-
-#create class enumeration to equate strings and integers
-#rebuild pairReturn, checkStraight and highCard with enum
-#remove string manipulation from controller and merge with handRank
+# resolve TwoPair bad return
+# rebuild compareHands
+# printer???

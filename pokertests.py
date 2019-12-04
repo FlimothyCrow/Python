@@ -39,10 +39,10 @@ class PokerTests(unittest.TestCase):
         self.assertEqual(10, keyReturn(matches, 2))
 ##########
     def test_findDuplicates(self):
-        hand = makeHand("9H 9S QC QS 2D")
-        matches = pairFinder(hand)
+        #hand = makeHand("9H 9S QC QS 2D")
+        matches = {9: 2, 12: 2, 2: 1}
         actual = findDuplicates(matches)
-        self.assertEqual([9, 12], actual)
+        self.assertEqual({9: 2, 12: 2}, actual)
 ##########
     def test_pairReturn(self):
         hand = makeHand("3C 9H 9C 2S KC")
@@ -69,10 +69,18 @@ class PokerTests(unittest.TestCase):
         self.assertEqual(RankList.FH, actual.rank)
 
     def test_pairReturn3(self):
-        hand = makeHand("2C 9H 9C 2S KC")
+        hand = Hand([Card(9, "C"), Card(4, "S"), Card(9, "H"), Card(4, "C"), Card(14, "S")])
         actual = pairReturn(hand)
         self.assertEqual(9, actual.tiebreaker)
         self.assertEqual(RankList.TwoPair, actual.rank)
+# manually construct a class to discern which function is failing
+# now we now that pairReturn is the failure, not makeHand
+
+    def test_pairReturn5(self):
+        hand = makeHand("3C 5S 3D 5C QH")
+        actual = pairReturn(hand)
+        self.assertEqual(RankList.TwoPair, actual.rank)
+
 ##########
     def test_suitCounter(self):
         hand = makeHand("3C 9C 8C KC JC")
@@ -123,39 +131,5 @@ class PokerTests(unittest.TestCase):
         actual = controller(hand)
         self.assertEqual(12, actual)
 ##########
-    def test_handRank(self):
-        hand = makeHand("3H 3C 5H 9S QD")
-        actual = handRank(hand)
-        self.assertEqual("pair", actual.rank)
-        self.assertEqual("3", actual.tiebreaker)
 
-    def test_handRank4(self):
-        hand = makeHand("3H 3C 3D 9S QD")
-        actual = handRank(hand)
-        self.assertEqual("three", actual.rank)
-        self.assertEqual("3", actual.tiebreaker)
 
-    def test_handRank1(self):
-        hand = makeHand("6C 7D 8S 9H 10D")
-        actual = handRank(hand)
-        self.assertEqual("straight", actual.rank)
-        self.assertEqual("10", actual.tiebreaker)
-
-    def test_handRank2(self):
-        hand = makeHand("10S JS QS KS AS")
-        actual = handRank(hand)
-        self.assertEqual("straight", actual.rank)
-        self.assertEqual("flush", actual.tiebreaker)
-
-    def test_handRank3(self):
-        hand = makeHand("JC JS JH JD AS")
-        actual = handRank(hand)
-        self.assertEqual("four", actual.rank)
-        self.assertEqual("11", actual.tiebreaker)
-##########
-    """
-        def test_pairReturn5(self):
-            hand = makeHand("3C 5S 3D 5C QH")
-            actual = pairReturn(hand)
-            self.assertEqual("two pair 3 5", actual)
-    """
