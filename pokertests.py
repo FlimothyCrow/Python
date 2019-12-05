@@ -105,36 +105,36 @@ class PokerTests(unittest.TestCase):
 ##########
     def test_controller(self):
         hand = makeHand("3C 3S 9D 8C QH")
-        actual = controller(hand)
+        actual = rankHand(hand)
         self.assertEqual(3, actual.tiebreaker)
         self.assertEqual(RankList.Pair, actual.rank)
 
     def test_controller1(self):
         hand = makeHand("3C 4C 9C 8C QC")
-        actual = controller(hand)
+        actual = rankHand(hand)
         self.assertEqual(RankList.Flush, actual.rank)
-        self.assertEqual("C", actual.tiebreaker)
+        self.assertEqual("C", actual.tiebreaker) #change flush to return high card
 
     def test_controller3(self):
         hand = makeHand("3C 4C 5C 6C 7H")
-        actual = controller(hand)
+        actual = rankHand(hand)
         self.assertEqual(7, actual.tiebreaker)
         self.assertEqual(RankList.ST, actual.rank)
 
     def test_controller4(self):
         hand = makeHand("3C 4C 5C 6C 7C")
-        actual = controller(hand)
+        actual = rankHand(hand)
         self.assertEqual(RankList.SF, actual.rank)
         self.assertEqual(7, actual.tiebreaker)
 
     def test_controller5(self):
         hand = makeHand("3C 4C 5C 6C QS")
-        actual = controller(hand)
+        actual = rankHand(hand)
         self.assertEqual(12, actual.tiebreaker)
 
     def test_controller6(self):
         hand = makeHand("3C 3D 3S 6C 6S")
-        actual = controller(hand)
+        actual = rankHand(hand)
         self.assertEqual(RankList.FH, actual.rank)
 ##########
     def test_compareHands(self):
@@ -146,5 +146,11 @@ class PokerTests(unittest.TestCase):
     def test_compareHands1(self):
         hand0 = makeHand("3C 3D 3S 3H AC")
         hand1 = makeHand("9D 9C 9S AH QS")
+        actual = compareHands(hand0, hand1)
+        self.assertEqual("Player 1 wins", actual)
+
+    def test_compareHands2(self):
+        hand0 = makeHand("3C 3D 2S QH AC")
+        hand1 = makeHand("9D 3H 3S 5H QS")
         actual = compareHands(hand0, hand1)
         self.assertEqual("Player 1 wins", actual)

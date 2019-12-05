@@ -10,7 +10,7 @@ class Hand :
         self.cards = cards
 
 class RankedHand :
-    def __init__(self, rank, tiebreaker):
+    def __init__(self, rank, tiebreaker): # fudge tiebreaker as integer for suit strength
         self.rank = rank
         self.tiebreaker = tiebreaker
 
@@ -112,7 +112,7 @@ def highCard(hand) :
     values = cardValues(hand)
     return RankedHand(RankList.HC, max(values))
 
-def controller(hand) :
+def rankHand(hand) :
     if pairReturn(hand) :
         return pairReturn(hand)
     elif checkStraight(hand) and suitCounter(hand) :
@@ -124,10 +124,20 @@ def controller(hand) :
     else :
         return highCard(hand)
 
-def compareHands(hand0, hand1) :
-    hand0 = controller(hand0)
-    hand1 = controller(hand1)
-    if hand0.rank.value > hand1.rank.value :
+def compareHands(handObject0, handObject1) :
+    rankedHand0 = rankHand(handObject0)
+    rankedHand1 = rankHand(handObject1)
+    if rankedHand0.rank.value == rankedHand1.rank.value :
+        if rankedHand0.tiebreaker > rankedHand1.tiebreaker :
+            return "Player 1 wins"
+        elif rankedHand1.tiebreaker < rankedHand0.tiebreaker :
+            return "Player 2 wins"
+        elif rankedHand0.tiebreaker == rankedHand1.tiebreaker :
+            if highCard(handObject0).tiebreaker > highCard(handObject1).tiebreaker :
+                return "Player 1 wins"
+            else :
+                return "Player 2 wins"
+    elif rankedHand0.rank.value > rankedHand1.rank.value :
         return "Player 1 wins"
     else :
         return "Player 2 wins"
