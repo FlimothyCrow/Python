@@ -124,3 +124,10 @@ def controller(hand) :
     else :
         return highCard(hand)
 
+def compareHands(hand0, hand1) :
+    hand0 = controller(hand0)
+    hand1 = controller(hand1)
+    if hand0.rank.value > hand1.rank.value :
+        return "Player 1 wins"
+    else :
+        return "Player 2 wins"
