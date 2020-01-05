@@ -24,5 +24,8 @@ def makeHand() :
 def sumCards(hand) :
     totalValue = 0
     for card in hand.cards :
-        totalValue += card.value
+        if card.operator == "P" :
+            totalValue += card.value
+        elif card.operator == "N" :
+            totalValue -= card.value
     return totalValue
