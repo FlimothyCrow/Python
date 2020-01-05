@@ -5,6 +5,12 @@ class Card :
         self.value = value
         self.operator = operator
 
+    def cardValue(self):
+        if self.operator == "P" :
+            return self.value
+        elif self.operator == "N" :
+            return -self.value
+
 class Hand :
     def __init__(self, cards):
         self.cards = cards
@@ -14,6 +20,7 @@ def makeCard() :
     return Card(random.randint(1, 20), operators[random.randint(0,2)])
 
 #print(makeCard().operator)
+# add functions (easily testable) into a class for high cohesion, low coupling
 
 def makeHand() :
     cards = []
@@ -24,14 +31,17 @@ def makeHand() :
 def sumCards(hand) :
     totalValue = 0
     for card in hand.cards :
-        if card.operator == "P" :
-            totalValue += card.value
-        elif card.operator == "N" :
-            totalValue -= card.value
+        totalValue += card.cardValue()
     return totalValue
 
 def aiCard(hand, total) :
     sortedCards = sorted(hand.cards, key=lambda x: x.value, reverse=True)
-    for card in sortedCards :
-        if card.value + total < 20 :
-            return card
+    reverseSortCards = sorted(hand.cards, key=lambda x: x.value)
+    if total < 20 :
+        for card in sortedCards :
+            if card.cardValue() + total <= 20 :
+                return card
+    else :
+        for card in reverseSortCards :
+            if card.cardValue() + total <= 20 :
+                return card
