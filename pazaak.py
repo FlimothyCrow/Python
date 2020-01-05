@@ -29,3 +29,9 @@ def sumCards(hand) :
         elif card.operator == "N" :
             totalValue -= card.value
     return totalValue
+
+def aiCard(hand, total) :
+    sortedCards = sorted(hand.cards, key=lambda x: x.value, reverse=True)
+    for card in sortedCards :
+        if card.value + total < 20 :
+            return card
