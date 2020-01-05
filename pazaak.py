@@ -1,14 +1,20 @@
 import random
 
+class Card :
+    def __init__(self, value, operator):
+        self.value = value
+        self.operator = operator
 
-def chooseCard() :
-    cards = {1:1, 2:2, 3:3, 4:-4}
-    return cards[(random.randint(1, 4))]
+class Hand :
+    def __init__(self, card):
+        self.card = card
+
+def makeCard() :
+    return Card(random.randint(1, 20), "f")
 
 def makeHand() :
     hand = {}
-    for card in range(5) :
+    for card in range(6) :
         hand[card] = random.randint(1,20)
     return hand
 
-print(makeHand())
