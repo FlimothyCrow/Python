@@ -54,6 +54,11 @@ class pazaakTest(unittest.TestCase):
         hand = Hand([Card(2, "P"), Card(3, "N")])
         self.assertEqual(None, aiCard(hand, 20))
 
+    def test_aiCard8(self):
+        hand = Hand([Card(5, "P"), Card(2, "P")])
+        cards_ = hand.cards[0]
+        self.assertEqual(cards_, aiCard(hand, 14))
+
     def test_playGame(self):
         hand = Hand([Card(2, "P"), Card(3, "N")])
         drawDeck = [10, 5, 8]
@@ -69,17 +74,12 @@ class pazaakTest(unittest.TestCase):
         drawDeck = [10, 4, 8]
         self.assertEqual(22, playGame(hand, drawDeck))
 
+    def test_playGame4(self):
+        hand = Hand([Card(5, "P"), Card(2, "P")])
+        drawDeck = [10, 4, 10]
+        self.assertEqual(19, playGame(hand, drawDeck))
+
     def test_gameController(self):
         hand = Hand([Card(5, "P"), Card(2, "P")])
         drawDeck = [10, 10, 10]
         self.assertEqual("AI wins", gameController(hand, drawDeck))
-
-    def test_gameController2(self):
-        hand = Hand([Card(5, "P"), Card(2, "P")])
-        drawDeck = [10, 4, 10]
-        self.assertEqual("wings of pastrami", gameController(hand, drawDeck))
-
-    def test_gameController3(self):
-        hand = Hand([Card(5, "P"), Card(2, "P")])
-        drawDeck = [10, 4, 10]
-        self.assertEqual("humanity wins", gameController(hand, drawDeck))

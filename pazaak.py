@@ -46,12 +46,15 @@ def aiCard(hand, total) :
 
 def playGame(hand, drawDeck) :
     total = 0
+
     while total < 15 :
-        total += drawDeck[0]
-        del drawDeck[0]
-    card = aiCard(hand, total)
-    if card:
-        total += card.cardValue()
+        card = aiCard(hand, total)
+        if card:
+            total += card.cardValue()
+        else :
+            total += drawDeck[0]
+            del drawDeck[0]
+
     return total
 
 def gameController(hand, drawDeck) :
@@ -61,12 +64,12 @@ def gameController(hand, drawDeck) :
     tie = 0
     for turn in range(3) :
         total = playGame(hand, drawDeck)
-        if total == 20 :
+        if 17 < total < 21 :
             return "AI wins"
         elif total > 20 :
-            return "wings of pastrami"
+            return "> 20"
         else :
-            return "humanity wins"
+            return "< 18"
 
 # story 1 - make controller that plays 3 rounds of game and returns win count
 #           is given a longer "draw deck"
