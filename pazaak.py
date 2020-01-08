@@ -15,6 +15,12 @@ class Hand :
     def __init__(self, cards):
         self.cards = cards
 
+class Scoreboard :
+    def __init__(self, ai, player, tie):
+        self.ai = ai
+        self.player = player
+        self.tie = tie
+
 def makeCard() :
     operators = {0:"P", 1:"N", 2:"B"}
     return Card(random.randint(1, 20), operators[random.randint(0,2)])
@@ -56,17 +62,18 @@ def playGame(hand, drawDeck):
 
 def gameController(hand, drawDeck) :
     total = 0
-    AI = 0
-    Player = 0
+    ai = 0
+    player = 0
     tie = 0
     for turn in range(3) :
         total = playGame(hand, drawDeck)
         if 17 < total < 21 :
-            return "AI wins"
+            ai += 1
         elif total > 20 :
-            return "> 20"
+            player += 1
         else :
-            return "< 18"
+            tie += 1
+    return Scoreboard(ai, player, tie)
 
 # story 1 - make controller that plays 3 rounds of game and returns win count
 #           is given a longer "draw deck"
