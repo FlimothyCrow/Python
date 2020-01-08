@@ -44,17 +44,14 @@ def aiCard(hand, total) :
             return card
 # draw, play or stay
 
-def playGame(hand, drawDeck) :
+def playGame(hand, drawDeck):
     total = 0
-
-    while total < 15 :
-        card = aiCard(hand, total)
-        if card:
-            total += card.cardValue()
-        else :
-            total += drawDeck[0]
-            del drawDeck[0]
-
+    while total < 15:
+        total += drawDeck[0]
+        del drawDeck[0]
+    card = aiCard(hand, total)
+    if card:
+        total += card.cardValue()
     return total
 
 def gameController(hand, drawDeck) :
