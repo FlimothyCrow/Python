@@ -39,7 +39,7 @@ def aiCard(hand, total) :
        return None
     sortedCards = sorted(hand.cards, key=lambda x: x.cardValue(), reverse=True)
     for card in sortedCards :
-        if card.cardValue() + total <= 20 :
+        if 16 < card.cardValue() + total <= 20 :
             del hand.cards[0]
             return card
 # draw, play or stay
@@ -49,9 +49,9 @@ def playGame(hand, drawDeck):
     while total < 15:
         total += drawDeck[0]
         del drawDeck[0]
-    card = aiCard(hand, total)
-    if card:
-        total += card.cardValue()
+        card = aiCard(hand, total)
+        if card:
+            total += card.cardValue()
     return total
 
 def gameController(hand, drawDeck) :

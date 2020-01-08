@@ -67,17 +67,22 @@ class pazaakTest(unittest.TestCase):
     def test_playGame2(self):
         hand = Hand([Card(5, "P"), Card(2, "N")])
         drawDeck = [10, 4, 8]
-        self.assertEqual(20, playGame(hand, drawDeck))
+        self.assertEqual(19, playGame(hand, drawDeck))
 
     def test_playGame3(self):
         hand = Hand([Card(5, "P"), Card(2, "P")])
-        drawDeck = [10, 4, 8]
-        self.assertEqual(22, playGame(hand, drawDeck))
+        drawDeck = [10, 4, 10]
+        self.assertEqual(19, playGame(hand, drawDeck))
 
     def test_playGame4(self):
         hand = Hand([Card(5, "P"), Card(2, "P")])
-        drawDeck = [10, 4, 10]
+        drawDeck = [10, 7, 10]
         self.assertEqual(19, playGame(hand, drawDeck))
+
+    def test_playGame5(self):
+        hand = Hand([Card(1, "N"), Card(2, "P")])
+        drawDeck = [10, 4, 7]
+        self.assertEqual(20, playGame(hand, drawDeck))
 
     def test_gameController(self):
         hand = Hand([Card(5, "P"), Card(2, "P")])
