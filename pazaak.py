@@ -46,11 +46,15 @@ def sumCards(hand) :
 def aiCard(hand, total) :
     if total == 20 :
        return None
-    sortedCards = sorted(hand.cards, key=lambda x: x.cardValue(), reverse=True)
-    for card in sortedCards :
-        if 16 < card.cardValue() + total <= 20 :
-            del hand.cards[0]
-            return card
+    if hand :
+        sortedCards = sorted(hand.cards, key=lambda x: x.cardValue(), reverse=True)
+        if len(sortedCards) > 0 :
+            for card in sortedCards :
+                if 16 < card.cardValue() + total <= 20 :
+                    del hand.cards[0]
+                    return card
+    else :
+        return None
 # draw, play or stay
 
 def playGame(hand, drawDeck):

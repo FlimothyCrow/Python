@@ -59,6 +59,10 @@ class pazaakTest(unittest.TestCase):
         cards_ = hand.cards[0]
         self.assertEqual(cards_, aiCard(hand, 14))
 
+    def test_aiCard9(self):
+        hand = []
+        self.assertEqual(None, aiCard(hand, 14)) # this fails because of empty hand
+
     def test_playGame(self):
         hand = Hand([Card(2, "P"), Card(3, "N")])
         drawDeck = [10, 5, 8]
@@ -89,6 +93,11 @@ class pazaakTest(unittest.TestCase):
         drawDeck = [10, 10, 10, 10, 10]
         self.assertEqual(20, playGame(hand, drawDeck))
 
+    def test_playGame7(self):
+        hand = []
+        drawDeck = [10, 5, 1]
+        self.assertEqual(16, playGame(hand, drawDeck)) # this fails because of empty hand
+
     def test_scoreMaker(self):
         board = boardMaker(1, 0, 2)
         self.assertEqual(1, board.ai)
@@ -97,3 +106,4 @@ class pazaakTest(unittest.TestCase):
         hand = Hand([Card(5, "P"), Card(2, "P"), Card(10, "P"), Card(4, "P")])
         drawDeck = [10, 10, 10, 10, 10]
         self.assertEqual(3, gameController(hand, drawDeck).ai)
+
