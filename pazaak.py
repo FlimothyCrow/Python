@@ -34,6 +34,9 @@ def makeHand() :
         cards.append(makeCard())
     return Hand(cards)
 
+def boardMaker(ai, player, tie) :
+    return Scoreboard(ai, player, tie)
+
 def sumCards(hand) :
     totalValue = 0
     for card in hand.cards :
