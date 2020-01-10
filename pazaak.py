@@ -80,6 +80,7 @@ def gameController(hand, drawDeck) :
 
 # story 1 - make controller that plays 3 rounds of game and returns win count
 #           is given a longer "draw deck"
+#           aiCard fails when it runs out of cards!
 
 # story 2 - run a manual simulation on controller with a real random draw deck and same hand and
 #           several different numbers for the 15 card limit and see which

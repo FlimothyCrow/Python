@@ -94,6 +94,6 @@ class pazaakTest(unittest.TestCase):
         self.assertEqual(1, board.ai)
 
     def test_gameController(self):
-        hand = Hand([Card(5, "P"), Card(2, "P")])
+        hand = Hand([Card(5, "P"), Card(2, "P"), Card(10, "P"), Card(4, "P")])
         drawDeck = [10, 10, 10, 10, 10]
-        self.assertEqual(1, gameController(hand, drawDeck).ai)
+        self.assertEqual(3, gameController(hand, drawDeck).ai)
