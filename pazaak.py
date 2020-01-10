@@ -76,7 +76,7 @@ def gameController(hand, drawDeck) :
             player += 1
         else :
             tie += 1
-    return Scoreboard(ai, player, tie)
+    return boardMaker(ai, player, tie)
 
 # story 1 - make controller that plays 3 rounds of game and returns win count
 #           is given a longer "draw deck"
