@@ -95,9 +95,10 @@ class pazaakTest(unittest.TestCase):
 
     def test_playGame7(self):
         hand = []
-        drawDeck = [10, 5, 1]
-        self.assertEqual(16, playGame(hand, drawDeck))
+        drawDeck = [10, 5, 1, 10, 2, 9]
+        self.assertEqual(26, playGame(hand, drawDeck))
 # there should be logic for playing multiple cards without a draw
+#
     def test_scoreMaker(self):
         board = boardMaker(1, 0, 2)
         self.assertEqual(1, board.ai)

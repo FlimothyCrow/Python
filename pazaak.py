@@ -59,7 +59,7 @@ def aiCard(hand, total) :
 
 def playGame(hand, drawDeck):
     total = 0
-    while total < 15:
+    while total < 16:
         total += drawDeck[0]
         del drawDeck[0]
         card = aiCard(hand, total)
