@@ -65,6 +65,9 @@ def playGame(hand, drawDeck):
         card = aiCard(hand, total)
         if card:
             total += card.cardValue()
+        elif not hand :
+            total += drawDeck[0]
+            del drawDeck[0]
     return total
 
 def gameController(hand, drawDeck) :
