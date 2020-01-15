@@ -27,6 +27,11 @@ def makeCard() :
 
 #print(makeCard().operator)
 # add functions (easily testable) into a class for high cohesion, low coupling
+def deckGenerator() :
+    deck = []
+    for card in range(29) :
+        deck.append(random.randint(1,10))
+    return deck
 
 def makeHand() :
     cards = []
@@ -70,12 +75,12 @@ def playGame(hand, drawDeck):
             del drawDeck[0]
     return total
 
-def gameController(hand, drawDeck) :
+def gameController(hand, drawDeck, turns) :
     total = 0
     ai = 0
     player = 0
     tie = 0
-    for turn in range(3) :
+    for turn in range(turns) :
         total = playGame(hand, drawDeck)
         if 17 < total < 21 :
             ai += 1
@@ -85,13 +90,26 @@ def gameController(hand, drawDeck) :
             tie += 1
     return boardMaker(ai, player, tie)
 
+def manualRun(turns) :
+    listOfResults = []
+    #randomHand = makeHand()
+    #randomDrawDeck = deckGenerator()
+    randomHand = Hand([Card(5, "P"), Card(2, "P"), Card(10, "P"), Card(4, "P")])
+    randomDrawDeck = [1, 2, 9, 10, 5]
+    listOfResults.append(gameController(randomHand, randomDrawDeck, turns))
+    return listOfResults
+
+print(manualRun(1)[0].ai)
+
+
 # story 1 - make controller that plays 3 rounds of game and returns win count
 #           is given a longer "draw deck"
-#           aiCard fails when it runs out of cards!
 
 # story 2 - run a manual simulation on controller with a real random draw deck and same hand and
 #           several different numbers for the 15 card limit and see which
 #           number provides the highest average totals below 20  (optionally play two ais against each other
-#           with differnt numbers passed in for the "15" amount and see which wins most)
+#           with different numbers passed in for the "15" amount and see which wins most)
 
 # story 3 - make aicard choose positive or negative MIND BLOWN
+
+
