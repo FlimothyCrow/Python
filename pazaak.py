@@ -25,7 +25,7 @@ class Scoreboard :
 # add functions (easily testable) into a class for high cohesion, low coupling
 
 def makeCard() :
-    operators = {0:"P", 1:"N", 2:"B"}
+    operators = {0:"P", 1:"N", 2:"P"}
     return Card(random.randint(1, 10), operators[random.randint(0,2)])
 
 def deckGenerator() :
@@ -117,7 +117,8 @@ print(manualRun(1)[0].ai)
 # TypeError: '<' not supported between instances of 'NoneType' and 'int' on line 55
 # sorting by calling cardValue on line 66 based on positive or negative is causing the problem
 # sortedCards can't handle the "B" conditional!
-
+# changed "B" to "P" on line 29
+# need to incorporate .cardValue function on line 8
 
 
 # story 1 - make controller that plays 3 rounds of game and returns win count
