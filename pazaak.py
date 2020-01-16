@@ -100,7 +100,7 @@ def manualRun(turns) :
     return listOfResults
 
 print(manualRun(1)[0].ai)
-
+# the print works with pre-defined hand and deck
 
 # story 1 - make controller that plays 3 rounds of game and returns win count
 #           is given a longer "draw deck"
