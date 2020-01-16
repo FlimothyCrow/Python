@@ -21,12 +21,13 @@ class Scoreboard :
         self.player = player
         self.tie = tie
 
+#print(makeCard().operator)
+# add functions (easily testable) into a class for high cohesion, low coupling
+
 def makeCard() :
     operators = {0:"P", 1:"N", 2:"B"}
     return Card(random.randint(1, 10), operators[random.randint(0,2)])
 
-#print(makeCard().operator)
-# add functions (easily testable) into a class for high cohesion, low coupling
 def deckGenerator() :
     deck = []
     for card in range(29) :
@@ -43,10 +44,11 @@ def handPrinter() :
     handList = []
     hand = makeHand()
     for card in hand.cards :
-        handList.append(card.value)
+        handList.append(card.operator)
     return handList
 
-print(handPrinter())
+#for hand in range(99999) : # this print test is returning correct numerical values!
+#    print(handPrinter()) # it also returns correct ranges of ["B", "P", "N"]
 
 def boardMaker(ai, player, tie) :
     return Scoreboard(ai, player, tie)
@@ -101,18 +103,20 @@ def gameController(hand, drawDeck, turns) :
 
 def manualRun(turns) :
     listOfResults = []
-    randomHand = makeHand()
-    randomDrawDeck = deckGenerator()
-    #randomHand = Hand([Card(5, "P"), Card(2, "P"), Card(10, "P"), Card(4, "P")])
-    #randomDrawDeck = [1, 2, 9, 10, 5]
+    #randomHand = makeHand()
+    #randomDrawDeck = deckGenerator()
+    randomHand = Hand([Card(5, "P"), Card(2, "N"), Card(10, "N"), Card(4, "P")])
+    randomDrawDeck = [1, 2, 9, 10, 5]
     listOfResults.append(gameController(randomHand, randomDrawDeck, turns))
     return listOfResults
 
-#print(manualRun(1)[0].ai)
+print(manualRun(1)[0].ai)
+
 # the print works with pre-defined hand and deck
 # two successful tests with randoms, and then :
 # TypeError: '<' not supported between instances of 'NoneType' and 'int' on line 55
-# makeHand > handPrinter is creating cards higher than 10??
+# sorting by calling cardValue on line 66 based on positive or negative is causing the problem
+# sortedCards can't handle the "B" conditional!
 
 
 
