@@ -25,7 +25,7 @@ class Scoreboard :
 # add functions (easily testable) into a class for high cohesion, low coupling
 
 def makeCard() :
-    operators = {0:"P", 1:"N", 2:"P"}
+    operators = {0:"P", 1:"N", 2:"B"}
     return Card(random.randint(1, 10), operators[random.randint(0,2)])
 
 def deckGenerator() :
@@ -103,14 +103,14 @@ def gameController(hand, drawDeck, turns) :
 
 def manualRun(turns) :
     listOfResults = []
-    #randomHand = makeHand()
-    #randomDrawDeck = deckGenerator()
-    randomHand = Hand([Card(5, "P"), Card(2, "N"), Card(10, "N"), Card(4, "P")])
-    randomDrawDeck = [1, 2, 9, 10, 5]
+    randomHand = makeHand()
+    randomDrawDeck = deckGenerator()
+    #randomHand = Hand([Card(5, "P"), Card(2, "N"), Card(10, "N"), Card(4, "B")])
+    #randomDrawDeck = [1, 2, 9, 10, 5]
     listOfResults.append(gameController(randomHand, randomDrawDeck, turns))
     return listOfResults
 
-print(manualRun(1)[0].ai)
+#print(manualRun(1)[0].ai)
 
 # the print works with pre-defined hand and deck
 # two successful tests with randoms, and then :
