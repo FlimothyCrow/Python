@@ -10,6 +10,8 @@ class Card :
             return self.value
         elif self.operator == "N" :
             return -self.value
+        elif self.operator == "B" :
+            return -self.value
 
 class Hand :
     def __init__(self, cards):
