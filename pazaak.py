@@ -5,13 +5,21 @@ class Card :
         self.value = value
         self.operator = operator
 
-    def cardValue(self):
+    def cardValue(self, top):
         if self.operator == "P" :
             return self.value
         elif self.operator == "N" :
             return -self.value
         elif self.operator == "B" :
-            return -self.value
+            if top :
+                return self.value
+            else :
+                return -self.value
+
+
+# make a "B" class into two disparate cards, + / -
+# aiCard already knows how to choose
+# playing one automatically removes the other
 
 class Hand :
     def __init__(self, cards):
@@ -65,15 +73,27 @@ def aiCard(hand, total) :
     if total == 20 :
        return None
     if hand :
-        sortedCards = sorted(hand.cards, key=lambda x: x.cardValue(), reverse=True)
+        sortedCards = sorted(hand.cards, key=lambda x: x.cardValue(True), reverse=True)
         if len(sortedCards) > 0 :
             for card in sortedCards :
-                if 16 < card.cardValue() + total <= 20 :
+                if 16 < card.cardValue(True) + total <= 20 :
                     del hand.cards[0]
                     return card
+        sortedCards = sorted(hand.cards, key=lambda x: x.cardValue(False), reverse=True)
+        if len(sortedCards) > 0:
+            for card in sortedCards:
+                if 16 < card.cardValue(False) + total <= 20:
+                    del hand.cards[0]
+                    return card
+
     else :
         return None
 # draw, play or stay
+# [ [3, -3], 2, -2] ]
+# [ 2, -2, [3, -3] ]
+# card[index]
+
+
 
 def playGame(hand, drawDeck):
     total = 0

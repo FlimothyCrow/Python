@@ -69,6 +69,11 @@ class pazaakTest(unittest.TestCase):
         cards_ = hand.cards[0]
         self.assertEqual(cards_, aiCard(hand, 18))
 
+    def test_aiCard11(self):
+        hand = Hand([Card(3, "B"), Card(2, "N")])
+        cards_ = hand.cards[1]
+        self.assertEqual(cards_, aiCard(hand, 22))
+
     def test_playGame(self):
         hand = Hand([Card(2, "P"), Card(3, "N")])
         drawDeck = [10, 5, 8]
