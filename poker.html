@@ -1,0 +1,75 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Vending Machine Change Calculator TDD Tutorial</title>
+    <!-- Load the QUnit CSS file from CDN - Require to display our tests attractively -->
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.18.0.css">
+    <!-- Pure CSS is a minimalist CSS file we have included to make things look nicer -->
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+</head>
+<body style='margin: 0 1em;'>
+<div id='main'>
+    <h1><em>Extra Spicy</em> poker kata</h1>
+    <h2>Calculate how <em>spicy</em> a hand of cards can get.</h2>
+</div>
+
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+<!-- Load the QUnit Testing Framework from CDN - this is the important bit ... -->
+<script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
+<script>
+
+      // This is what a simple unit test looks like:
+
+      function cardValue(card) {
+        if (card[0] === "A") {
+            return 14
+        }
+        else if (card[0] === "K") {
+            return 13
+        }
+        else if (card[0] === "Q") {
+            return 12
+        }
+        else if (card[0] === "J") {
+            return 11
+        }
+        else return parseInt(card.slice(0, -1))
+      }
+      test('cardValue', function(assert) {
+        var value = cardValue("AS") ;
+        assert.equal(value, 14) ;
+      });
+      test('cardValue', function(assert) {
+        var value = cardValue("KC") ;
+        assert.equal(value, 13) ;
+      });
+      test('cardValue', function(assert) {
+        var value = cardValue("QH") ;
+        assert.equal(value, 12) ;
+      });
+      test('cardValue', function(assert) {
+        var value = cardValue("JD") ;
+        assert.equal(value, 11) ;
+      });
+      test('cardValue', function(assert) {
+        var value = cardValue("10S") ;
+        assert.equal(value, 10) ;
+      });
+      test('cardValue', function(assert) {
+        var value = cardValue("9D") ;
+        assert.equal(value, 9) ;
+      });
+
+      function makeCard(string) {
+        return { value : cardValue(string), suit : string.charAt(string.length-1)  }
+      }
+
+      test('makeCard', function(assert) {
+        var cardObject = makeCard("9D") ;
+        assert.equal(cardObject.value, 9) ;
+        assert.equal(cardObject.suit, "D") ;
+      });
+</script>
+</body>
+</html>
