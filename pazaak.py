@@ -5,6 +5,12 @@ class Card :
         self.value = value
         self.operator = operator
 
+    def topValue(self): # ai chooses positive value from "B"
+        return self.cardValue(True)
+
+    def bottomValue(self): # ai chooses negative value from "B"
+        return self.cardValue(False)
+
     def cardValue(self, top):
         if self.operator == "P" :
             return self.value
@@ -16,10 +22,13 @@ class Card :
             else :
                 return -self.value
 
-    def __eq__(self, other):
-        if self.value == other.value and self.operator == other.operator :
-            return True
+    def choosePositive(self):
+        self.operator = "P"
+        return self
 
+    def chooseNegative(self):
+        self.operator = "N"
+        return self
 
 # make a "B" class into two disparate cards, + / -
 # aiCard already knows how to choose
@@ -71,21 +80,19 @@ def aiCard(hand, total) :
     if total == 20 :
        return None
     if hand :
-        sortedCards = sorted(hand.cards, key=lambda x: x.cardValue(True), reverse=True)
+        sortedCards = sorted(hand.cards, key=lambda x: x.topValue(), reverse=True)
         if len(sortedCards) > 0 :
             for card in sortedCards :
-                if card.cardValue(True) > 0 :
-                    if 16 < card.cardValue(True) + total <= 20 :
+                if card.topValue() > 0 :
+                    if 16 < card.topValue() + total <= 20 :
                         del hand.cards[0]
-                        card.operator = "P"
-                        return card
-        sortedCards = sorted(hand.cards, key=lambda x: x.cardValue(False), reverse=True)
+                        return card.choosePositive()
+        sortedCards = sorted(hand.cards, key=lambda x: x.bottomValue(), reverse=True)
         if len(sortedCards) > 0:
             for card in sortedCards:
-                if 16 < card.cardValue(False) + total <= 20:
+                if 16 < card.bottomValue() + total <= 20:
                     del hand.cards[0]
-                    card.operator = "N"
-                    return card
+                    return card.chooseNegative()
     else :
         return None
 # remember you can singly mutate (line 87) instead of redefining the class
@@ -147,5 +154,3 @@ def manualRun(turns) :
 #           with different numbers passed in for the "15" amount and see which wins most)
 
 # story 3 - make aicard choose positive or negative MIND BLOWN
-
-
