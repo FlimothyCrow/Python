@@ -16,6 +16,10 @@ class Card :
             else :
                 return -self.value
 
+    def __eq__(self, other):
+        if self.value == other.value and self.operator == other.operator :
+            return True
+
 
 # make a "B" class into two disparate cards, + / -
 # aiCard already knows how to choose
@@ -63,12 +67,6 @@ def handPrinter() :
 def boardMaker(ai, player, tie) :
     return Scoreboard(ai, player, tie)
 
-def sumCards(hand) :
-    totalValue = 0
-    for card in hand.cards :
-        totalValue += card.cardValue()
-    return totalValue
-
 def aiCard(hand, total) :
     if total == 20 :
        return None
@@ -76,24 +74,21 @@ def aiCard(hand, total) :
         sortedCards = sorted(hand.cards, key=lambda x: x.cardValue(True), reverse=True)
         if len(sortedCards) > 0 :
             for card in sortedCards :
-                if 16 < card.cardValue(True) + total <= 20 :
-                    del hand.cards[0]
-                    return card
+                if card.cardValue(True) > 0 :
+                    if 16 < card.cardValue(True) + total <= 20 :
+                        del hand.cards[0]
+                        card.operator = "P"
+                        return card
         sortedCards = sorted(hand.cards, key=lambda x: x.cardValue(False), reverse=True)
         if len(sortedCards) > 0:
             for card in sortedCards:
                 if 16 < card.cardValue(False) + total <= 20:
                     del hand.cards[0]
+                    card.operator = "N"
                     return card
-
     else :
         return None
-# draw, play or stay
-# [ [3, -3], 2, -2] ]
-# [ 2, -2, [3, -3] ]
-# card[index]
-
-
+# remember you can singly mutate (line 87) instead of redefining the class
 
 def playGame(hand, drawDeck):
     total = 0
@@ -102,7 +97,7 @@ def playGame(hand, drawDeck):
         del drawDeck[0]
         card = aiCard(hand, total)
         if card:
-            total += card.cardValue()
+            total += card.cardValue(True) # come back
         elif not hand :
             total += drawDeck[0]
             del drawDeck[0]
