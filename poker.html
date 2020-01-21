@@ -70,6 +70,21 @@
         assert.equal(cardObject.value, 9) ;
         assert.equal(cardObject.suit, "D") ;
       });
+
+      function makeHand(listOfCards) {
+        var handObject = []
+        for (card in listOfCards) {
+          handObject.push(makeCard(card))
+        }
+        return handObject
+      }
+
+      test('makeHand', function(assert) {
+        var handObject = makeHand(["9D", "2S", "5C", "8D", "AH"]) ;
+        assert.equal(handObject[0].value, 9) ;
+      });
+
+
 </script>
 </body>
 </html>
