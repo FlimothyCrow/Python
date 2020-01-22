@@ -17,77 +17,9 @@
 <div id="qunit-fixture"></div>
 <!-- Load the QUnit Testing Framework from CDN - this is the important bit ... -->
 <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
-<script>
-
-      // This is what a simple unit test looks like:
-
-      function cardValue(card) {
-        if (card[0] === "A") {
-            return 14
-        }
-        else if (card[0] === "K") {
-            return 13
-        }
-        else if (card[0] === "Q") {
-            return 12
-        }
-        else if (card[0] === "J") {
-            return 11
-        }
-        else return parseInt(card.slice(0, -1))
-      }
-      test('cardValue', function(assert) {
-        var value = cardValue("AS") ;
-        assert.equal(value, 14) ;
-      });
-      test('cardValue', function(assert) {
-        var value = cardValue("KC") ;
-        assert.equal(value, 13) ;
-      });
-      test('cardValue', function(assert) {
-        var value = cardValue("QH") ;
-        assert.equal(value, 12) ;
-      });
-      test('cardValue', function(assert) {
-        var value = cardValue("JD") ;
-        assert.equal(value, 11) ;
-      });
-      test('cardValue', function(assert) {
-        var value = cardValue("10S") ;
-        assert.equal(value, 10) ;
-      });
-      test('cardValue', function(assert) {
-        var value = cardValue("9D") ;
-        assert.equal(value, 9) ;
-      });
-
-      function makeCard(string) {
-        return { value : cardValue(string), suit : string.charAt(string.length-1)  }
-      }
-
-      test('makeCard', function(assert) {
-        var cardObject = makeCard("9D") ;
-        assert.equal(cardObject.value, 9) ;
-        assert.equal(cardObject.suit, "D") ;
-      });
-
-      function makeHand(listOfCards) {
-        var handObject = []
-        for (card of listOfCards) {
-          handObject.push(makeCard(card))
-        }
-        // console.log(handObject[0])
-        return { cards : handObject }
-      }
-
-      test('makeHand', function(assert) {
-        var handObject = makeHand(["9D", "3C"]) ;
-        assert.equal(handObject.cards[0].value, 9) ;
-        assert.equal(handObject.cards[0].suit, "D") ;
-        assert.equal(handObject.cards[1].suit, "C") ;
-      });
-
+<script src ="./pokerkata.js">
 
 </script>
+<script src="./pokertest.js"> </script>
 </body>
 </html>
