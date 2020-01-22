@@ -74,7 +74,7 @@
       function makeHand(listOfCards) {
         var handObject = []
         for (card of listOfCards) {
-          handObject.push(card)
+          handObject.push(makeCard(card))
         }
         // console.log(handObject[0])
         return { cards : handObject }
@@ -82,7 +82,9 @@
 
       test('makeHand', function(assert) {
         var handObject = makeHand(["9D", "3C"]) ;
-        assert.equal(handObject.cards[0], 3) ;
+        assert.equal(handObject.cards[0].value, 9) ;
+        assert.equal(handObject.cards[0].suit, "D") ;
+        assert.equal(handObject.cards[1].suit, "C") ;
       });
 
 
