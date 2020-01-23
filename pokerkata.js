@@ -31,13 +31,10 @@
         return { cards : handObject }
       }
 
-/*
       function isMatch(hand) {
-        var values = []
-        for (value in hand.cards.values)
-          values.push({
-            key: value
-            value: 1
-          })
+        var listOfValues = [] ;
+        for (value of hand.cards) {
+          listOfValues[value] = 1 ;
+          return listOfValues
+        } ;
       }
-*/
