@@ -32,9 +32,9 @@
       }
 
       function isMatch(hand) {
-        var listOfValues = [] ;
-        for (value of hand.cards) {
-          listOfValues[value] = 1 ;
+        var listOfValues = {} ;
+        for (card of hand.cards) {
+          listOfValues[card.value] = 1 ;
           return listOfValues
         } ;
       }
