@@ -36,6 +36,5 @@
         for (card of hand.cards) {
           listOfValues[card.value] = (listOfValues[card.value]+1) || 1 ;
           }
-        console.log(listOfValues)
         return listOfValues // currently returning empty
       };

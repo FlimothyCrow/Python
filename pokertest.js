@@ -38,6 +38,6 @@ test('cardValue', function(assert) {
 });
 // ------------------------------------------------
 test('isMatch', function(assert) {
-  var handObject = makeHand(["9D", "9C"]) ;
-  assert.equal(isMatch(handObject)[9], 2) ;
+  var handObject = makeHand(["9D", "9C", "3S", "3H", "9S"]) ;
+  assert.equal(isMatch(handObject)[3], 2) ;
 });
