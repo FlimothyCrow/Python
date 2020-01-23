@@ -34,7 +34,9 @@
       function isMatch(hand) {
         var listOfValues = {} ;
         for (card of hand.cards) {
-          listOfValues[card.value] = 1 ;
-          return listOfValues
+          if (card.value in listOfValues) {
+            listOfValues[card.value] = (listOfValues[card.value]+1) || 1 ;
+          }
+        return listOfValues
         } ;
       }
