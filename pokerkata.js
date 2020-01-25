@@ -38,7 +38,7 @@
           }
         for (key in listOfValues) {
           if (listOfValues[key] === 2) {
-            return "string"
+            return "pair of " + key
           }
         }
         return listOfValues
