@@ -36,5 +36,10 @@
         for (card of hand.cards) {
           listOfValues[card.value] = (listOfValues[card.value]+1) || 1 ;
           }
-        return listOfValues // currently returning empty
+        for (key in listOfValues) {
+          if (listOfValues[key] === 2) {
+            return "string"
+          }
+        }
+        return listOfValues
       };
