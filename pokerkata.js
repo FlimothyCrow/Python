@@ -30,16 +30,33 @@
         }
         return { cards : handObject }
       }
-
+// ----------------------------------------------------------
       function isMatch(hand) {
         var listOfValues = {} ;
         for (card of hand.cards) {
           listOfValues[card.value] = (listOfValues[card.value]+1) || 1 ;
           }
+          var counter = 0 ;
+          for (let i = 0; i < listOfValues.length; step++) {
+              if (listOfValues[i].value === 2) {
+                counter += 1
+              }
+          }
+          if (counter === 2) {
+            return "string"
+          }
         for (key in listOfValues) {
           if (listOfValues[key] === 2) {
+
             return "pair of " + key
           }
+          else if (listOfValues[key] === 3) {
+            return "three of " + key
+          }
+          else if (listOfValues[key] === 4) {
+            return "four of " + key
+          }
         }
+
         return listOfValues
       };
