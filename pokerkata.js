@@ -37,8 +37,10 @@
           listOfValues[card.value] = (listOfValues[card.value]+1) || 1 ;
           }
           var counter = 0 ;
-          for (let i = 0; i < listOfValues.length; step++) {
-              if (listOfValues[i].value === 2) {
+          var keyCount = Object.keys(listOfValues).length;
+          //console.log(keyCount)
+          for (key in listOfValues) {
+              if (listOfValues.key.value === 2) {
                 counter += 1
               }
           }
