@@ -62,3 +62,7 @@
 
         return listOfValues
       };
+// ----------------------------------------------------------
+  function valueCounter(hand) {
+    return "True"
+  }

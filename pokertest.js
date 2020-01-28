@@ -52,9 +52,14 @@ test('isMatch', function(assert) {
   var handObject = makeHand(["9D", "9C", "9S", "9H", "5S"]) ;
   assert.equal(isMatch(handObject), "four of 9") ;
 });
-*/
+
 test('isMatch', function(assert) {
   var handObject = makeHand(["9D", "9C", "5S", "3H", "5S"]) ;
   assert.equal(isMatch(handObject), "two pair 9 and 5") ;
 });
-// application day!
+*/
+// ------------------------------------------------
+test('valueCounter', function(assert) {
+  var handObject = makeHand(["9D", "9C", "9S", "3H", "5S"]) ;
+  assert.equal(valueCounter(handObject), {9 : 3})
+})
