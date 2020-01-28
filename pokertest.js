@@ -57,3 +57,4 @@ test('isMatch', function(assert) {
   var handObject = makeHand(["9D", "9C", "5S", "3H", "5S"]) ;
   assert.equal(isMatch(handObject), "two pair 9 and 5") ;
 });
+// application day!
