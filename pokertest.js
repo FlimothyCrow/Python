@@ -39,9 +39,13 @@ test('cardValue', function(assert) {
 // ------------------------------------------------
 test('valueCounter', function(assert) {
   var handObject = makeHand(["9D", "9C", "9S"]) ;
-  assert.deepEqual(valueCounter(handObject), { 9:3 })
+  assert.deepEqual(valueCounter(handObject), {9:3})
 })
 
+test('valueCounter', function(assert) {
+  var handObject = makeHand(["9D", "9C", "2S", "AS"]) ;
+  assert.deepEqual(valueCounter(handObject), { "14": 1, "2": 1, "9": 2})
+})
 /*
 test('isMatch', function(assert) {
   var handObject = makeHand(["9D", "9C", "2S", "3H", "5S"]) ;
