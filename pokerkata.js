@@ -31,38 +31,10 @@
         return { cards : handObject }
       }
 // ----------------------------------------------------------
-      function isMatch(hand) {
-        var listOfValues = {} ;
-        for (card of hand.cards) {
-          listOfValues[card.value] = (listOfValues[card.value]+1) || 1 ;
-          }
-          var counter = 0 ;
-          var keyCount = Object.keys(listOfValues).length;
-          //console.log(keyCount)
-          for (key in listOfValues) {
-              if (listOfValues.key.value === 2) {
-                counter += 1
-              }
-          }
-          if (counter === 2) {
-            return "string"
-          }
-        for (key in listOfValues) {
-          if (listOfValues[key] === 2) {
-
-            return "pair of " + key
-          }
-          else if (listOfValues[key] === 3) {
-            return "three of " + key
-          }
-          else if (listOfValues[key] === 4) {
-            return "four of " + key
-          }
-        }
-
-        return listOfValues
-      };
-// ----------------------------------------------------------
   function valueCounter(hand) {
-    return "True"
+    var listOfValues = {} ;
+    for (card of hand.cards) {
+      listOfValues[card.value] = (listOfValues[card.value]+1) || 1 ;
+      }
+    return listOfValues
   }
