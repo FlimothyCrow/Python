@@ -52,11 +52,19 @@ test('matchCounter', function(assert) {
   var valueCounted = valueCounter(handObject) ;
   assert.deepEqual(matchCounter(valueCounted), "pair of 9")
 })
+
+test('matchCounter', function(assert) {
+  var handObject = makeHand(["9D", "9C", "9S", "5H"]) ;
+  var valueCounted = valueCounter(handObject) ;
+  assert.deepEqual(matchCounter(valueCounted), "three 9s")
+})
+
+test('matchCounter', function(assert) {
+  var handObject = makeHand(["9D", "9C", "9S", "9H"]) ;
+  var valueCounted = valueCounter(handObject) ;
+  assert.deepEqual(matchCounter(valueCounted), "four 9s")
+})
 /*
-test('isMatch', function(assert) {
-  var handObject = makeHand(["9D", "9C", "2S", "3H", "5S"]) ;
-  assert.equal(isMatch(handObject), "pair of 9") ;
-});
 
 test('isMatch', function(assert) {
   var handObject = makeHand(["9D", "9C", "9S", "3H", "5S"]) ;

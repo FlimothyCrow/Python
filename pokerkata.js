@@ -41,8 +41,15 @@ function valueCounter(hand) {
 // ----------------------------------------------------------
 function matchCounter(valueCounted) {
   for (object of Object.entries(valueCounted)) {
-    if (object[1] === 2)
-      return "pair of " + object[0] 
+    if (object[1] === 2) {
+      return "pair of " + object[0]
+    }
+    else if (object[1] === 3) {
+      return "three " + object[0] + "s"
+    }
+    else if (object[1] === 4) {
+      return "four " + object[0] + "s"
+    }
   }
 }
 
