@@ -52,7 +52,12 @@ function matchCounter(valueCounted) {
     }
   }
 }
-
+// ----------------------------------------------------------
+function objToArray(hand) {
+  var arrayOfArrays = Object.keys(hand).map(function(key) {
+    return [key, hand[key]];
+});
+}
     //if ({value} === 2) {
       //return "string"
 

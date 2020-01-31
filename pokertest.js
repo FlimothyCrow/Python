@@ -44,10 +44,17 @@ test('valueCounter', function(assert) {
 
 test('valueCounter', function(assert) {
   var handObject = makeHand(["9D", "9C", "2S", "AS"]) ;
-  assert.deepEqual(valueCounter(handObject), { "14": 1, "2": 1, "9": 2})
+  assert.deepEqual(valueCounter(handObject), {"14": 1, "2": 1, "9": 2})
 })
 // ----------------------------------------------------------
-test('matchCounter', function(assert) {
+test('objToArray', function(assert) {
+  var handObject = makeHand(["9D", "3S"]) ;
+  var valueCounted = valueCounter(handObject) ;
+  assert.equal(objToArray(valueCounted, [[9,1], [3,1]]))
+})
+
+// ----------------------------------------------------------
+/*test('matchCounter', function(assert) {
   var handObject = makeHand(["9D", "9C", "3S", "5H"]) ;
   var valueCounted = valueCounter(handObject) ;
   assert.deepEqual(matchCounter(valueCounted), "pair of 9")
@@ -70,21 +77,4 @@ test('matchCounter', function(assert) {
   var valueCounted = valueCounter(handObject) ;
   assert.deepEqual(matchCounter(valueCounted), "two pair 3 and 5")
 })
-/*
-
-test('isMatch', function(assert) {
-  var handObject = makeHand(["9D", "9C", "9S", "3H", "5S"]) ;
-  assert.equal(isMatch(handObject), "three of 9") ;
-});
-
-test('isMatch', function(assert) {
-  var handObject = makeHand(["9D", "9C", "9S", "9H", "5S"]) ;
-  assert.equal(isMatch(handObject), "four of 9") ;
-});
-
-test('isMatch', function(assert) {
-  var handObject = makeHand(["9D", "9C", "5S", "3H", "5S"]) ;
-  assert.equal(isMatch(handObject), "two pair 9 and 5") ;
-});
 */
-// ------------------------------------------------
