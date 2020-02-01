@@ -53,13 +53,18 @@ test('objToArray', function(assert) {
   assert.equal(objToArray(valueCounted, [[9,1], [3,1]]))
 })
 
-// ----------------------------------------------------------
-/*test('matchCounter', function(assert) {
-  var handObject = makeHand(["9D", "9C", "3S", "5H"]) ;
+test('objToArray', function(assert) {
+  var handObject = makeHand(["9D", "AS", "10D", "9S", "3S"]) ;
   var valueCounted = valueCounter(handObject) ;
-  assert.deepEqual(matchCounter(valueCounted), "pair of 9")
+  assert.equal(objToArray(valueCounted, [[9,2], [14,1], [10,1], [3,1]]))
 })
-
+// ----------------------------------------------------------
+test('matchCounter', function(assert) {
+  var handObject = makeHand(["9D", "9C", "3S", "5H"]) ;
+  var valueCounted = objToArray(handObject) ;
+  assert.equal(matchCounter(valueCounted), "pair of 9")
+})
+/*
 test('matchCounter', function(assert) {
   var handObject = makeHand(["9D", "9C", "9S", "5H"]) ;
   var valueCounted = valueCounter(handObject) ;
