@@ -48,7 +48,14 @@ function objToArray(hand) {
 // ----------------------------------------------------------
 function matchCounter(matches) {
   for (var i = 0; i < matches.length; i++) {
-    return "true"
+    if (matches[i][1] == 2) {
+      return "pair of " + matches[i][0]
+    }
+    else if (matches[i][1] == 3) {
+      return "three " + matches[i][0]
+    }
+    else if (matches[i][1] == 4) {
+      return "four " + matches[i][0]
+    }
   }
 }
-// studied sortMerge and applications
