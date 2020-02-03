@@ -75,13 +75,12 @@ test('matchCounter', function(assert) {
   var matchCounted = [[9,3], [5,1]]
   assert.equal(matchCounter(matchCounted), "three 9")
 })
-/*
-test('matchCounter', function(assert) {
-  var handObject = makeHand(["9D", "9C", "9S", "9H"]) ;
-  var valueCounted = valueCounter(handObject) ;
-  assert.deepEqual(matchCounter(valueCounted), "four 9s")
-})
 
+test('matchCounter', function(assert) {
+  var matchCounted = [[9,4]]
+  assert.equal(matchCounter(matchCounted), "four 9")
+})
+/*
 test('matchCounter', function(assert) {
   var handObject = makeHand(["3D", "5S", "3S", "5H"]) ;
   var valueCounted = valueCounter(handObject) ;
