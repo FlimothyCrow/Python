@@ -65,7 +65,7 @@ test('objToArray', function(assert) {
   assert.equal(objToArray(valueCounted, [[9,2], [3,1], [5,1]]))
 })
 // ----------------------------------------------------------
-
+/*
 test('matchCounter', function(assert) {
   var matchCounted = [[9,2], [3,1], [5,1]]
   assert.equal(matchCounter(matchCounted), "pair of 9")
@@ -80,8 +80,8 @@ test('matchCounter', function(assert) {
   var matchCounted = [[9,4]]
   assert.equal(matchCounter(matchCounted), "four 9")
 })
-
+*/
 test('matchCounter', function(assert) {
   var matchCounted = [[9,2], [6,3]]
-  assert.equal(matchCounter(matchCounted), "string")
+  assert.equal(matchCounter(matchCounted), "full house 9 6")
 })
