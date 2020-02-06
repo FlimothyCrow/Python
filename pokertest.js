@@ -68,7 +68,7 @@ test('objToArray', function(assert) {
 
 test('matchCounter', function(assert) {
   var matchCounted = [[9,2], [3,1], [5,1]]
-  assert.equal(matchCounter(matchCounted), "true")
+  assert.equal(matchCounter(matchCounted), "pair of 9")
 })
 /*
 test('matchCounter', function(assert) {

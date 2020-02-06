@@ -52,9 +52,7 @@ function matchCounter(matches) {
       if (matches[i + 1][1] == 3) {
         return "full house " + matches[i][0] + " " + matches[i+1][0]
       }
-      else if (matches[i][1] == 2) { // how about a real conditional?
-        return "true"
+      else return "pair of " + matches[i][0]
       }
     }
-  }
 }
