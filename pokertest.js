@@ -87,6 +87,6 @@ test('matchCounter', function(assert) {
 })
 // ----------------------------------------------------------
 test('reorderArray', function(assert) {
-  var ordered = reorderArray[[2,1], [5,9], [4, 6]]
-  assert.equal(ordered, [[5,9], [4,6], [2,1]])
-}
+  var ordered = reorderArray[[2,1], [4, 6]]
+  assert.equal(ordered, [[4,6], [2,1]])
+})

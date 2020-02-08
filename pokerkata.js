@@ -46,6 +46,12 @@ function objToArray(hand) {
 });
 }
 // ----------------------------------------------------------
+function reorderArray(hand) {
+  var reordered = hand.sort(function(a, b) {
+  return a[1] > b[1] 
+  }
+}
+// ----------------------------------------------------------
 function matchCounter(matches) {
   for (var i = 0; i < matches.length; i++) {
     if (matches[i][1] === 2) {
