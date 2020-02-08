@@ -62,3 +62,5 @@ function matchCounter(matches) {
     }
     }
 }
+// helper function to descend-order the objToArray results?
+// or just make objToArray do it??
