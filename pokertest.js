@@ -85,3 +85,8 @@ test('matchCounter', function(assert) {
   var matchCounted = [[9,2], [6,3]]
   assert.equal(matchCounter(matchCounted), "full house 9 6")
 })
+// ----------------------------------------------------------
+test('reorderArray', function(assert) {
+  var ordered = reorderArray[[2,1], [5,9], [4, 6]]
+  assert.equal(ordered, [[5,9], [4,6], [2,1]])
+}
