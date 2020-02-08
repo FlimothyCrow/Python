@@ -57,5 +57,8 @@ function matchCounter(matches) {
     else if (matches[i][1] === 3) {
       return "three " + matches[i][0]
     }
+    else if (matches[i][1] === 4) {
+      return "four " + matches[i][0]
+    }
     }
 }

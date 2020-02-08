@@ -75,12 +75,12 @@ test('matchCounter', function(assert) {
   var matchCounted = [[9,3], [5,1]]
   assert.equal(matchCounter(matchCounted), "three 9")
 })
-/*
+
 test('matchCounter', function(assert) {
   var matchCounted = [[9,4]]
   assert.equal(matchCounter(matchCounted), "four 9")
 })
-*/
+
 test('matchCounter', function(assert) {
   var matchCounted = [[9,2], [6,3]]
   assert.equal(matchCounter(matchCounted), "full house 9 6")
