@@ -48,7 +48,7 @@ function objToArray(hand) {
 // ----------------------------------------------------------
 function reorderArray(hand) {
   var reordered = hand.sort(function(a, b) {
-  return a[1] > b[1] 
+  return a[1] > b[1]
   }
 }
 // ----------------------------------------------------------
@@ -70,3 +70,4 @@ function matchCounter(matches) {
 }
 // helper function to descend-order the objToArray results?
 // or just make objToArray do it??
+// studied sort > compare array[arrays]
