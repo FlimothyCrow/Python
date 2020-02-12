@@ -1,2 +1,5 @@
 .idea
 venv
+/bankInput.txt
+/insults.txt
+/vettedAccounts.txt
