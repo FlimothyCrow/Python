@@ -76,6 +76,7 @@ test('reorderArray', function(assert) {
   assert.deepEqual(ordered, [[3,25], [10, 10], [3,6], [5,1]])
 })
 // ----------------------------------------------------------
+
 test('matchCounter0', function(assert) {
   var matchCounted = [[9,2], [3,1], [5,1]]
   assert.equal(matchCounter(matchCounted), "pair of 9")
@@ -86,11 +87,6 @@ test('matchCounter1', function(assert) {
   assert.equal(matchCounter(matchCounted), "three 9")
 })
 
-test('matchCounter2', function(assert) {
-  var matchCounted = [[9,4]]
-  assert.equal(matchCounter(matchCounted), "four 9")
-})
-
 test('matchCounter3', function(assert) {
   var matchCounted = [[9,2], [6,3]]
   assert.equal(matchCounter(matchCounted), "full house 6 9")
@@ -98,6 +94,11 @@ test('matchCounter3', function(assert) {
 
 test('matchCounter4', function(assert) {
   var matchCounted = [[9,2], [6,2]]
-  assert.equal(matchCounter(matchCounted), "two pair 6 9")
+  assert.equal(matchCounter(matchCounted), "two pair 9 6")
+})
+
+test('matchCounter2', function(assert) {
+  var matchCounted = [[9,4]]
+  assert.equal(matchCounter(matchCounted), "four 9")
 })
 // ----------------------------------------------------------

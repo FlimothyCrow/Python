@@ -66,9 +66,13 @@ function matchCounter(matches) {
         return "three " + reorderedMatches[i][0]
       }
     }
-
     else if (reorderedMatches[i][1] === 2) {
-      return "pair of " + reorderedMatches[i][0]
+      if (reorderedMatches[i+1][1] === 2) {
+        return "two pair " + reorderedMatches[i][0] + " " + reorderedMatches[i+1][0]
+      }
+      else {
+        return "pair of " + reorderedMatches[i][0]
+      }
     }
     else if (reorderedMatches[i][1] === 4) {
       return "four " + reorderedMatches[i][0]
