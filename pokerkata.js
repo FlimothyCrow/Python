@@ -56,18 +56,19 @@ function reorderArray(hand) {
 }
 // ----------------------------------------------------------
 function matchCounter(matches) {
-  for (var i = 0; i < matches.length; i++) {
-    if (matches[i][1] === 2) {
-      if (matches[i + 1][1] === 3) {
-        return "full house " + matches[i][0] + " " + matches[i+1][0]
+  reorderedMatches = reorderArray(matches)
+  for (var i = 0; i < reorderedMatches.length; i++) {
+    if (reorderedMatches[i][1] === 3) {
+      if (reorderedMatches[i + 1][1] === 2) {
+        return "full house " + reorderedMatches[i][0] + " " + reorderedMatches[i+1][0]
       }
-      else return "pair of " + matches[i][0]
+      else return "pair of " + reorderedMatches[i][0]
       }
-    else if (matches[i][1] === 3) {
-      return "three " + matches[i][0]
+    else if (reorderedMatches[i][1] === 3) {
+      return "three " + reorderedMatches[i][0]
     }
-    else if (matches[i][1] === 4) {
-      return "four " + matches[i][0]
+    else if (reorderedMatches[i][1] === 4) {
+      return "four " + reorderedMatches[i][0]
     }
     }
 }
