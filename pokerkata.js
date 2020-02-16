@@ -85,5 +85,9 @@ function suitCounter(hand) {
   for (card of hand.cards) {
     listOfValues[card.suit] = (listOfValues[card.suit]+1) || 1 ;
     }
-    return listOfValues
+  for (var i = 0; i < listOfValues.length; i++) {
+    if (listOfValues[i] === 2) {
+      return
+    }
+  }
 }
