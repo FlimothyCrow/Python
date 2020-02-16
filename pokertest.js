@@ -102,3 +102,8 @@ test('matchCounter2', function(assert) {
   assert.equal(matchCounter(matchCounted), "four 9")
 })
 // ----------------------------------------------------------
+test('suitCounter0', function(assert){
+  var handObject = makeHand(["9D", "3D"]) ;
+  var suitCounted = suitCounter(handObject) ;
+  assert.equal(suitCounted, "diamonds")
+})

@@ -79,3 +79,11 @@ function matchCounter(matches) {
     }
   }
 }
+// ----------------------------------------------------------
+function suitCounter(hand) {
+  var listOfValues = {} ;
+  for (card of hand.cards) {
+    listOfValues[card.suit] = (listOfValues[card.suit]+1) || 1 ;
+    }
+    return listOfValues
+}
