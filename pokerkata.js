@@ -81,13 +81,11 @@ function matchCounter(matches) {
 }
 // ----------------------------------------------------------
 function suitCounter(hand) {
-  var listOfValues = {} ;
+  var listOfValues = [] ;
   for (card of hand.cards) {
-    listOfValues[card.suit] = (listOfValues[card.suit]+1) || 1 ;
-    }
-  for (var i = 0; i < listOfValues.length; i++) {
-    if (listOfValues[i] === 2) {
-      return
-    }
+    listOfValues.push([card.suit, 1])
+  }
+  if (listOfValues.length === 5) {
+    return listOfValues[0][0]
   }
 }

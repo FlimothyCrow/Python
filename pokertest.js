@@ -103,7 +103,19 @@ test('matchCounter2', function(assert) {
 })
 // ----------------------------------------------------------
 test('suitCounter0', function(assert){
-  var handObject = makeHand(["9D", "3D"]) ;
+  var handObject = makeHand(["9D", "3D", "2D", "KD", "10D"]) ;
   var suitCounted = suitCounter(handObject) ;
-  assert.equal(suitCounted, "diamonds")
+  assert.equal(suitCounted, "D")
+})
+
+test('suitCounter0', function(assert){
+  var handObject = makeHand(["9S", "3S", "2S", "KS", "10S"]) ;
+  var suitCounted = suitCounter(handObject) ;
+  assert.equal(suitCounted, "S")
+})
+
+test('suitCounter0', function(assert){
+  var handObject = makeHand(["9D", "3S", "2S", "KS", "10S"]) ;
+  var suitCounted = suitCounter(handObject) ;
+  assert.equal(suitCounted, undefined)
 })
