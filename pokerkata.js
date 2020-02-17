@@ -83,9 +83,11 @@ function matchCounter(matches) {
 function suitCounter(hand) {
   var listOfValues = [] ;
   for (card of hand.cards) {
-    listOfValues.push([card.suit, 1])
+    if (!listOfValues.includes(card.suit)) {
+      listOfValues.push(card.suit)
+    }
   }
-  if (listOfValues.length === 5) {
-    return listOfValues[0][0]
+  if (listOfValues.length === 1) {
+    return listOfValues[0]
   }
 }
