@@ -91,3 +91,11 @@ function suitCounter(hand) {
     return listOfValues[0]
   }
 }
+// ----------------------------------------------------------
+
+function controller(hand) {
+  handObject = makeHand(hand)
+  if (matchCounter(handObject)) {
+    return "true"
+  }
+}

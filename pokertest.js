@@ -119,3 +119,11 @@ test('suitCounter0', function(assert){
   var suitCounted = suitCounter(handObject) ;
   assert.equal(suitCounted, undefined)
 })
+// ----------------------------------------------------------
+/*
+test('controller0', function(assert){
+  hand = ["9D", "AS", "10D", "9S", "3S"]
+  var controlled = controller(hand)
+  assert.equal(controlled, "pair of 9")
+})
+*/
