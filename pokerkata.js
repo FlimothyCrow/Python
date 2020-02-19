@@ -32,11 +32,11 @@
     }
 // ----------------------------------------------------------
 function valueCounter(hand) {
-  var listOfValues = [] ;
+  var listOfValues = {} ;
   for (card of hand.cards) {
-    listOfValues.push([card.value])
+    listOfValues[card.value] = (listOfValues[card.value]+1) || 1 ;
+    }
   return listOfValues
-  }
 }
 // ----------------------------------------------------------
 function objToArray(hand) {

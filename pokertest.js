@@ -68,15 +68,14 @@ test('reorderArray', function(assert) {
 })
 // ----------------------------------------------------------
 test('valueCounter', function(assert) {
-  var handObject = makeHand(["9D"]) ;
-  assert.deepEqual(valueCounter(handObject), [[9]])
+  var handObject = makeHand(["9D", "9C", "9S"]) ;
+  assert.deepEqual(valueCounter(handObject), {9:3})
 })
-/*
+
 test('valueCounter', function(assert) {
   var handObject = makeHand(["9D", "9C", "2S", "AS"]) ;
-  assert.deepEqual(valueCounter(handObject), [[14,1], [9,2], [2,1]])
+  assert.deepEqual(valueCounter(handObject), {"14": 1, "2": 1, "9": 2})
 })
-*/
 // ----------------------------------------------------------
 test('matchCounter0', function(assert) {
   var matchCounted = [[9,2], [3,1], [5,1]]
