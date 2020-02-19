@@ -32,13 +32,12 @@
     }
 // ----------------------------------------------------------
 function valueCounter(hand) {
-  var listOfValues = {} ;
+  var listOfValues = [] ;
   for (card of hand.cards) {
-    listOfValues[card.value] = (listOfValues[card.value]+1) || 1 ;
-    }
+    listOfValues.push([card.value])
   return listOfValues
+  }
 }
-
 // ----------------------------------------------------------
 function objToArray(hand) {
   var arrayOfArrays = Object.keys(hand).map(function(key) {
@@ -47,7 +46,7 @@ function objToArray(hand) {
 }
 // ----------------------------------------------------------
 function reorderArray(hand) {
-  sorted = hand.sort((a,b)=>{
+  var sorted = hand.sort((a,b)=>{
     if (a[1] < b[1]) return 1;
     else if (b[1] < a[1]) return -1;
     else return 0;
@@ -94,8 +93,9 @@ function suitCounter(hand) {
 // ----------------------------------------------------------
 
 function controller(hand) {
-  handObject = makeHand(hand)
-  if (matchCounter(handObject)) {
+  var handObject = makeHand(hand)
+  var handArray = objToArray(handObject)
+  if (matchCounter(handArray)) {
     return "true"
   }
 }

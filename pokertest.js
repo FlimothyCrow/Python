@@ -38,16 +38,7 @@ test('cardValue', function(assert) {
   assert.equal(value, 9) ;
 });
 // ------------------------------------------------
-test('valueCounter', function(assert) {
-  var handObject = makeHand(["9D", "9C", "9S"]) ;
-  assert.deepEqual(valueCounter(handObject), {9:3})
-})
 
-test('valueCounter', function(assert) {
-  var handObject = makeHand(["9D", "9C", "2S", "AS"]) ;
-  assert.deepEqual(valueCounter(handObject), {"14": 1, "2": 1, "9": 2})
-})
-// ----------------------------------------------------------
 test('objToArray', function(assert) {
   var handObject = makeHand(["9D", "3S"]) ;
   var valueCounted = valueCounter(handObject) ;
@@ -76,7 +67,17 @@ test('reorderArray', function(assert) {
   assert.deepEqual(ordered, [[3,25], [10, 10], [3,6], [5,1]])
 })
 // ----------------------------------------------------------
-
+test('valueCounter', function(assert) {
+  var handObject = makeHand(["9D"]) ;
+  assert.deepEqual(valueCounter(handObject), [[9]])
+})
+/*
+test('valueCounter', function(assert) {
+  var handObject = makeHand(["9D", "9C", "2S", "AS"]) ;
+  assert.deepEqual(valueCounter(handObject), [[14,1], [9,2], [2,1]])
+})
+*/
+// ----------------------------------------------------------
 test('matchCounter0', function(assert) {
   var matchCounted = [[9,2], [3,1], [5,1]]
   assert.equal(matchCounter(matchCounted), "pair of 9")
@@ -122,7 +123,7 @@ test('suitCounter0', function(assert){
 // ----------------------------------------------------------
 /*
 test('controller0', function(assert){
-  hand = ["9D", "AS", "10D", "9S", "3S"]
+  var hand = ["9D", "AS", "10D", "9S", "3S"]
   var controlled = controller(hand)
   assert.equal(controlled, "pair of 9")
 })
