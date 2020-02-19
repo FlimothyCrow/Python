@@ -42,29 +42,22 @@ test('cardValue', function(assert) {
 test('objToArray', function(assert) {
   var handObject = makeHand(["9D", "3S"]) ;
   var valueCounted = valueCounter(handObject) ;
-  assert.equal(objToArray(valueCounted, [[9,1], [3,1]]))
+  var newObject = objToArray(valueCounted)
+  assert.deepEqual(newObject, [[3,1], [9,1]])
 })
 
 test('objToArray', function(assert) {
   var handObject = makeHand(["9D", "AS", "10D", "9S", "3S"]) ;
   var valueCounted = valueCounter(handObject) ;
-  assert.equal(objToArray(valueCounted, [[9,2], [14,1], [10,1], [3,1]]))
+  var newObject = objToArray(valueCounted)
+  assert.deepEqual(newObject, [[3,1], [9,2], [10,1], [14,1] ])
 })
 
 test('objToArray', function(assert) {
   var handObject = makeHand(["9D", "9C", "3S", "5H"]) ;
   var valueCounted = valueCounter(handObject) ;
-  assert.equal(objToArray(valueCounted, [[9,2], [3,1], [5,1]]))
-})
-
-test('objToArray', function(assert) {
-  var objectOfMatches = {"14": 1, "2": 1, "9": 2}
-  assert.equal(objToArray(objectOfMatches, [[9,2], [3,1], [5,1]]))
-})
-
-test('objToArray', function(assert) {
-  var objectOfMatches = {"10":1, "14": 1, "2": 1, "9": 2}
-  assert.equal(objToArray(objectOfMatches, [[14,1], [9,2], [3,1], [5,1]]))
+  var newObject = objToArray(valueCounted)
+  assert.deepEqual(newObject, [[3,1], [5,1], [9,2]])
 })
 
 // ----------------------------------------------------------
@@ -137,5 +130,5 @@ test('suitCounter0', function(assert){
 test('converter0', function(assert){
   var hand = ["9D", "AS", "10D", "9S", "3S"]
   var converted = converter(hand)
-  assert.equal(converted, [[9,2], [14,1], [10,1], [3,1]])
+  assert.deepEqual(converted, [[3,1], [9,2], [10,1], [14,1]])
 })
