@@ -32,7 +32,7 @@
     }
 // ----------------------------------------------------------
 function valueCounter(hand) {
-  var listOfValues = [] ;
+  var listOfValues = {} ;
   for (card of hand.cards) {
     listOfValues[card.value] = (listOfValues[card.value]+1) || 1 ;
     }
@@ -91,8 +91,12 @@ function suitCounter(hand) {
   }
 }
 // ----------------------------------------------------------
-function controller(arrayOfStrings) { // this needs to call objToArray, makeHand and valueCounter
+function converter(arrayOfStrings) {
   var handObject = makeHand(arrayOfStrings)
-  var valueCounted = valueCounter(handObject)
-  return valueCounted
+  var objectOfMatches = valueCounter(handObject)
+  var arrayOfMatches = objToArray(objectOfMatches)
+  return arrayOfMatches
 }
+// makeHand (arrayOfStrings > handObject)
+// valueCounter (handObject > objectOfMatches)
+// objToArray (objectOfMatches > arrayOfMatches)

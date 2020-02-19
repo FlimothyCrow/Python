@@ -56,6 +56,17 @@ test('objToArray', function(assert) {
   var valueCounted = valueCounter(handObject) ;
   assert.equal(objToArray(valueCounted, [[9,2], [3,1], [5,1]]))
 })
+
+test('objToArray', function(assert) {
+  var objectOfMatches = {"14": 1, "2": 1, "9": 2}
+  assert.equal(objToArray(objectOfMatches, [[9,2], [3,1], [5,1]]))
+})
+
+test('objToArray', function(assert) {
+  var objectOfMatches = {"10":1, "14": 1, "2": 1, "9": 2}
+  assert.equal(objToArray(objectOfMatches, [[14,1], [9,2], [3,1], [5,1]]))
+})
+
 // ----------------------------------------------------------
 test('reorderArray', function(assert) {
   var ordered = reorderArray([[5, 1], [3, 6]])
@@ -68,9 +79,14 @@ test('reorderArray', function(assert) {
 })
 // ----------------------------------------------------------
 test('valueCounter', function(assert) {
-  var handObject = makeHand(["9D", "9C", "3S"]) ;
-  assert.deepEqual(valueCounter(handObject), [[3,1], [9,2]])
-}) // MUST RETURN ARRAY
+  var handObject = makeHand(["9D", "9C", "9S"]) ;
+  assert.deepEqual(valueCounter(handObject), {9:3})
+})
+
+test('valueCounter', function(assert) {
+  var handObject = makeHand(["9D", "9C", "2S", "AS"]) ;
+  assert.deepEqual(valueCounter(handObject), {"14": 1, "2": 1, "9": 2})
+})
 
 // ----------------------------------------------------------
 test('matchCounter0', function(assert) {
@@ -115,18 +131,11 @@ test('suitCounter0', function(assert){
   var suitCounted = suitCounter(handObject) ;
   assert.equal(suitCounted, undefined)
 })
+
 // ----------------------------------------------------------
-/*
+
 test('converter0', function(assert){
-  var arrayOfStrings = ["9D", "9S", "2S", "QH"] ;
-  assert.equal(arrayOfStrings, [[9,2], [12,1], [2,1]])
-}) // currently returns a handObject
-*/
-// ----------------------------------------------------------
-/*
-test('controller0', function(assert){
   var hand = ["9D", "AS", "10D", "9S", "3S"]
-  var controlled = controller(hand)
-  assert.equal(controlled, "pair of 9")
+  var converted = converter(hand)
+  assert.equal(converted, [[9,2], [14,1], [10,1], [3,1]])
 })
-*/
