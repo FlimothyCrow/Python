@@ -125,3 +125,4 @@ function controller(arrayOfStrings) {
   }
 }
 // don't forget to defined function highCard
+// filled out applications
