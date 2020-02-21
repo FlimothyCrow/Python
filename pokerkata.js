@@ -101,3 +101,15 @@ function converter(arrayOfStrings) {
 // makeHand (arrayOfStrings > handObject)
 // valueCounter (handObject > objectOfMatches)
 // objToArray (objectOfMatches > arrayOfMatches)
+// ----------------------------------------------------------
+function controller(arrayOfStrings) {
+  handObject = makeHand(arrayOfStrings)
+  arrayOfMatches = converter(arrayOfStrings)
+  if (matchCounter(arrayOfMatches)) {
+    return matchCounter(arrayOfMatches)
+  }
+  else if (suitCounter(handObject)) {
+    return suitCounter(handObject)
+  }
+}
+// don't forget to defined function highCard

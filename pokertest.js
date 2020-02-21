@@ -126,9 +126,20 @@ test('suitCounter0', function(assert){
 })
 
 // ----------------------------------------------------------
-
 test('converter0', function(assert){
   var hand = ["9D", "AS", "10D", "9S", "3S"]
   var converted = converter(hand)
   assert.deepEqual(converted, [[3,1], [9,2], [10,1], [14,1]])
+})
+// ----------------------------------------------------------
+test('controller0', function(assert){
+  var hand = ["9D", "AS", "10D", "9S", "3S"]
+  var controlled = controller(hand)
+  assert.equal(controlled, "pair of 9")
+})
+
+test('controller0', function(assert){
+  var hand = ["9S", "AS", "10S", "QS", "3S"]
+  var controlled = controller(hand)
+  assert.equal(controlled, "S")
 })
