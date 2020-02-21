@@ -92,6 +92,15 @@ function suitCounter(hand) {
   }
 }
 // ----------------------------------------------------------
+function highCard(arrayOfStrings) {
+  values = []
+  for (string in arrayOfStrings) {
+    values.push(cardValue(arrayOfStrings[string]))
+  }
+  descendingArray = values.sort(function(a, b){return b-a});
+  return values[0]
+}
+// ----------------------------------------------------------
 function converter(arrayOfStrings) {
   var handObject = makeHand(arrayOfStrings)
   var objectOfMatches = valueCounter(handObject)

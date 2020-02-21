@@ -124,7 +124,12 @@ test('suitCounter0', function(assert){
   var suitCounted = suitCounter(handObject) ;
   assert.equal(suitCounted, undefined)
 })
-
+// ----------------------------------------------------------
+test('highCard', function(assert) {
+  var hand = ["9D", "3S", "2S", "KS", "10S"]
+  var highCarded = highCard(hand)
+  assert.equal(highCarded, 13)
+})
 // ----------------------------------------------------------
 test('converter0', function(assert){
   var hand = ["9D", "AS", "10D", "9S", "3S"]
