@@ -120,5 +120,8 @@ function controller(arrayOfStrings) {
   else if (suitCounter(handObject)) {
     return suitCounter(handObject)
   }
+  else {
+    return highCard(arrayOfStrings)
+  }
 }
 // don't forget to defined function highCard

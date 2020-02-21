@@ -148,3 +148,9 @@ test('controller0', function(assert){
   var controlled = controller(hand)
   assert.equal(controlled, "S")
 })
+
+test('controller0', function(assert){
+  var hand = ["9S", "AS", "10S", "QH", "3S"]
+  var controlled = controller(hand)
+  assert.equal(controlled, 14)
+})
