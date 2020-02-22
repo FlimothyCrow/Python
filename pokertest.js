@@ -154,3 +154,10 @@ test('controller0', function(assert){
   var controlled = controller(hand)
   assert.equal(controlled, 14)
 })
+// ----------------------------------------------------------
+
+test('mergeSort0', function(assert){
+  var unsorted = [5, 3, 4, 1]
+  var sorted = mergeSort(unsorted)
+  assert.equal(sorted, [1, 3, 4, 5])
+})

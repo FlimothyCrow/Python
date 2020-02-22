@@ -126,3 +126,19 @@ function controller(arrayOfStrings) {
 }
 // don't forget to defined function highCard
 // filled out applications
+// ----------------------------------------------------------
+
+function mergeSort(array){
+  mid = array.length / 2
+  left = []
+  right = []
+  for (integer of array){
+    if (array.indexOf(integer) < mid){
+      left.push(integer)
+    }
+    else {
+      right.push(integer)
+    }
+  }
+  return right
+}
