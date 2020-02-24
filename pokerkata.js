@@ -142,3 +142,4 @@ function mergeSort(array){
   }
   return right
 }
+// applications
