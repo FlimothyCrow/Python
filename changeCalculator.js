@@ -1,7 +1,10 @@
 function changeCalculator(cost, paid) {
+  changeDue = []
   totalDue = paid - cost
-  return totalDue % 0.05
-  //if (totalDue % 0.05 === 0.0){
-    //return totalDue / 0.05
-  }
-//}
+  do {
+    changeDue.push(5);
+    totalDue -= 5
+    totalDue++;
+  } while (totalDue > 4);
+  return changeDue.length
+}

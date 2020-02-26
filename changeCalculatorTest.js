@@ -1,6 +1,6 @@
 test('changeCalculator', function(assert) {
-  var cost = 1
-  var paid = 3
+  var cost = 100 // one dollar
+  var paid = 300 // three dollars
   var changeDue = changeCalculator(cost, paid) ;
-  assert.equal(changeDue, "true") ;
+  assert.equal(changeDue, 40) ;
 });
