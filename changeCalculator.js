@@ -1,11 +1,13 @@
 function changeCalculator(cost, paid) {
+  changeObject = {}
   changeDue = []
   totalDue = paid - cost
   do {
     if (totalDue > 9){
-      changeDue.push(10);
+      changeObject[dimes.value] = (changeObject[dimes.value]+1) || 1
       totalDue -=10;
     }
+    /*
     else if (totalDue > 4) {
     changeDue.push(5);
     totalDue -= 5;
@@ -14,6 +16,12 @@ function changeCalculator(cost, paid) {
     changeDue.push(1);
     totalDue -= 1;
     }
-  } while (totalDue > 4);
-  return changeDue.length
+    */
+  } while (totalDue > 0);
+  for (element in changeDue){
+    if (element === 10){
+
+    }
+  }
+  return changeObject
 }
