@@ -33,10 +33,10 @@ function changeCalculator(cost, paid) {
   }
   return changeObject
 }
-/*
 
-else {
-changeDue.push(1);
-totalDue -= 1;
+function changePrinter(changeObject){
+  console.log("Your change is:")
+  console.log(changeObject.dollars + "dollars")
 }
-*/
+var change = changeCalculator(500, 375)
+changePrinter(change)
