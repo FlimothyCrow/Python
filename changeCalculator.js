@@ -10,16 +10,21 @@ function changeCalculator(cost, paid) {
     if (totalDue > 9){
       //console.log("change object", changeObject)
       changeObject.dimes += 1
-      totalDue -=10;
+      totalDue -= 10;
+    }
+    else if (totalDue > 4) {
+    changeObject.nickels += 1
+    totalDue -= 5;
+    }
+    else if (totalDue > 0) {
+    changeObject.pennies += 1
+    totalDue -= 1;
     }
   }
   return changeObject
 }
 /*
-else if (totalDue > 4) {
-changeDue.push(5);
-totalDue -= 5;
-}
+
 else {
 changeDue.push(1);
 totalDue -= 1;
