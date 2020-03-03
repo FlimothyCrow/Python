@@ -1,7 +1,7 @@
-function testFunction(integers) {
+function averageCalculator(integers) {
   sumOfInts = 0
-  for (int in integers){
+  for (int of integers){
     sumOfInts += int
   }
-  return sumOfInts
+  return sumOfInts / integers.length
 }
