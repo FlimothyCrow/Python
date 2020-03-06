@@ -16,11 +16,9 @@ function meanCalculator(listOfInts){
 }
 
 function modeCalculator(listOfInts){
-  modeList = []
-  for (i = 0; i < listOfInts.length; i++){
-    if (listOfInts[i] === listOfInts[i+1]){
-      modeList.push(listOfInts[i])
-    }
+  var modeObject = {};
+  for (number of listOfInts){
+    modeObject[number] = (modeObject[number]+1) || 1 ;
   }
-  return modeList
+  return modeObject
 }
