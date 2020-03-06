@@ -29,4 +29,4 @@ test('modeCalculator', function(assert){
   var listOfInts = modeCalculator([1, 1, 2, 9, 39, 238]) ;
   assert.equal(listOfInts, 1)
 })
-// mmm applications
+// mmm applicationssssssssssss
