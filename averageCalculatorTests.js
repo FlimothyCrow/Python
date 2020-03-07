@@ -27,5 +27,5 @@ test('meanCalculator', function(assert){
 
 test('modeCalculator', function(assert){
   var listOfInts = modeCalculator([1, 9, 1, 2, 9, 39, 238]) ;
-  assert.equal(listOfInts, {1:2, 9:2})
+  assert.deepEqual(listOfInts, [["1",2], ["9",2]])
 })
