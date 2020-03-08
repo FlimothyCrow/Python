@@ -28,3 +28,4 @@ function modeCalculator(listOfInts){
   }
   return modeArray
 }
+// mm applications
