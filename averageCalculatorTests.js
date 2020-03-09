@@ -29,3 +29,9 @@ test('modeCalculator', function(assert){
   var listOfInts = modeCalculator([1, 9, 1, 2, 9, 39, 238]) ;
   assert.deepEqual(listOfInts, [["1",2], ["9",2]])
 })
+//---------------------------------------
+
+test('hasDupes', function(assert){
+  var yesDupes = hasDupes([3, 9, 3]);
+  assert.equal(yesDupes, [[1,3]])
+})

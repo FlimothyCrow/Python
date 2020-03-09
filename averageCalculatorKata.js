@@ -28,4 +28,8 @@ function modeCalculator(listOfInts){
   }
   return modeArray
 }
-// mm applications
+
+function hasDupes(listOfInts){
+  const yesDupes = new Set(listOfInts)
+  return yesDupes
+}
