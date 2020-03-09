@@ -31,7 +31,7 @@ test('modeCalculator', function(assert){
 })
 //---------------------------------------
 
-test('hasDupes', function(assert){
-  var yesDupes = hasDupes([3, 9, 3]);
-  assert.equal(yesDupes, [[1,3]])
+test('removeDupes', function(assert){
+  var listDupes = removeDupes([1, 2, 1, 1, 3, 4, 3, 9, 3]);
+  assert.deepEqual(listDupes, [1, 2, 3, 4, 9])
 })

@@ -29,7 +29,7 @@ function modeCalculator(listOfInts){
   return modeArray
 }
 
-function hasDupes(listOfInts){
-  const yesDupes = new Set(listOfInts)
+function removeDupes(listOfInts){
+  const yesDupes = Array.from(new Set(listOfInts))
   return yesDupes
 }
