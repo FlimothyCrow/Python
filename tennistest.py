@@ -24,3 +24,18 @@ class tennistest(unittest.TestCase):
         listOfElements = removeDupes([1, "n", 39, "b", "b", 39, 238])
         self.assertEqual({39: 2, "b": 2}, listOfElements)
 
+    def test_max(self):
+        input1 = 2
+        input2 = 2
+        input3 = [1, 2, 5, 6]
+        newUser = UserMainCode()
+        maxResult = newUser.max(input1, input2, input3)
+        self.assertEqual([[1, 2], [5,6]], maxResult)
+
+    def test_max1(self):
+        input1 = 3
+        input2 = 3
+        input3 = [1, 2, 5, 6, 238, 4]
+        newUser = UserMainCode()
+        maxResult = newUser.max(input1, input2, input3)
+        self.assertEqual([[1, 2, 5], [6, 238, 4]], maxResult)

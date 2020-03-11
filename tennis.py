@@ -39,3 +39,16 @@ def removeDupes(mixedList) :
             dupes[key] = 2
     return dupes
 
+
+class UserMainCode(object):
+    @classmethod
+    def max(cls, input1, input2, input3):
+        nestedList = []
+        for row in range(input1) :
+            innerList = []
+            for column in range(input2):
+                #print(row, column)
+                innerList.append(input3.pop(0))
+            nestedList.append(innerList)
+        return nestedList
+        pass
