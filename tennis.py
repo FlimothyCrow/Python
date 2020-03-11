@@ -1,3 +1,4 @@
+"""
 def score(num) :
     if num == 0 :
         return "love"
@@ -7,11 +8,8 @@ def score(num) :
         return "thirty"
     if num == 3 :
         return "forty"
+"""
 
-def victory(p1, p2) :
-   if max(p1, p2) - min(p1, p2) > 1 :
-       if max(p1, p2) > 3 :
-           return True
 
 def whoWins(p1, p2) :
     if p1 > p2 :
@@ -19,14 +17,25 @@ def whoWins(p1, p2) :
     else : return "player 2"
 
 
-def tennis(p1, p2) :
-    if victory(p1, p2) :
-        print("victory", whoWins(p1, p2))
-    elif p1 and p2 > 2 :
-        if p1 == p2 :
-            return "deuce"
-    else :
-        return score(p1) + " " + score(p2)
+def returnLargest(listOfInputs) :
+    orderedList = sorted(listOfInputs, key=None, reverse=False)
+    return orderedList[-1]
 
 
+def removeDupes(mixedList) :
+    flattened = {}
+    singles = {}
+    dupes = {}
+    for element in mixedList :
+        if element in flattened :
+            flattened[element] += 1
+        else :
+            flattened[element] = 1
+
+    for key, value in flattened.items() :
+        if value == 1 :
+            singles[key] = 1
+        else :
+            dupes[key] = 2
+    return dupes
 

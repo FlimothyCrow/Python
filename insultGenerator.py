@@ -25,35 +25,7 @@ def insultGenerator(set0, set1, set2) :
 
 # split by string with newline
 # split by comma
-# assign each line to a variable
-# contents gives us one long string
 
-#print(contents)
-
-def parseInsult(row, inputText):
-    final = []
-    rows = inputText.splitlines()
-    singleRow = rows[row].split(",")
-    for i in singleRow :
-        final.append(i.strip())
-    return final
-
-def insultPuller(row0, row1, row2) :
-    return (row0[randomNumber()]), row1[randomNumber()], row2[randomNumber()]
-
-def insultGenerator(howMany):
-    f = open("insults.txt", "r")
-    contents = f.read()
-    
-    nouns = parseInsult(0, contents)
-    modern = parseInsult(1, contents)
-    shakespeare = parseInsult(2, contents)
-
-    for i in range(howMany) :
-        print(insultPuller(nouns, modern, shakespeare))
-
-insultGenerator(10)
-"""
 
 def jerk(thing) :
     return thing
