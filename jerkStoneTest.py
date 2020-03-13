@@ -1,5 +1,3 @@
-import unittest
-from jerkStone import *
 
 
 class jerkStoneTest(unittest.TestCase):
