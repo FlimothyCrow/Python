@@ -19,8 +19,8 @@ class managramsTest(unittest.TestCase):
         self.assertEqual(False, anagrams(list0, list1))
 
     def test_fizzBuzz(self):
-        toParse = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        self.assertEqual([1, 2, "fizz", "buzz", 5, "fizz", 7, "buzz", "fizz"], fizzBuzz(toParse))
+        toParse = [1, 2, 3, 4, 5, 6, 7, 8, 9, 12]
+        self.assertEqual([1, 2, "fizz", "buzz", 5, "fizz", 7, "buzz", "fizz", "fizz buzz"], fizzBuzz(toParse))
 
     def test_ifAnd(self):
         listToParse = [1, 2]

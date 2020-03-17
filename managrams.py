@@ -10,10 +10,12 @@ def anagrams(list0, list1) :
 def fizzBuzz(listOfInts) :
     parsedList = []
     for element in listOfInts :
-        if element % 3 == 0 :
-            parsedList.append("fizz")
+        if element % 3 == 0 and element % 4 == 0 :
+            parsedList.append("fizz buzz")
         elif element % 4 == 0 :
             parsedList.append("buzz")
+        elif element % 3 == 0 :
+            parsedList.append("fizz")
         else :
             parsedList.append(element)
     return parsedList
