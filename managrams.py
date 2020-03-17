@@ -17,3 +17,9 @@ def fizzBuzz(listOfInts) :
         else :
             parsedList.append(element)
     return parsedList
+
+def ifAnd(listToParse) :
+    if listToParse[0] == 1 and listToParse[1] == 2 :
+        return True
+    elif listToParse[2] % 5 == 0 :
+        return False # this won't trip if the first one has already tripped!
