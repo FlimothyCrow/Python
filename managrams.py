@@ -12,6 +12,8 @@ def fizzBuzz(listOfInts) :
     for element in listOfInts :
         if element % 3 == 0 :
             parsedList.append("fizz")
+        elif element % 4 == 0 :
+            parsedList.append("buzz")
         else :
             parsedList.append(element)
     return parsedList

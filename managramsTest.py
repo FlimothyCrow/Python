@@ -20,5 +20,5 @@ class managramsTest(unittest.TestCase):
 
     def test_fizzBuzz(self):
         listToParse = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        self.assertEqual([1, 2, "fizz", 4, 5, "fizz", 7, 8, "fizz"], fizzBuzz(listToParse))
+        self.assertEqual([1, 2, "fizz", "buzz", 5, "fizz", 7, "buzz", "fizz"], fizzBuzz(listToParse))
 
