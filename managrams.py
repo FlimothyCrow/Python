@@ -7,11 +7,11 @@ def anagrams(list0, list1) :
         return False
 
 
-
 def fizzBuzz(listOfInts) :
     parsedList = []
     for element in listOfInts :
         if element % 3 == 0 :
+            parsedList.append("fizz")
+        else :
             parsedList.append(element)
     return parsedList
-# applications
