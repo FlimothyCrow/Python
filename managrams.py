@@ -14,3 +14,4 @@ def fizzBuzz(listOfInts) :
         if element % 3 == 0 :
             parsedList.append(element)
     return parsedList
+# applications
