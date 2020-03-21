@@ -20,3 +20,4 @@ def fizzBuzz(listOfInts) :
             parsedList.append(element)
     return parsedList
 # anagram compatibility generator assessment
+# applications
