@@ -21,3 +21,15 @@ class managramsTest(unittest.TestCase):
     def test_fizzBuzz(self):
         toParse = [1, 2, 3, 4, 5, 6, 7, 8, 9, 12]
         self.assertEqual([1, 2, "fizz", "buzz", 5, "fizz", 7, "buzz", "fizz", "fizz buzz"], fizzBuzz(toParse))
+
+    def test_oddOrEven(self):
+        self.assertEqual("even", oddOrEven(2))
+
+    def test_oddOrEven1(self):
+        self.assertEqual("odd", oddOrEven(3))
+
+    def test_oddOrEven2(self):
+        self.assertEqual("not applicable", oddOrEven(0))
+
+    def test_oddOrEven3(self):
+        self.assertEqual("not an inputNumber", oddOrEven(3.14))

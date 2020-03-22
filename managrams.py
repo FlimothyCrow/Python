@@ -21,3 +21,15 @@ def fizzBuzz(listOfInts) :
     return parsedList
 # anagram compatibility generator assessment
 # applicationsssssssssssss
+
+def oddOrEven(inputNumber) :
+    if not isinstance(inputNumber, int) :
+        return "not an inputNumber"
+    elif inputNumber == 0 :
+        return "not applicable"
+    elif inputNumber % 2 == 0 :
+        return "even"
+    else :
+        return "odd"
+
+#print(isinstance(0,int))

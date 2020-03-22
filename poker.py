@@ -10,7 +10,7 @@ class Hand :
         self.cards = cards
 
 class RankedHand :
-    def __init__(self, rank, tiebreaker): # fudge tiebreaker as integer for suit strength
+    def __init__(self, rank, tiebreaker): # fudge tiebreaker as inputNumber for suit strength
         self.rank = rank
         self.tiebreaker = tiebreaker
 
