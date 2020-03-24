@@ -33,3 +33,6 @@ class managramsTest(unittest.TestCase):
 
     def test_oddOrEven3(self):
         self.assertEqual("not an inputNumber", oddOrEven(3.14))
+
+    def test_oddOrEven4(self):
+        self.assertEqual("not an inputNumber", oddOrEven("three"))
