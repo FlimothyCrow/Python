@@ -36,3 +36,7 @@ class managramsTest(unittest.TestCase):
 
     def test_oddOrEven4(self):
         self.assertEqual("not an inputNumber", oddOrEven("three"))
+
+    def test_spicyChange1(self):
+        inputCash = 150
+        self.assertEqual(1, spicyChange(inputCash))
