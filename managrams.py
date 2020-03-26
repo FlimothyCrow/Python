@@ -37,10 +37,14 @@ def oddOrEven(inputNumber) :
 def spicyChange(inputCash) :
     hundreds = 0
     fifties  = 0
+    twenties = 0
     while inputCash > 99 :
         inputCash -= 100
         hundreds += 1
         while inputCash > 49 :
             inputCash -= 50
             fifties += 1
+            while inputCash > 19 :
+                inputCash -= 20
+                twenties += 1
     return fifties
