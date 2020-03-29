@@ -38,6 +38,7 @@ def spicyChange(inputCash) :
     hundreds = 0
     fifties  = 0
     twenties = 0
+    tens = 0
     while inputCash > 99 :
         inputCash -= 100
         hundreds += 1
@@ -47,4 +48,7 @@ def spicyChange(inputCash) :
             while inputCash > 19 :
                 inputCash -= 20
                 twenties += 1
-    return fifties
+                while inputCash > 9 :
+                    inputCash -+ 10
+                    tens += 1
+    return tens

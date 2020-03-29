@@ -39,4 +39,4 @@ class managramsTest(unittest.TestCase):
 
     def test_spicyChange1(self):
         inputCash = 150
-        self.assertEqual(1, spicyChange(inputCash))
+        self.assertEqual(15, spicyChange(inputCash))
