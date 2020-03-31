@@ -1,0 +1,1581 @@
+[33mcommit fccb829db64c882ed21cfa50a9cc0728bf9325a0[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Feb 12 10:35:39 2020 -0700
+
+    flooding in texas
+
+[33mcommit 6a15713fc03a21570dac4704c95287fec661c796[m[33m ([m[1;31morigin/master[m[33m)[m
+Merge: 2a858a5 de69987
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Feb 12 10:32:20 2020 -0700
+
+    merge commit comment
+
+[33mcommit 2a858a5055f13062dd542f3dd9039ea3a6f4580c[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Feb 11 23:15:31 2020 -0700
+
+    added failing test for reorderArray
+
+[33mcommit de69987476090a059cfa72dfeff4ceda734f04ec[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Feb 9 18:49:06 2020 -0700
+
+    comments
+
+[33mcommit 5e753a3cf730df5650f50caf5b6222f8f350b956[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Feb 8 11:09:15 2020 -0700
+
+    added failing test for new function reorderArray
+
+[33mcommit 1eaf554d056c16922c08e152fb64383b68cbb1fe[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Feb 8 10:17:49 2020 -0700
+
+    added failing test for new function reorderArray
+
+[33mcommit 1b707ad33b2b384149876b3af6b6af3f2d83e2f3[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Feb 7 18:00:36 2020 -0700
+
+    added comments
+
+[33mcommit 3872ebd4a6ce5b4c85d242e01991907e27f461e3[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Feb 7 17:47:23 2020 -0700
+
+    added four of a kind conditional
+
+[33mcommit 9b42174594db1ef32947c7e81e0d34a1236fc7c7[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Feb 7 17:03:07 2020 -0700
+
+    added three of a kind conditional
+
+[33mcommit 53ec87855d20d88077aa3a2714367c82cbd8222f[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Feb 6 16:42:54 2020 -0700
+
+    modified two pair conditional, removed redundant if
+
+[33mcommit 6f9933a3c4dd97f6bbd076b5ed8c8df61aab2071[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Feb 6 16:35:35 2020 -0700
+
+    added two pair conditional
+
+[33mcommit 23362637d74a34dc8933dd81b9ca01204e763d15[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Feb 6 14:50:52 2020 -0700
+
+    removed all conditionals other than full house for nested if testing
+
+[33mcommit e636df6dd5281e128e20dca0654ee6f2832b5c00[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Feb 5 12:05:50 2020 -0700
+
+    added failing test to matchCounter for full house conditional
+
+[33mcommit 865a0a1db422ce85d143f6513cef0dc167fe44bf[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Feb 3 13:18:19 2020 -0700
+
+    test commit
+
+[33mcommit 097780c28bd380730ae05122efc8df10bc5b4b74[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Feb 2 20:33:14 2020 -0700
+
+    redefined conditionals and tests for 3 and 4
+
+[33mcommit 6e5459a11b9d194cb80127992dad965d75887120[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Feb 2 20:32:29 2020 -0700
+
+    redefined conditionals and tests for 3 and 4
+
+[33mcommit 267a55246ded98a314fdc17e9ef418deb695e133[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Feb 2 19:08:56 2020 -0700
+
+    troubleshooting matchCounter, added third test to objToArray
+
+[33mcommit cfcad8dd54c3caea84a14d20cfb49d197638c96e[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Feb 1 13:08:19 2020 -0700
+
+    applications
+
+[33mcommit 7d98e29c1e4a682b351a19c825ce1af535dcb574[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Jan 31 10:18:04 2020 -0700
+
+    defined objToArray with test
+
+[33mcommit 459ce1f6370b0e1eb5bd36742f838e05d691ccdb[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Jan 30 13:20:40 2020 -0700
+
+    added test for two pair
+
+[33mcommit 1919f3780586f19f4216fb42512da65811f42290[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Jan 30 12:54:18 2020 -0700
+
+    added 3 and 4 of a kind conditionals
+
+[33mcommit 0443a881978034dec7bd9026ecda7e4742c1dc74[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Jan 30 12:49:41 2020 -0700
+
+    updated matchCounter to return pair conditional string
+
+[33mcommit 536fa79b87bdf0ce82c2156a75c85c4cf7dc48d2[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Jan 29 13:53:41 2020 -0700
+
+    added second valueCounter test
+
+[33mcommit 1de60e53f095017354cc1ac18b7f3b4d435bb811[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Jan 28 17:39:26 2020 -0700
+
+    updated valueCounter to pass test
+
+[33mcommit 9108fd845c9566ee8ca727e18f9687f9d8fed791[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Jan 28 16:02:35 2020 -0700
+
+    defined valueCounter with failing test
+
+[33mcommit 1297aba661e41823af49a9249d366ac8ec778a4c[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Jan 27 17:55:46 2020 -0700
+
+    application day!
+
+[33mcommit 1a04d7431ba173b40ff02255b2e725652e2d0062[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Jan 26 17:30:16 2020 -0700
+
+    isMatch failing test for two pair conditional
+
+[33mcommit 9dca1527d0f5511eaf106a0d57820041fab9fc0b[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Jan 25 17:16:58 2020 -0700
+
+    isMatch failing test for two pair conditional
+
+[33mcommit c56ec7c70c57cba14fc0d1bed987d6dc83646b6e[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Jan 24 20:23:12 2020 -0700
+
+    updated isMatch with string format for key
+
+[33mcommit 118373434d70a1617accf8d01be170cd95457117[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Jan 24 20:13:18 2020 -0700
+
+    updated isMatch to return string
+
+[33mcommit 8cfeb22c62901a188134d585db3fdb21ddf619b2[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Jan 23 15:59:57 2020 -0700
+
+    updated isMatch test for multiple matches
+
+[33mcommit aa777f8ab9d934e86ab04fb2a3a9a17208a6e3e2[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Jan 23 15:48:23 2020 -0700
+
+    fixed isMatch to correctly aggregate values
+
+[33mcommit 47dcba07e089812320c8e44b55f2d976fcde1d71[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Jan 23 15:24:29 2020 -0700
+
+    updated isMatch test to fail
+
+[33mcommit e130a990b6a228f3e9e2bb1bb9744a968d98815d[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Jan 23 14:35:28 2020 -0700
+
+    got isMatch appending to object correctly
+
+[33mcommit 77eee9d848b667ee144d067f0d350a494b9ae154[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Jan 22 17:54:17 2020 -0700
+
+    still failing to append to dict obj
+
+[33mcommit 7cd27a01a7f70cfd87ffcde65687c7c7116d862b[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Jan 22 15:26:22 2020 -0700
+
+    created isMatch and test
+
+[33mcommit 47bd7ae35b3b888641cc8ed41e842c00158c14c2[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Jan 22 15:21:32 2020 -0700
+
+    created isMatch and test
+
+[33mcommit 7a4ec25da49f426e679f7343bc56e2e3b78b806a[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Jan 21 18:16:48 2020 -0700
+
+    updated makeHand to return object.list of objects
+
+[33mcommit d3d0381134b12a46a585b75271470d8b47b0aa7c[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Jan 21 15:23:33 2020 -0700
+
+    changed loop operator to "of"
+
+[33mcommit 0bbd24759bfdeb3a34b4166c46ecf59d752701d9[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Jan 21 15:01:27 2020 -0700
+
+    got for loop working
+
+[33mcommit 5f692c2817163dce7838a7987646c5d70f4eaeb6[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Jan 21 14:46:00 2020 -0700
+
+    defined makeHand and test
+
+[33mcommit f2ddb3a43e50c1dfbb85d2cfaf8043bf8ea7cbde[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Jan 21 14:14:07 2020 -0700
+
+    defined makeHand and test
+
+[33mcommit 62754c14f2d94accd0f7c87d04ef8ab6bf4a216f[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Jan 20 12:11:32 2020 -0700
+
+    started poker kata
+
+[33mcommit 0b8f5b1aba9ca8d7fe5cc3e167894dd508084313[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Jan 20 11:15:59 2020 -0700
+
+    mmm change
+
+[33mcommit 13702b910eb6a2c12303b4db3a67bb6e3358c89f[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Jan 20 10:19:46 2020 -0700
+
+    passing all tests, added True / False operator in class data
+
+[33mcommit 2f82e8c06b67e240a6da1729757c1d245dfa85dd[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Jan 20 10:04:03 2020 -0700
+
+    passing all tests, added True / False operator in class data
+
+[33mcommit 06a43b6e094c878267517f6800325eeebd19acc2[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Jan 20 09:37:02 2020 -0700
+
+    defined aiCard11
+
+[33mcommit dabaf492cc81c22d738118c2d245e7e4bc23caa3[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Jan 19 14:59:29 2020 -0700
+
+    defined aiCard9 / 10, 9 is passing for "B".cardValue == -, aiCard10 needs "B".cardValue == +
+
+[33mcommit 57b712f3168a635c0c45d1061e3e3fcc28c8d133[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Jan 18 21:05:16 2020 -0700
+
+    defined aiCard9 for "B".cardValue
+
+[33mcommit a1980bccd443fd475204f95238a80cf49bfc7728[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Jan 17 20:51:16 2020 -0700
+
+    defined playGame8 for .cardValue("B")
+
+[33mcommit 958613f76390e8292aba5895235242c2add7f548[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Jan 16 00:15:42 2020 -0700
+
+    found the problem!
+
+[33mcommit d6b6a08ceabc6da6acde911ef60e192c85de00fb[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Jan 15 23:32:22 2020 -0700
+
+    figured out problem!
+
+[33mcommit a9bdb3a4dafc2e3e448e9e246bc43ae2b87db980[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Jan 15 22:49:47 2020 -0700
+
+    updated makeCard to create card.value to range(1-10)
+
+[33mcommit fcb2b8370c364ffb4b984bd1a6ae91f1db9e14d0[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Jan 15 21:17:58 2020 -0700
+
+    configuring manual print test
+
+[33mcommit 74a0ba764622feaa3334f123896ef1a2103e049b[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Jan 14 21:53:44 2020 -0700
+
+    defined manualRun
+
+[33mcommit e2b4d52afa6fd555ea2eb74da92c5ef70455a6cd[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Jan 13 16:44:51 2020 -0700
+
+    updated playGame7 for ai being forced to draw too high
+
+[33mcommit 9a97045e5f27f8cd5e84c22629e29c3b81593527[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Jan 12 17:48:55 2020 -0700
+
+    flowcharting draw-play-stand logics
+
+[33mcommit 8e52d0dda55755ece1a8009fe9471fadb64c37b0[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Jan 11 18:33:03 2020 -0700
+
+    failing test, ai should play multiple cards
+
+[33mcommit ae88df64fa3beaffa0928e5795479d1f1a264db1[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Jan 10 15:05:08 2020 -0700
+
+    added conditional for ai having empty hand
+
+[33mcommit 053ddde271317fb4f94d829ea9093794d8623181[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Jan 9 21:37:02 2020 -0700
+
+    added cards to gameController hand test
+
+[33mcommit 99584ffc594bc1d55d573377b13ddd70dab1e35e[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Jan 9 21:29:31 2020 -0700
+
+    added playGame6
+
+[33mcommit cb7f396f4e6c97ec9ef061be312d785e181eb96b[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Jan 9 20:03:19 2020 -0700
+
+    defined scoreMaker and test
+
+[33mcommit 51d95aaea031867f0ceea1958447d191d770e0e2[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Jan 8 15:14:38 2020 -0700
+
+    defined failing test for gameController
+
+[33mcommit 6d6c63da7c8a310ce61577414fa0e4d54322e970[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Jan 8 15:09:00 2020 -0700
+
+    added tests to playGame
+
+[33mcommit 6080e20c8e4a6f08d5359a52b924386f617f4783[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Jan 8 13:20:37 2020 -0700
+
+    reverted to naive playGame
+
+[33mcommit 5f89e748f85da6b8e824f180360e2aa31d0e5c0e[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Jan 7 11:32:24 2020 -0700
+
+    testing gameController
+
+[33mcommit 9d9a03b7ea0407a063a88767c585bd1f696966bb[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Jan 6 20:08:05 2020 -0700
+
+    defined gameController
+
+[33mcommit f502faab383a23b3dc82c934cf5a7be25895fc56[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Jan 5 13:21:31 2020 -0700
+
+    added cardValue(self) to Card class
+
+[33mcommit e3c30d0c4c495dc25ba5e46456aa4bfffb9f0c3b[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Jan 5 12:47:30 2020 -0700
+
+    defined aiCard and tests
+
+[33mcommit 18de7ad6b01b74f80e80a84dbed2597a192c1c34[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Jan 5 11:58:59 2020 -0700
+
+    updated sumCards for + / -
+
+[33mcommit e4b83903b4c230c502da79d710aaec528c4f18d3[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Jan 5 11:53:50 2020 -0700
+
+    defined sumCards and test
+
+[33mcommit c91bcb1f094919665620fb6137537499315e68fb[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Jan 5 11:17:36 2020 -0700
+
+    updated makeCard with letter values to indicate operator of card
+
+[33mcommit 012214ba2d7f23823ce92ba357e64adaedc611d7[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Jan 5 11:12:49 2020 -0700
+
+    defined makeCard and test
+
+[33mcommit c78694bd2ad63d8677e8d733bbf9e7217db9c853[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Jan 4 17:44:46 2020 -0700
+
+    defined makeHand
+
+[33mcommit 2233d072885c41ff3a785726f10552b5caa01dca[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Jan 4 17:39:25 2020 -0700
+
+    defined chooseCard
+
+[33mcommit 8f7a73afa1a77fffcc9c89152959fb99b0b1b1f3[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Dec 4 17:52:14 2019 -0700
+
+    added tiebreaker logic to compareHands
+
+[33mcommit 3ecbdc93ee789a736ecadffcef64b2c84fcfe27d[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Dec 4 17:13:52 2019 -0700
+
+    defined compareHands and tests
+
+[33mcommit 8de8710b5fcb1ebe0aa454320b3fc4c292152fa1[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Dec 4 16:42:24 2019 -0700
+
+    added controller test for RankList.SF
+
+[33mcommit a3488fa36f75c3a7c17e4745204e3e98a8171425[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Dec 3 20:13:10 2019 -0700
+
+    updated controller test 5 for Enum data
+
+[33mcommit 563d855e54256711593bec9a75195639662b4dab[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Dec 3 20:08:58 2019 -0700
+
+    rebuilt var dup / for / if in pairReturn to accommodate TwoPair
+
+[33mcommit e31f89cb2c7d4aeca6b4f42c55c825fefd2b1359[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Dec 3 19:59:23 2019 -0700
+
+    rebuilt findDuplicates to return dictionary of matches = 2
+
+[33mcommit 55a0da7c3318b26f61c88d4c622d97410c4ef48b[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Dec 3 19:30:29 2019 -0700
+
+    added straight flush RankedHand return in controller
+
+[33mcommit abe790f3174743a6e6ad3a49f43d403f407ab580[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Dec 3 19:19:49 2019 -0700
+
+    updated highCard to return RankedHand(Enum)
+
+[33mcommit d0e4b711b1346720c056279b8334e9e2a2fb753c[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Dec 3 19:11:21 2019 -0700
+
+    rebuilt pairReturn to return RankedHand containing Enum data
+
+[33mcommit 96e4fac217039d2c0fd65fc7a96ddd80019486cc[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Dec 3 18:27:22 2019 -0700
+
+    added Enum return to suitCounter and updated tests
+
+[33mcommit 757c526f067e42456cd1f261731e49577dacb7e4[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Dec 3 17:58:33 2019 -0700
+
+    reconfigured suitCounter to return string of suit if == 5
+
+[33mcommit f7104e35298f7643e65cb376b4dc129fc44736ad[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Dec 3 11:40:00 2019 -0700
+
+    reconfigured checkStraight and tests for Enum data
+
+[33mcommit a6021dc898b16856c1015255251e4c79c962a36f[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Dec 2 22:54:03 2019 -0700
+
+    commented failing test for pairReturn
+
+[33mcommit 0b6c8b76c092aa1e07f744eb85c5555124cee450[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Dec 2 22:48:17 2019 -0700
+
+    defined compareHands and tests
+
+[33mcommit 1d229db02c3ea5b85eb2a488d27f5506656f2ea7[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Dec 2 21:34:59 2019 -0700
+
+    added test for handRank
+
+[33mcommit 6d135fff243a874c0a1fd137a4e768e9b6716f05[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Dec 2 21:27:03 2019 -0700
+
+    added test for handRank
+
+[33mcommit 77135dac56dfbcd69f7b63af7b4d340b3ef06208[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Dec 1 23:26:15 2019 -0700
+
+    defined class RankedHand and function handRank with test
+
+[33mcommit d0a23fd57db9c586b67db46f1d46750a9a2ea772[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Nov 30 21:15:23 2019 -0700
+
+    modified "flush" test in controller to return suit
+
+[33mcommit 09a10773e04f5fbbb06093981a6308731d9c159f[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Nov 30 21:05:19 2019 -0700
+
+    added data from findDuplicates into pairReturn
+
+[33mcommit a5f7692f0f3e02c9e0f25ce2d9f0f2596c30e44b[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Nov 30 21:01:15 2019 -0700
+
+    defined findDuplicates and test
+
+[33mcommit 488d61c96211fcdbf287080b95042871799e108f[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Nov 30 20:13:56 2019 -0700
+
+    defined keyReturn and test
+
+[33mcommit 1ff36ae7df34d4c2b8b55f11aa6da2b82e4bd20f[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Nov 30 18:53:28 2019 -0700
+
+    added conditional for two pair hand in pairReturn
+
+[33mcommit d608287c4b69ce524eaec082e4edbb04e71b2f73[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Nov 29 20:20:40 2019 -0700
+
+    defined controller with tests
+
+[33mcommit b993ac75e3bf8b5a3424361d7e6ce2ce83501c7c[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Nov 29 20:16:05 2019 -0700
+
+    defined controller and tests
+
+[33mcommit cb6b17c68b1faed50a280b9814c6baddfa31b731[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Nov 29 20:02:52 2019 -0700
+
+    defined checkStraight and test
+
+[33mcommit d1c7ab9a588f50e714d54d476280d47af6fa3f17[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Nov 29 19:59:19 2019 -0700
+
+    defined highCard and test
+
+[33mcommit b0428d491693a07c1f19d94c349138ac1139f08b[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Nov 29 19:55:24 2019 -0700
+
+    defined pairReturn and tests
+
+[33mcommit f5b446c1dcc9615019e9bb743b1dee7b673182ee[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Nov 29 19:41:38 2019 -0700
+
+    defined suitCounter and tests
+
+[33mcommit e7f93c25b4e004606ee3f131ae8a99223120d5d2[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Nov 29 19:04:45 2019 -0700
+
+    defined cardValues, pairfinder and tests
+
+[33mcommit 1491f8757d518402112e6ee89ebd984255682394[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Nov 29 18:34:09 2019 -0700
+
+    defined class Hand, makeHand and tests
+
+[33mcommit dcd0fed68cc6b64c2296bf66cb2c284495c24430[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Nov 29 18:19:51 2019 -0700
+
+    defined class Card, makeCard and tests
+
+[33mcommit 9c9bb8ab8205ce5797e068d1e0f73541a9355be3[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Nov 28 09:13:40 2019 -0800
+
+    defined printer
+
+[33mcommit a58c5ec229613c42452b93030bbbcc1e359d0f59[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Nov 28 08:12:10 2019 -0800
+
+    added logic for highCard to controller
+
+[33mcommit 51ddf4cfb72c3dc537987525bc86852d61d835a8[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Nov 28 08:01:25 2019 -0800
+
+    added logic to matchReturn for full house
+
+[33mcommit 8ea6f9e3a79ba162fd00c79384c12770278eab63[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Nov 28 07:51:58 2019 -0800
+
+    defined controller with tests
+
+[33mcommit ce3fee228f13c13bf66e5697c8ed3c31b8b26b15[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Nov 26 22:49:32 2019 -0700
+
+    rebuild matchReturn logic
+
+[33mcommit 6ef8f39f87277d7cce69ba946c4a8518cd19907f[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Nov 26 22:41:45 2019 -0700
+
+    updated matchReturn to return strings
+
+[33mcommit 72c92055caa5170f4dec7ba42f96094d65abb842[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Nov 26 22:09:55 2019 -0700
+
+    defined highCard with passing test
+
+[33mcommit 2d9763b7bae81e539d3bce0a6d246ee86b1c7ce5[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Nov 26 21:44:17 2019 -0700
+
+    defined isStraight with tests
+
+[33mcommit a07f317fea27188f034b40cff4ab68b655724a45[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Nov 26 21:19:58 2019 -0700
+
+    defined suitCounter and tests
+
+[33mcommit d832dd6f6936893402211f44dfa6f5cd5ea80016[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Nov 26 21:00:42 2019 -0700
+
+    defined matchCounter and passing test
+
+[33mcommit 701a7b07e78873d7de8a3b0cb4f6307d91d2ac78[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Nov 26 14:46:05 2019 -0700
+
+    defined Hand class, makeHand and tests
+
+[33mcommit 9b37face6bbe5658c21be5fed7182a123736478d[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Nov 26 14:29:45 2019 -0700
+
+    added tests to makeCard
+
+[33mcommit e436b1ac8fb7a0ae0bcd27cb351a9378814e5940[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Nov 26 14:28:44 2019 -0700
+
+    defined Hand class and makeCard with passing tests
+
+[33mcommit 81e8135c5a1b03600ecf9ca6ef5e979b0cc5c05a[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Nov 25 16:43:51 2019 -0700
+
+    defined class Hand, makeHand function and passing tests
+
+[33mcommit fcdaaf0bf4b9ee8c03b606ec824658afc0e64581[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Nov 25 16:32:48 2019 -0700
+
+    added test and updated logic for makeCard
+
+[33mcommit bb1200a8d99684e47dac315a2fe0f63213dd50dd[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Nov 25 16:27:19 2019 -0700
+
+    defined makeCard and passing tests using class info
+
+[33mcommit 26ef4661b0ff5f3116157f4f4e4c77a32f23fc9b[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Nov 8 10:50:21 2019 -0700
+
+    updated matchCheck for full house conditional (2 and 3 of a kind)
+
+[33mcommit 39697ad6f712d3017640b4806cb56c0156435293[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Nov 7 22:48:10 2019 -0700
+
+    updated controller test for flush
+
+[33mcommit 4eead98ea209c01486300276e957915e2fb4a225[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Nov 7 22:31:04 2019 -0700
+
+    updated controller test for flush
+
+[33mcommit f96489a9396f6bebd9182c3fd77f4ecea0637ae8[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Nov 7 22:30:01 2019 -0700
+
+    updated suitCount to boolean
+
+[33mcommit a6c0904b52813f0a931500036f63c565730deca4[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Nov 7 21:56:49 2019 -0700
+
+    defined controller and tests for pair and high card
+
+[33mcommit 3c7bb5e4d3d19aaf14a7ad729c42d9839f589cda[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Nov 7 19:15:40 2019 -0700
+
+    defined highCard with test
+
+[33mcommit 12156e46dab377db6c6d7c243b54a1f36abe7952[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Nov 7 18:58:38 2019 -0700
+
+    defined suitCount with test
+
+[33mcommit 67593b1ad7a41cc0c28d1553617095f2481a934b[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Nov 7 12:41:11 2019 -0700
+
+    added inOrder test
+
+[33mcommit c8d128494111c4b3d4cb69929b11699cf7e8217a[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Nov 7 11:56:55 2019 -0700
+
+    defined inOrder and test
+
+[33mcommit e88abff357844cd8fd7ece0f0534a7c3ce1ca548[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Nov 6 22:54:41 2019 -0700
+
+    defined matchCheck and passing tests
+
+[33mcommit b11f9a6e73254ef27b95606ff0d33f53fe4ee455[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Nov 6 22:32:17 2019 -0700
+
+    redefined howManyLike and cardValues to accommodate class constructor
+
+[33mcommit 5c736a8409cdf3e7b0bf15fd1b801b1a8a651612[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Nov 6 17:36:06 2019 -0700
+
+    defined howManyLike + tests
+
+[33mcommit 09397e2c056a51d65f92cfcf8869e29a92368b1d[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Nov 6 17:23:28 2019 -0700
+
+    defined cardValues
+
+[33mcommit f49dcf5bc3f760c42fcee2711b4b4fc2c4b91add[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Nov 6 15:34:23 2019 -0700
+
+    updated makeCard to allow for J, Q, K and A
+
+[33mcommit cd6ddb0b845dbfe7ef82820a3d0ba6c3dcbf8274[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Nov 6 15:22:13 2019 -0700
+
+    passed first test with makeCard
+
+[33mcommit 9db599371ca61726fc34ad0bc5d31c3916d90899[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Nov 3 15:43:36 2019 -0700
+
+    comment trim
+
+[33mcommit 9b8ed66a169d6a1a9379d2b03b8fb4a6fdc7ba3f[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Nov 3 11:17:01 2019 -0700
+
+    refactored listGet
+
+[33mcommit e37ab039c2b9817ab1a930015dc07ab866234820[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Nov 3 10:37:13 2019 -0700
+
+    naive solution
+
+[33mcommit a4fdfc3395d1a8cd6c55e9e78bd7f0ac4fcfaa03[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Nov 2 13:48:01 2019 -0600
+
+    added test for capital letters
+
+[33mcommit a7f448803f17c7d5348b356115eb6824da509484[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Nov 2 13:40:00 2019 -0600
+
+    added alphabetical test
+
+[33mcommit 64a587ec08a5863536b237bd46586d7d4322cd6c[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Nov 2 13:36:47 2019 -0600
+
+    added test cases
+
+[33mcommit 4aa1ddf5efe77eef7ba97769866a05ee89ae34c6[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Nov 2 13:34:13 2019 -0600
+
+    added test case to sortReverse for list of lists
+
+[33mcommit 2bc738d55359e8815cb4c8b086538433a9ff3eff[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Nov 2 13:30:42 2019 -0600
+
+    added test case to sortNumerical for list of lists
+
+[33mcommit 02651456387009a869b8a420ea3a55ed5cecbc44[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Nov 2 13:27:58 2019 -0600
+
+    defined sortReverse
+
+[33mcommit 8eb5e9366dda84f11225662e05aa3d6bf3a87095[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Nov 2 13:25:10 2019 -0600
+
+    defined sortNumerical
+
+[33mcommit 642d144b04dcbe55223496daf7c9c5531c4fa59e[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Nov 2 13:18:35 2019 -0600
+
+    defined jerk as test
+
+[33mcommit 8be8b1c60537939bbc4f27643f38ab0dde4e7bdb[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 31 16:50:50 2019 -0600
+
+    GAME OVER MAN
+
+[33mcommit 83fc6ab518f4b9f0f2ebece63505b8567d19c20c[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 31 16:36:33 2019 -0600
+
+    removed print tests
+
+[33mcommit e73a82ae906d0196c304732ab1566d3db3633cf1[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 31 16:10:11 2019 -0600
+
+    updated playCard for int(card)
+
+[33mcommit 1c5cedf3de1e5621442ec00aaa99217cb071f6e0[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 31 15:30:50 2019 -0600
+
+    debugging stateController2
+
+[33mcommit 1df809074107da63496bc3e964f24a8207683111[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 31 15:09:14 2019 -0600
+
+    updated tests for endTurn
+
+[33mcommit 9bb54f5fe1bc90fc4b4845e523510bef12da6783[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 31 15:08:12 2019 -0600
+
+    updated tests for endTurn
+
+[33mcommit f3b809daae14fda4b47a1bb273fe4fbe22a049ec[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 31 14:20:36 2019 -0600
+
+    removed turnCounter and added gameState:['turn']
+
+[33mcommit afdfa1f0c20991dda9e4f110b822736c7a2d576a[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 31 00:23:04 2019 -0600
+
+    comments
+
+[33mcommit 6227fb198a19d8b9bbbbfff1c8c6bbd1c931471e[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 30 23:40:59 2019 -0600
+
+    added print("Invalid move") to playCard
+
+[33mcommit baee77abf4cb45a804b97c574cb8a02fc6b3718d[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 30 23:05:40 2019 -0600
+
+    updated test for validPlay
+
+[33mcommit 585e56e7b2a4afb74449f1fab2db3ad9b9573960[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 30 22:45:41 2019 -0600
+
+    updated test for validPlay
+
+[33mcommit 32d63591e9e889182860e20f00ef34b661c2e221[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 30 21:59:54 2019 -0600
+
+    updated test in playCard to reflect dealDamage
+
+[33mcommit 1607c51f4bf4b20c14ab572e131396b24c50fb70[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 30 21:57:18 2019 -0600
+
+    updated tests for restoreMana
+
+[33mcommit fdbdd3e6d9b33051278c2c66de7abdf6da405da1[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 30 21:41:34 2019 -0600
+
+    added test for endState
+
+[33mcommit c4ccdb40401ba03263904dd8bfa190a6cdb8521b[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 30 21:29:06 2019 -0600
+
+    defined restoreMana
+
+[33mcommit f5744b1daf3e30af134d4e4c563b1f2e01d3ceb2[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 30 14:01:08 2019 -0600
+
+    defined validPlay
+
+[33mcommit c645cf4005e0ccac36b7f411bb1e4c5b5be67dc9[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 30 08:40:57 2019 -0600
+
+    updated statePrinter to include len(deck)
+
+[33mcommit ae0b28224a3da09f2ccb012b412cdd339b71c5e6[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 30 08:27:08 2019 -0600
+
+    updated drawCard to add mana until 10
+
+[33mcommit 438970dfcd833657e40e0e5b4205ffe9ff9afd22[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 30 08:04:18 2019 -0600
+
+    defined statePrinter
+
+[33mcommit 22af7de811c1790347a1e2444f669e72c947739b[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 30 07:54:28 2019 -0600
+
+    updated tests
+
+[33mcommit e52a069498198d5e1d8ca275a5ab09ea76093052[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 30 07:16:55 2019 -0600
+
+    updated playCard to with "that card isn't in your hand" conditional
+
+[33mcommit 000f98e48791f04790e28fd9fcde9f80dafc6692[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 30 07:13:41 2019 -0600
+
+    updated playCard to accommodate mana expenditure
+
+[33mcommit f2b55b76ab628634086c7f0970360c788e5dae7c[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 30 07:05:14 2019 -0600
+
+    updated playCard to include mana expenditure
+
+[33mcommit a47fffa8ebee22adc5bde08ac3680f80038f3942[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 30 06:57:19 2019 -0600
+
+    added conditional for hand being too full in drawCard
+
+[33mcommit bdef7656d83cb6e7169896ed44e58824fdf5db6b[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 30 06:25:52 2019 -0600
+
+    updated startDeck
+
+[33mcommit 869d3095c7da6ef10cffaae659387134d907c9b3[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 29 19:58:11 2019 -0600
+
+    removed comments
+
+[33mcommit c700ddb1c145f5ee930dbead09f92b8105e7e001[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 29 19:54:33 2019 -0600
+
+    updated playCard to use dictionary
+
+[33mcommit 7f478bcb1cad4f6f0d40fe3bbf4edaac062304ff[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 29 19:09:10 2019 -0600
+
+    updated hand.append in drawCard, modified test case
+
+[33mcommit dfafdaf5caa90c8d0f8ae9983cb7aab993d2c60f[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 29 19:04:15 2019 -0600
+
+    updated drawCard
+
+[33mcommit 790f34b20bf4690d001529f8a0582aef23d42213[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 29 17:59:32 2019 -0600
+
+    updated drawCard
+
+[33mcommit bb5f9efdac4664d3681895036aa90e331e82f8a2[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 29 17:54:31 2019 -0600
+
+    rebuilt dealDamage
+
+[33mcommit 75635a1acd45d1168529e9a90274f295ac2df100[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 29 17:25:57 2019 -0600
+
+    defined gameState
+
+[33mcommit dfcbd62eff39f2fe1f17d84efcbdf9624d377c29[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 29 16:57:42 2019 -0600
+
+    updated gamePlay
+
+[33mcommit aeac2bd956efe955b0bde83ffbc25f207c90867e[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 29 16:51:06 2019 -0600
+
+    updated gamePlay with user prompt
+
+[33mcommit 4ec4bc693195b58aade0e3610d115ff79d146f8b[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 29 16:41:31 2019 -0600
+
+    updated gamePlay with user prompt
+
+[33mcommit 2bc04f6bd63d3130e2fbc1ff9b3dccbfd4bb36bc[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 29 16:24:58 2019 -0600
+
+    updated gamePlay with user prompt
+
+[33mcommit 2e2ad58d58a9e80c3972a4a5123fc961bb2745da[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 29 11:40:27 2019 -0600
+
+    updated gamePlay
+
+[33mcommit 6c8193db65845a80031bcc24f31e5598eba6eaaa[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 29 11:36:55 2019 -0600
+
+    defined gamePlay
+
+[33mcommit 7eabf62b72b7de00b2817369bd65b836586222a3[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 29 10:40:55 2019 -0600
+
+    updated drawCard to remove from deck and place in hand
+
+[33mcommit b64f55e627682cd398222c7dbe37539909d08d43[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 29 10:21:15 2019 -0600
+
+    defined dealDamage
+
+[33mcommit 4d41ff3a384db0f252214929bb2db7d4e05499fd[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 29 10:16:18 2019 -0600
+
+    defined playCard
+
+[33mcommit 8eb347bd4943f0dfadbb58f5cf495f56942aa52e[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 29 10:08:58 2019 -0600
+
+    defined cardGenerator, startDeck, drawCard and gamePlay
+
+[33mcommit a48da20bd6d9aa095f67db8e1f1e8a11e8755bc2[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Oct 28 17:14:32 2019 -0600
+
+    updated accountPrinter to generate vettedAccounts.txt
+
+[33mcommit 5147264b4720558c071c2284078e7048f4b8f377[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Oct 28 15:56:24 2019 -0600
+
+    defined accountPrinter
+
+[33mcommit e9e66f6d5cd294f5bed3ceb84accef9ce2b5b173[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Oct 28 15:06:37 2019 -0600
+
+    defined accountNumbers and tests
+
+[33mcommit 12562803a25134d45c614022e797acb953662539[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Oct 27 18:47:50 2019 -0600
+
+    updated checksum equation in entryValidator
+
+[33mcommit 29b060bcebb65d601f04b76344b21f0d184f6063[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Oct 27 18:09:02 2019 -0600
+
+    updated entryValidator to accommodate checksum
+
+[33mcommit 62d54f1ed175cf465f7067b95016711cd2f5b0e5[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Oct 27 17:52:03 2019 -0600
+
+    updated entryValidator
+
+[33mcommit a699f0ac097e5c785ff067c94cf97fbe9287252b[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Oct 27 17:40:29 2019 -0600
+
+    defined body and tests for entryValidator
+
+[33mcommit e84ec1252c684abf74494bd976d4a907ca10db6d[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Oct 26 17:00:24 2019 -0600
+
+    defined parseEntries with test cases
+
+[33mcommit 3f38ac179332b41d9c86e8e60b790e0f25289f77[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sat Oct 26 14:51:51 2019 -0600
+
+    define 0-9 visual representation integers
+
+[33mcommit d308e9ece96f5027225e383046847b42cda9a738[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Oct 25 12:08:31 2019 -0600
+
+    updated insults.txt and increased randomNumber range
+
+[33mcommit 382768883b12f1ac899b786069c1ffff68264bcc[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Oct 25 11:06:59 2019 -0600
+
+    defined insultPuller
+
+[33mcommit 7d17d144ed5723201fd2a4bb7f617103a1f5776c[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Oct 25 10:44:12 2019 -0600
+
+    added parseInsult
+
+[33mcommit 87b01e857cc0d789ef7a7e5dd8a5b8d02c066e06[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 24 21:00:51 2019 -0600
+
+    updated comments
+
+[33mcommit 87fdcc732f63e357085e631f3a3b09ed24a06b40[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 24 20:56:31 2019 -0600
+
+    increased lists
+
+[33mcommit 95eb489eb390ddaede978aa2ca53832bb2cba0c3[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 24 20:48:29 2019 -0600
+
+    added in second mutation for finalInsult to include set2
+
+[33mcommit eebdaef2467c9634cce161fa8c0db524a351b0bc[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 24 20:46:47 2019 -0600
+
+    built randomNumber, defined lists and insultGenerator
+
+[33mcommit 1617334bc79c04e3059a6b1f2cfa9c29b749ceaf[m
+Merge: cb1fd90 a50937d
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 24 17:16:56 2019 -0600
+
+    Merge branch 'master' of https://github.com/FlimothyCrow/Python
+    manual
+
+[33mcommit cb1fd905a9b31397e638db6498957223f4212c72[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 24 17:11:37 2019 -0600
+
+    repaired return on line 29
+
+[33mcommit 8b9b609798618d05bac6ba5d395445117d6f6bf3[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 24 17:09:22 2019 -0600
+
+    repaired return on line 29
+
+[33mcommit a33a658319defe9c948749040cfa4c68c364d792[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 24 16:47:47 2019 -0600
+
+    added whoWins, whoWins tests and whoWins conditional to tennis
+
+[33mcommit 3d1cdd9a99f1329c026100cefa4e8ddc52eadfeb[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 24 16:35:47 2019 -0600
+
+    added victory conditional to tennis
+
+[33mcommit e2041e172656c33f0d481295c631fe11ee422dad[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 24 16:25:33 2019 -0600
+
+    added tests for victory
+
+[33mcommit df6ad49195489e387004fa424234a1bd74612ed3[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 24 16:19:05 2019 -0600
+
+    defined victory
+
+[33mcommit 561fa80b1850c0ac65d00a31959d5f6ec93e910a[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 24 15:57:53 2019 -0600
+
+    updated test case for tennis
+
+[33mcommit e56240d57b46ff3e2859db185c1306e8956431a6[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 24 15:56:35 2019 -0600
+
+    updated test case for tennis
+
+[33mcommit 9f767010d5c6f904db27f0000661e09cafc392eb[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 24 15:53:24 2019 -0600
+
+    defined score and tennis
+
+[33mcommit a50937d9e61d5a6f27d91cf00abe8b492fa30643[m
+Author: FlimothyCrow <54328147+FlimothyCrow@users.noreply.github.com>
+Date:   Thu Oct 24 15:25:25 2019 -0600
+
+    Create coinToss
+
+[33mcommit fd148bf60eb70be48b40ddd07e35f28b71ac7cf7[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 23 20:05:16 2019 -0600
+
+    rebuilt conditional for num == int failure
+
+[33mcommit c6d03b7fe59531c357a0866601c0ecf30ef1af41[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 23 00:08:45 2019 -0600
+
+    rebuilt wordChanger to use append instead of enumerate
+
+[33mcommit dcd9b4877d7f695ef1e4c3b8d7b83a0b759ac6cb[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 22 23:14:45 2019 -0600
+
+    added failing test for list containing a string passing into wordChanger
+
+[33mcommit c63afd6618a4434b566c8da3e8e14748ee0a6fae[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 22 22:52:24 2019 -0600
+
+    created listMutate
+
+[33mcommit 7173e7ecc8e54a25188dad03b056506743daee2f[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 22 22:38:43 2019 -0600
+
+    added listRange test
+
+[33mcommit c3010cc83f9a0c7ce66ba0717eb7c6dc876787c7[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 22 22:34:18 2019 -0600
+
+    dedented return at the end of wordChanger to return final product, not iterations
+
+[33mcommit 9e8f07c62f9a2c931554ad4c50c731d41a356b5d[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 22 22:22:59 2019 -0600
+
+    added test to wordChanger for multiple replacement occurrences
+
+[33mcommit c0840535b396421f25c7a28337b6ea8fdd79b617[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 22 21:41:10 2019 -0600
+
+    added test to wordChanger for multiple replacement occurrences
+
+[33mcommit 7cb93c87e77384ed11e41a4a4028d9ceab186e10[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 22 21:39:28 2019 -0600
+
+    updated wordChanger test to reflect new "target" argument
+
+[33mcommit 96bcde519903cf29603ee00b43381bc7a305d067[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 22 21:33:45 2019 -0600
+
+    created listMutate
+
+[33mcommit c13b8603bb03067f3ae4dc71aa34d2f8900f5a52[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 22 21:16:21 2019 -0600
+
+    built wordNums
+
+[33mcommit bdbb26649628e5e345a2d340f0607f0b4e4fcd9f[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 22 20:31:03 2019 -0600
+
+    rebuilt listRange
+
+[33mcommit 14bffab6fecbdc477128f03b602211b1292baf1d[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 22 20:19:43 2019 -0600
+
+    fizzBuzz rebuild
+
+[33mcommit 36c7f73cf27e7f348d187bf08b868d6c5f4aeaad[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Oct 21 11:16:36 2019 -0600
+
+    removed extra comments
+
+[33mcommit b3927c6b69637879a67bbc84259f9c419ae50f43[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Oct 21 11:11:06 2019 -0600
+
+    renamed to gameOver and put it as innermost if
+
+[33mcommit c9d8cb00d0994120d9358e94d831d576d938ff2a[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Oct 21 11:00:14 2019 -0600
+
+    updated gameContinue
+
+[33mcommit 1694ae37381ad1d103c9355dcbcd805e1a2aa471[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Oct 21 10:48:16 2019 -0600
+
+    rebuilt gamecontinue to count total hits as a victory conditional
+
+[33mcommit 32cdae28ac5a01e35d0537ddcb51f9002295c252[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Oct 21 09:01:23 2019 -0600
+
+    added playerboards for player 2
+
+[33mcommit 7b7c088309b7dc8880750cb030def6bda559adb4[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Oct 20 20:40:33 2019 -0600
+
+    updated moveValid with elif to accommodate repeated attempts on hits OR misses
+
+[33mcommit f14f109ce303dad5a7c84643ae1dbcb0018102c5[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Oct 18 00:50:49 2019 -0600
+
+    removed extra comments
+
+[33mcommit 06b671b4979cda71bcf6b635ee85f8c615931200[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Oct 18 00:46:37 2019 -0600
+
+    changed line 58 to check moveValid against updated playerBoard, not shipsBoard
+
+[33mcommit 975c2d8fb3c1a20d1e9890e2929d62ec5e476eed[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Oct 18 00:43:46 2019 -0600
+
+    rebuilt tests to reflect changes in updateGame, moveValid and hitMiss
+
+[33mcommit 9a16b107b54cfe40d68833b5affa70304647428f[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Fri Oct 18 00:22:54 2019 -0600
+
+    defined gameOver and test
+
+[33mcommit eca09e6dfce3b11410f2ee9e0e2d64a63b5de4c7[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 17 23:43:10 2019 -0600
+
+    updated playGame to mutate playerBoard with each move
+
+[33mcommit 8a469bea5d3e280c7a9d90c2b0b570c22bef1b84[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 17 23:23:02 2019 -0600
+
+    updated playGame to only mutate and print playerBoard by checking coordinates against shipsBoard
+
+[33mcommit 983d326d5c5039ee23fde0847a2fefa437ad2ccc[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Thu Oct 17 23:16:02 2019 -0600
+
+    added definitions for playerBoard and shipsBoard within playGame
+
+[33mcommit 09468daeef1f31c405c6db4b5f17a6b33921f134[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 16 19:39:08 2019 -0600
+
+    added printGame under "miss" conditional
+    added legend for hits and misses
+
+[33mcommit 28c55a22d1d152e85b20e6ebc5f3cf3c97799f6a[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 16 19:30:40 2019 -0600
+
+    updated loop in playGame, added tests
+
+[33mcommit 3935194bb8c087f038c10566f1ca2c6405f1b6ff[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 16 15:18:38 2019 -0600
+
+    renamed moveValid to hitMiss and added "hit" conditional on line 69
+
+[33mcommit 1c9140c4ad4451a5f6609a8e05a655588b438e40[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Wed Oct 16 14:56:06 2019 -0600
+
+    updated moveValid
+
+[33mcommit ac8f4975b0b49b05d4ffa8ef8c446f0d6fbc02e1[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 15 13:47:18 2019 -0600
+
+    added printGame and playerMove
+
+[33mcommit 937d96dccd618c0748132b658a478adc370c62f6[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Tue Oct 15 13:21:27 2019 -0600
+
+    began battleship game skeleton
+
+[33mcommit d5a32f62d765f846ece88d6c4c4d1e99db500621[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Mon Oct 14 17:21:41 2019 -0600
+
+    began Reversi (Othello) game
+
+[33mcommit 718946a554fcb06d667e121a77e67ce88fa9451e[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Oct 13 15:53:49 2019 -0600
+
+    Completed pokerHands with else highCard conditional
+
+[33mcommit c9f72bfd79f8b8fa88e5cd93b24db7f3bee96abd[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Oct 13 15:50:02 2019 -0600
+
+    added full house conditional to pairCheck
+
+[33mcommit 16397fe9a36f1ebf75d5bd2091862a370ffbae54[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Oct 13 12:34:36 2019 -0600
+
+    corrected test on line 31
+
+[33mcommit 0c1f99748660c6e8e4cc639d179c8a4e7459439e[m
+Author: FlimothyCrow <discman15@hotmail.com>
+Date:   Sun Oct 13 12:07:52 2019 -0600
+
+    push test 3
+
+[33mcommit e351dd8d316ac44f8e36f22dc293fb22b48981a8[m
+Author: FlimothyCrow <timshogren@gmail.com>
+Date:   Sun Oct 13 12:03:23 2019 -0600
+
+    push test 2
+
+[33mcommit e71402f58fe1c7fc23452f5b5e54c74be6166180[m
+Author: FlimothyCrow <timshogren@gmail.com>
+Date:   Sun Oct 13 11:49:03 2019 -0600
+
+    push test
+
+[33mcommit e7320ecbbe2295e0501392ab8c843327ab752cbf[m
+Author: Tim Shogren <timshogren@gmail.com>
+Date:   Sun Oct 13 11:39:00 2019 -0600
+
+    rebuilt string formatting in pairCheck
+
+[33mcommit d7b8c46dd9d5a16bda408f2dbc500a6a0a815394[m
+Author: Tim Shogren <timshogren@gmail.com>
+Date:   Sat Oct 12 23:43:04 2019 -0600
+
+    updated pairCheck, suitList and added pokerHands
+
+[33mcommit db0fc060414616744558225d7e01cd73df46b6ef[m
+Author: Tim Shogren <timshogren@gmail.com>
+Date:   Sat Oct 12 23:42:37 2019 -0600
+
+    updated pairCheck, suitList and added pokerHands
+
+[33mcommit 8c467a104fe8f7bd2dfc70eb12051f09035cf178[m
+Author: Tim Shogren <timshogren@gmail.com>
+Date:   Sat Oct 12 23:09:19 2019 -0600
+
+    updated pairCheck, suitList and added pokerHands
+
+[33mcommit 1c2214afb745e8d61be95a1e4347c60f05649706[m
+Author: Tim Shogren <timshogren@gmail.com>
+Date:   Fri Oct 11 16:29:15 2019 -0600
+
+    i did the thing
+
+[33mcommit 73ffbc6b9e74c65c000b4e4aa2f89ce520599499[m
+Author: Tim Shogren <timshogren@gmail.com>
+Date:   Fri Oct 11 16:18:54 2019 -0600
+
+    added some comments
+
+[33mcommit fcae91650493ded080417b083e0ccceb0b8b3354[m
+Author: Tim Shogren <timshogren@gmail.com>
+Date:   Fri Oct 11 16:07:40 2019 -0600
+
+    Initial commit

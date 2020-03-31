@@ -33,3 +33,22 @@ function removeDupes(listOfInts){
   const yesDupes = Array.from(new Set(listOfInts))
   return yesDupes
 }
+
+function sumReduce(ints){
+  return ints.reduce((acc, next) => acc + next)
+}
+
+function filterEvens(ints){
+  var filteredList = ints.reduce((acc, next) => {
+    if (next % 2 !== 0){
+      acc.push(next)
+    }
+      return acc
+  }, [])
+  return filteredList
+}
+
+function filterEvens0(ints){
+  var filteredList = ints.filter(x => x % 2 !== 0)
+  return filteredList
+}

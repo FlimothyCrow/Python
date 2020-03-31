@@ -35,3 +35,18 @@ test('removeDupes', function(assert){
   var listDupes = removeDupes([1, 2, 1, 1, 3, 4, 3, 9, 3]);
   assert.deepEqual(listDupes, [1, 2, 3, 4, 9])
 })
+//---------------------------------------
+test('sumReduce0', function(assert){
+  var listDupes = sumReduce([5, 10, 20]);
+  assert.deepEqual(listDupes, 35)
+})
+//---------------------------------------
+test('filterEvens0', function(assert){
+  var listOfInts = filterEvens([5, 9, 10, 20, 39]);
+  assert.deepEqual(listOfInts, [5, 9, 39])
+})
+//---------------------------------------
+test('filterEvens00', function(assert){
+  var listOfInts = filterEvens0([5, 9, 10, 20, 39]);
+  assert.deepEqual(listOfInts, [5, 9, 39])
+})
