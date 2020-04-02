@@ -1,10 +1,4 @@
-function averageCalculator(integers) {
-  sumOfInts = 0
-  for (int of integers){
-    sumOfInts += int
-  }
-  return sumOfInts / integers.length
-}
+
 
 function meanCalculator(listOfInts){
   if (listOfInts.length % 2 === 0){
@@ -30,8 +24,7 @@ function modeCalculator(listOfInts){
 }
 
 function removeDupes(listOfInts){
-  const yesDupes = Array.from(new Set(listOfInts))
-  return yesDupes
+  return Array.from(new Set(listOfInts))
 }
 
 function sumReduce(ints){
@@ -49,6 +42,9 @@ function filterEvens(ints){
 }
 
 function filterEvens0(ints){
-  var filteredList = ints.filter(x => x % 2 !== 0)
-  return filteredList
+   return ints.filter(x => x % 2 !== 0)
+}
+
+function averageCalculator(integers) {
+  return integers.reduce((acc, next) => acc + next) / 2
 }

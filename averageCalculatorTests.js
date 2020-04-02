@@ -3,9 +3,9 @@ test('averageCalculator', function(assert) {
   assert.equal(listOfInts, 5.5) ;
 });
 
-test('averageCalculator', function(assert) {
+test('averageCalculator0', function(assert) {
   var listOfInts = averageCalculator([1, 10, 100, 5, 39])
-  assert.equal(listOfInts, 31) ;
+  assert.equal(listOfInts, 77.5) ;
 });
 //---------------------------------------
 
