@@ -1,14 +1,5 @@
 
 
-function meanCalculator(listOfInts){
-  if (listOfInts.length % 2 === 0){
-    return "pass"
-  }
-  else {
-    return listOfInts[(listOfInts.length / 2) - 0.5]
-  }
-}
-
 function modeCalculator(listOfInts){
   var modeArray = [];
   var intsObject = {};
@@ -41,10 +32,22 @@ function filterEvens(ints){
   return filteredList
 }
 
+function averageCalculator(integers) {
+  return integers.reduce((acc, next) => acc + next) / 2
+}
+
+function meanCalculator(listOfInts){
+  if (listOfInts.length % 2 === 0){
+    return "pass"
+  }
+  else {
+    return listOfInts[(listOfInts.length / 2) - 0.5]
+  }
+}
 function filterEvens0(ints){
    return ints.filter(x => x % 2 !== 0)
 }
 
-function averageCalculator(integers) {
-  return integers.reduce((acc, next) => acc + next) / 2
+function filterFactor(targetFactor, listOfIntegers){
+  return listOfIntegers.filter(x => x % targetFactor === 0)
 }

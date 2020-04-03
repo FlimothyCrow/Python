@@ -50,3 +50,21 @@ test('filterEvens00', function(assert){
   var listOfInts = filterEvens0([5, 9, 10, 20, 39]);
   assert.deepEqual(listOfInts, [5, 9, 39])
 })
+//---------------------------------------
+test('filterFactor0', function(assert){
+  var targetFactor = 3
+  var listOfIntegers = filterFactor(targetFactor, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+  assert.deepEqual(listOfIntegers, [3, 6, 9])
+})
+
+test('filterFactor0', function(assert){
+  var targetFactor = 4
+  var listOfIntegers = filterFactor(targetFactor, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+  assert.deepEqual(listOfIntegers, [4, 8])
+})
+
+test('filterFactor0', function(assert){
+  var targetFactor = 11
+  var listOfIntegers = filterFactor(targetFactor, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+  assert.deepEqual(listOfIntegers, [])
+})
