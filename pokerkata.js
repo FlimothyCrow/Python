@@ -21,6 +21,7 @@ function cardValue(card) {
 function makeCard(string) {
   return { value : cardValue(string), suit : string.charAt(string.length-1)  }
 }
+
 // ----------------------------------------------------------
 
 function makeHand(listOfCards) {
@@ -30,6 +31,11 @@ function makeHand(listOfCards) {
   }
   return { cards : handObject }
   }
+
+function cardsToHand(listOfCards){
+  return listOfCards.map(makeCard)
+}
+
 // ----------------------------------------------------------
 function valueCounter(hand) {
   var listOfValues = {} ;

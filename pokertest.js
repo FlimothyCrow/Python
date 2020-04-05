@@ -6,6 +6,19 @@ test('makeHand', function(assert) {
   assert.equal(handObject.cards[0].suit, "D") ;
   assert.equal(handObject.cards[1].suit, "C") ;
 });
+
+// ------------------------------------------------
+test('cardsToHand', function(assert) {
+  var handObject = cardsToHand(["9D", "3C"]) ;
+  assert.equal(handObject[0].value, 9) ;
+  assert.equal(handObject[0].suit, "D") ;
+  assert.equal(handObject[1].suit, "C") ;
+});
+// ------------------------------------------------
+test('cardValue', function(assert) {
+  var value = cardValue("AS") ;
+  assert.equal(value, 14) ;
+});
 // ------------------------------------------------
 test('makeCard', function(assert) {
   var cardObject = makeCard("9D") ;
@@ -13,10 +26,6 @@ test('makeCard', function(assert) {
   assert.equal(cardObject.suit, "D") ;
 });
 // ------------------------------------------------
-test('cardValue', function(assert) {
-  var value = cardValue("AS") ;
-  assert.equal(value, 14) ;
-});
 test('cardValue', function(assert) {
   var value = cardValue("KC") ;
   assert.equal(value, 13) ;
