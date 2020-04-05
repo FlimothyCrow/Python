@@ -51,3 +51,4 @@ function filterEvens0(ints){
 function filterFactor(targetFactor, listOfIntegers){
   return listOfIntegers.filter(x => x % targetFactor === 0)
 }
+// applications
