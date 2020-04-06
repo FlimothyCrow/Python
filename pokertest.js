@@ -170,3 +170,9 @@ test('mergeSort0', function(assert){
   var sorted = mergeSort(unsorted)
   assert.equal(sorted, [1, 3, 4, 5])
 })
+// ----------------------------------------------------------
+
+test('addSum100', function(assert){
+  var listOfInts = addSum100([1, 2, 5, 9])
+  assert.equal(listOfInts, 117)
+})

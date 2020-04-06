@@ -24,7 +24,7 @@ function makeCard(string) {
 
 // ----------------------------------------------------------
 
-function makeHand(listOfCards) {
+function makeHand(listOfCards) { // old
   var handObject = []
   for (card of listOfCards) {
     handObject.push(makeCard(card))
@@ -32,7 +32,7 @@ function makeHand(listOfCards) {
   return { cards : handObject }
   }
 
-function cardsToHand(listOfCards){
+function cardsToHand(listOfCards){ // new dense
   return listOfCards.map(makeCard)
 }
 
@@ -149,3 +149,8 @@ function mergeSort(array){
   return right
 }
 // applications
+// ----------------------------------------------------------
+
+function addSum100(listOfInts){
+  return listOfInts.reduce((sum, value) => sum + value, 100)
+}
