@@ -172,7 +172,8 @@ test('mergeSort0', function(assert){
 })
 // ----------------------------------------------------------
 
-test('addSum100', function(assert){
-  var listOfInts = addSum100([1, 2, 5, 9])
+test('addSumN', function(assert){
+  var start = 100
+  var listOfInts = addSumN([1, 2, 5, 9], start)
   assert.equal(listOfInts, 117)
 })

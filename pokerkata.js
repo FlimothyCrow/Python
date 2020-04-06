@@ -151,6 +151,6 @@ function mergeSort(array){
 // applications
 // ----------------------------------------------------------
 
-function addSum100(listOfInts){
+function addSumN(listOfInts, start){
   return listOfInts.reduce((sum, value) => sum + value, 100)
 }
