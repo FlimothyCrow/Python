@@ -154,3 +154,16 @@ function mergeSort(array){
 function addSumN(listOfInts, start){
   return listOfInts.reduce((sum, value) => sum + value, 100)
 }
+// ----------------------------------------------------------
+
+function randomCeiling(){
+  var ceiling = 1000
+  var generator = Math.floor(Math.random() * ceiling);
+  while (generator > 1){
+    console.log(generator)
+    ceiling = generator
+    var generator = Math.floor(Math.random() * ceiling);
+  }
+}
+
+randomCeiling()
