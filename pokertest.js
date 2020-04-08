@@ -164,16 +164,16 @@ test('controller0', function(assert){
   assert.equal(controlled, 14)
 })
 // ----------------------------------------------------------
-
-test('mergeSort0', function(assert){
-  var unsorted = [2, 6, 5, 3, 4, 1]
-  var sorted = mergeSort(unsorted)
-  assert.equal(sorted, [1, 3, 4, 5])
-})
-// ----------------------------------------------------------
-
 test('addSumN', function(assert){
   var start = 100
   var listOfInts = addSumN([1, 2, 5, 9], start)
   assert.equal(listOfInts, 117)
+})
+
+// ----------------------------------------------------------
+
+test('mergeSort0', function(assert){
+  var unsorted = [2, 6, 5, 3, 4, 1]
+  var sorted = mergeSort(unsorted)
+  assert.equal(sorted, [1, 2, 3])
 })

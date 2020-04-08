@@ -130,8 +130,7 @@ function controller(arrayOfStrings) {
     return highCard(arrayOfStrings)
   }
 }
-// don't forget to defined function highCard
-// filled out applications
+
 // ----------------------------------------------------------
 
 function mergeSort(array){
@@ -139,16 +138,17 @@ function mergeSort(array){
   left = []
   right = []
   for (integer of array){
-    if (array.indexOf(integer) < mid){
+    if (integer <= mid){
       left.push(integer)
     }
     else {
       right.push(integer)
     }
   }
-  return right
+  return left
+
 }
-// applications
+
 // ----------------------------------------------------------
 
 function addSumN(listOfInts, start){
@@ -164,6 +164,7 @@ function randomCeiling(){
     ceiling = generator
     var generator = Math.floor(Math.random() * ceiling);
   }
+  console.log(generator)
 }
 
-randomCeiling()
+//randomCeiling()
