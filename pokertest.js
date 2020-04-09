@@ -171,6 +171,11 @@ test('addSumN', function(assert){
 })
 
 // ----------------------------------------------------------
+test('filterFactorN', function(assert){
+  var listOfInts = filterFactorN(3, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+  assert.deepEqual(listOfInts, [3, 6, 9])
+})
+// ----------------------------------------------------------
 
 test('mergeSort0', function(assert){
   var unsorted = [2, 6, 5, 3, 4, 1]

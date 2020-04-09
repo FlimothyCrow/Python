@@ -155,7 +155,10 @@ function addSumN(listOfInts, start){
   return listOfInts.reduce((sum, value) => sum + value, 100)
 }
 // ----------------------------------------------------------
-
+function filterFactorN(factor, listOfInts){
+  return listOfInts.filter(element => element % 3 === 0)
+}
+// ----------------------------------------------------------
 function randomCeiling(){
   var ceiling = 1000
   var generator = Math.floor(Math.random() * ceiling);
