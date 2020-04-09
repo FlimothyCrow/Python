@@ -156,7 +156,7 @@ function addSumN(listOfInts, start){
 }
 // ----------------------------------------------------------
 function filterFactorN(factor, listOfInts){
-  return listOfInts.filter(element => element % 3 === 0)
+  return listOfInts.filter(element => element % factor === 0)
 }
 // ----------------------------------------------------------
 function randomCeiling(){

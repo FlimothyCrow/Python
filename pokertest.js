@@ -175,6 +175,11 @@ test('filterFactorN', function(assert){
   var listOfInts = filterFactorN(3, [1, 2, 3, 4, 5, 6, 7, 8, 9])
   assert.deepEqual(listOfInts, [3, 6, 9])
 })
+
+test('filterFactorN0', function(assert){
+  var listOfInts = filterFactorN(2, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+  assert.deepEqual(listOfInts, [2, 4, 6, 8])
+})
 // ----------------------------------------------------------
 
 test('mergeSort0', function(assert){
