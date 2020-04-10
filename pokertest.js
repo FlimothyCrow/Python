@@ -186,6 +186,15 @@ test('filterTwoFactors', function(assert){
   assert.deepEqual(listOfInts, [6, 12])
 })
 
+test('filterTwoFactors0', function(assert){
+  var listOfInts = filterTwoFactors(3, 4, [1, 6, 12, 3])
+  assert.deepEqual(listOfInts, [12])
+})
+// ----------------------------------------------------------
+test('filterEitherFactor', function(assert){
+  var listOfInts = filterEitherFactor(2, 3, [1, 6, 12, 3])
+  assert.deepEqual(listOfInts, [6, 12, 3])
+})
 // ----------------------------------------------------------
 
 test('mergeSort0', function(assert){
