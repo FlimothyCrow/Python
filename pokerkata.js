@@ -159,6 +159,12 @@ function filterFactorN(factor, listOfInts){
   return listOfInts.filter(element => element % factor === 0)
 }
 // ----------------------------------------------------------
+function filterTwoFactors(factor0, factor1, listOfInts){
+  return listOfInts.filter(element => element % factor0 === 0
+  && element % factor1 === 0)
+}
+
+// ----------------------------------------------------------
 function randomCeiling(){
   var ceiling = 1000
   var generator = Math.floor(Math.random() * ceiling);
