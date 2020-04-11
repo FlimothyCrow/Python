@@ -192,8 +192,13 @@ test('filterTwoFactors0', function(assert){
 })
 // ----------------------------------------------------------
 test('filterEitherFactor', function(assert){
-  var listOfInts = filterEitherFactor(2, 3, [1, 6, 12, 3])
-  assert.deepEqual(listOfInts, [6, 12, 3])
+  var listOfInts = filterEitherFactor("both", 2, 3, [1, 6, 12, 3])
+  assert.deepEqual(listOfInts, [6, 12])
+})
+
+test('filterEitherFactor0', function(assert){
+  var listOfInts = filterEitherFactor("either", 4, 7, [42, 21, 12, 3])
+  assert.deepEqual(listOfInts, [42, 21, 12])
 })
 // ----------------------------------------------------------
 

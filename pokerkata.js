@@ -165,9 +165,15 @@ function filterTwoFactors(factor0, factor1, listOfInts){
 }
 // ----------------------------------------------------------
 
-function filterEitherFactor(factor0, factor1, listOfInts){
-  return listOfInts.filter(element => element % factor0 === 0
-  || element % factor1 === 0)
+function filterEitherFactor(target, factor0, factor1, listOfInts){
+  if (target === "both"){
+    return listOfInts.filter(element => element % factor0 === 0
+      && element % factor1 === 0)
+  }
+  else if (target === "either"){
+    return listOfInts.filter(element => element % factor0 === 0
+      || element % factor1 === 0)
+  }
 }
 // ----------------------------------------------------------
 function randomCeiling(){
