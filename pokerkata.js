@@ -186,5 +186,5 @@ function randomCeiling(){
   }
   console.log(generator)
 }
-
+// applications
 //randomCeiling()
