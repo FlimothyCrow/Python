@@ -156,12 +156,12 @@ function addSumN(listOfInts, start){
 }
 // ----------------------------------------------------------
 function subtractFromFirst(listOfInts){
-  return listOfInts.reduce((sum, value) => sum - value, 0)
+  return listOfInts.reduce((sum, value) => sum - value)
 }
 // ----------------------------------------------------------
 function filterFactorN(factor, listOfInts){
   return listOfInts.filter(element => element % factor === 0)
-}
+} //
 // ----------------------------------------------------------
 function filterTwoFactors(factor0, factor1, listOfInts){
   return listOfInts.filter(element => element % factor0 === 0
