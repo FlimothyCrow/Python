@@ -169,7 +169,11 @@ test('addSumN', function(assert){
   var listOfInts = addSumN([1, 2, 5, 9], start)
   assert.equal(listOfInts, 117)
 })
-
+// ----------------------------------------------------------
+test('subtractFromFirst', function(assert){
+  var listOfInts = subtractFromFirst([1, 1, 1], start)
+  assert.equal(listOfInts, -1)
+})
 // ----------------------------------------------------------
 test('filterFactorN', function(assert){
   var listOfInts = filterFactorN(3, [1, 2, 3, 4, 5, 6, 7, 8, 9])

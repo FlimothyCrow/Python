@@ -155,6 +155,10 @@ function addSumN(listOfInts, start){
   return listOfInts.reduce((sum, value) => sum + value, 100)
 }
 // ----------------------------------------------------------
+function subtractFromFirst(listOfInts){
+  return listOfInts.reduce((sum, value) => sum - value, 0)
+}
+// ----------------------------------------------------------
 function filterFactorN(factor, listOfInts){
   return listOfInts.filter(element => element % factor === 0)
 }
@@ -186,5 +190,5 @@ function randomCeiling(){
   }
   console.log(generator)
 }
-// applications
+
 //randomCeiling()
