@@ -192,3 +192,5 @@ function randomCeiling(){
 }
 
 //randomCeiling()
+
+//applications
