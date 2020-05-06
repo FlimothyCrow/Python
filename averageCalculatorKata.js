@@ -51,3 +51,41 @@ function filterEvens0(ints){
 function filterFactor(targetFactor, listOfIntegers){
   return listOfIntegers.filter(x => x % targetFactor === 0)
 }
+// --------------------------------------------------------
+function fizzBuzzNoveau(targetRange){
+  var spicy = Array.from(Array(10).keys()) // [0, 1, 2...]
+  return spicy.map((element) => {
+    if (element % 2 === 0 && element % 3 === 0){
+      return "fizzBuzz"
+    }
+    else if (element % 3 === 0){
+      return "fizz"
+    }
+    else if (element % 2 === 0){
+      return "buzz"
+    }
+    else {
+      return element
+    }
+  })
+}
+// map does not mutate, call it clone
+
+function objectify(listOfInts){
+  return listOfInts.map((x) => ({id:x}))
+}
+
+function select(listOfObjects, target){
+  return listOfObjects.map(object => {
+    if (object.id === target){
+      return {
+        id:target,
+        selected:true
+      }
+    }
+    return {
+      id:object.id,
+      selected:false
+    }
+  })
+}
