@@ -68,13 +68,13 @@ test('filterFactor0', function(assert){
   var listOfIntegers = filterFactor(targetFactor, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
   assert.deepEqual(listOfIntegers, [])
 })
-/*
+
 test('fizzBuzzNoveau', function(assert){
   var fizzResults = fizzBuzzNoveau(10)
   assert.deepEqual(fizzResults, [1, "buzz", "fizz", "buzz", 5,
   "fizzBuzz", 7, "buzz", "fizz", "buzz"])
 })
-*/
+
 test('twoLists', function(assert){
   var list0 = [1, 2, 3]
   var objectified = objectify(list0)

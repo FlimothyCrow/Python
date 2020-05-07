@@ -53,7 +53,7 @@ function filterFactor(targetFactor, listOfIntegers){
 }
 // --------------------------------------------------------
 function fizzBuzzNoveau(targetRange){
-  var spicy = Array.from(Array(10).keys()) // [0, 1, 2...]
+  var spicy = Array.from(Array(10)).map((e,i)=>i+1)  // [0, 1, 2...]
   return spicy.map((element) => {
     if (element % 2 === 0 && element % 3 === 0){
       return "fizzBuzz"
@@ -69,7 +69,8 @@ function fizzBuzzNoveau(targetRange){
     }
   })
 }
-// map does not mutate, call it clone
+// map does not mutate, it clones
+console.log(Array.from(Array(10)).map((e,i)=>i+1))
 
 function objectify(listOfInts){
   return listOfInts.map((x) => ({id:x}))

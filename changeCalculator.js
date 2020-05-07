@@ -1,3 +1,4 @@
+/*
 function changeCalculator(cost, paid) {
   var totalDue = paid - cost
   var changeObject = {
@@ -40,3 +41,13 @@ function changePrinter(changeObject){
 }
 var change = changeCalculator(500, 375)
 changePrinter(change)
+*/
+
+
+function printStuff(input){
+  console.log(input)
+  console.log(input + " ")
+  console.log(input + "efefef ")
+}
+
+printStuff("steve")
