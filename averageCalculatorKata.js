@@ -75,7 +75,7 @@ console.log(Array.from(Array(10)).map((e,i)=>i+1))
 function objectify(listOfInts){
   return listOfInts.map((x) => ({id:x}))
 }
-
+// --------------------------------------------------------
 function select(listOfObjects, target){
   return listOfObjects.map(object => {
     if (object.id === target){
@@ -89,4 +89,27 @@ function select(listOfObjects, target){
       selected:false
     }
   })
+}
+// --------------------------------------------------------
+function selectedMover(list0, list1){
+  array0 = []
+  array1 = []
+  rearrangedArray = []
+  list0.map((object) => {
+    if (object.selected === true){ // if the object is "selected"
+      array1.push(object)
+    }
+    else {
+      array0.push(object)
+    }
+  })
+  list1.map((object) => {
+    if (object.selected === true){ // if the object is "selected"
+      array0.push(object)
+    }
+    else {
+      array1.push(object)
+    }
+  })
+  return array0
 }

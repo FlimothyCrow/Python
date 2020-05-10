@@ -75,13 +75,25 @@ test('fizzBuzzNoveau', function(assert){
   "fizzBuzz", 7, "buzz", "fizz", "buzz"])
 })
 
-test('twoLists', function(assert){
+test('objectify0', function(assert){
   var list0 = [1, 2, 3]
   var objectified = objectify(list0)
   assert.deepEqual(objectified, [{id:1}, {id:2}, {id:3}])
 })
 
-test('twoLists0', function(assert){
+test('objectify1', function(assert){
+  var list0 = ["a", "b", "c"]
+  var objectified = objectify(list0)
+  assert.deepEqual(objectified, [{id:"a"}, {id:"b"}, {id:"c"}])
+})
+
+test('objectify2', function(assert){
+  var list0 = [1, 2]
+  var objectified = objectify(list0)
+  assert.deepEqual(objectified, [{id:1}, {id:2}])
+})
+
+test('select0', function(assert){
   var list0 = [1, 2, 3]
   var objectified = objectify(list0)
   var selected = select(objectified, 2)
@@ -89,3 +101,60 @@ test('twoLists0', function(assert){
     {id:2, selected:true},
     {id:3, selected:false}])
 })
+
+test('select1', function(assert){
+  var list0 = [1, 2, 3, 4, 5]
+  var objectified = objectify(list0)
+  var selected = select(objectified, 5)
+  assert.deepEqual(selected, [{id:1, selected:false},
+    {id:2, selected:false},
+    {id:3, selected:false},
+    {id:4, selected:false},
+    {id:5, selected:true}])
+  })
+
+test('select2', function(assert){
+  var list0 = [1, 2, 3, 4, 5]
+  var objectified = objectify(list0)
+  var selected = select(objectified, false)
+  assert.deepEqual(selected, [{id:1, selected:false},
+    {id:2, selected:false},
+    {id:3, selected:false},
+    {id:4, selected:false},
+    {id:5, selected:false}])
+  })
+
+test('select3', function(assert){
+  var list0 = [1, 3]
+  var objectified = objectify(list0)
+  var selected = select(objectified, 1)
+  assert.deepEqual(selected, [{id:1, selected:true},
+    {id:3, selected:false}])
+  })
+
+test('selectedMover0', function(assert){
+  var list0 = [1]
+  var list1 = [4]
+  var selected0 = select(list0, 1) // 0 indicates none are selected
+  var selected1 = select(list1, 4) // function should move all trues to other list
+  var controlled = selectedMover(selected0, selected1)
+  assert.deepEqual(controlled,
+    [[{id:1, selected:true}],
+    [{id:4, selected:true}
+    ]])
+  })
+/*
+test('selectedMover1', function(assert){
+  var list0 = [1, 3]
+  var list1 = [2, 4]
+  var selected0 = select(list0, 1) // 0 indicates none are selected
+  var selected1 = select(list1, 4) // function should move all trues to other list
+  var controlled = selectedMover(selected0, selected1)
+  assert.deepEqual(controlled,
+    [[{id:2, selected:false},
+    {id:1, selected:false},
+    {id:3, selected:false}],
+    [{id:4, selected:false}
+    ]])
+  })
+*/
