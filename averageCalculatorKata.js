@@ -71,7 +71,7 @@ function fizzBuzzNoveau(targetRange){
 }
 // map does not mutate, it clones
 console.log(Array.from(Array(10)).map((e,i)=>i+1))
-
+// --------------------------------------------------------
 function objectify(listOfInts){
   return listOfInts.map((x) => ({id:x}))
 }
@@ -111,5 +111,6 @@ function selectedMover(list0, list1){
       array1.push(object)
     }
   })
-  return array0
+  array1.push(array0)
+  return array1
 }

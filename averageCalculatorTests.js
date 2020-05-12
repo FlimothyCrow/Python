@@ -133,8 +133,8 @@ test('select3', function(assert){
   })
 
 test('selectedMover0', function(assert){
-  var list0 = [1]
-  var list1 = [4]
+  var list0 = objectify([1])
+  var list1 = objectify([4])
   var selected0 = select(list0, 1) // 0 indicates none are selected
   var selected1 = select(list1, 4) // function should move all trues to other list
   var controlled = selectedMover(selected0, selected1)
