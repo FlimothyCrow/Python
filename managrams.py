@@ -19,8 +19,10 @@ def fizzBuzz(listOfInts) :
         else :
             parsedList.append(element)
     return parsedList
-# anagram compatibility generator assessment
-# applicationsssssssssssss
+
+
+
+
 
 def oddOrEven(inputNumber) :
     if not isinstance(inputNumber, int) :
@@ -52,3 +54,7 @@ def spicyChange(inputCash) :
                     inputCash -+ 10
                     tens += 1
     return tens
+
+
+
+

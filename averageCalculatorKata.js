@@ -1,116 +1,29 @@
+//Fill in the ? with a Javascript expression to set the scale for
+//an image having a given original height and width so that it can exactly fit
+//inside a maxdim-by-maxdim square area (touching at least two edges). *
 
 
-function modeCalculator(listOfInts){
-  var modeArray = [];
-  var intsObject = {};
-  for (number of listOfInts){
-    intsObject[number] = (intsObject[number]+1) || 1 ;
-  }
-  for (pair of Object.entries(intsObject)){
-    if (pair[1] > 1){
-      modeArray.push(pair)
-    }
-  }
-  return modeArray
+function scaleImage(width, height, maxdim) {
+  var scale = width < height? (maxdim / height):(maxdim / width);
+  var scale = (maxdim / height);
+  return [scale * width, scale * height];
 }
 
-function removeDupes(listOfInts){
-  return Array.from(new Set(listOfInts))
-}
+//It looks like the sort of site that would require continuously designing more modular and dynamic solutions, particularly for the "collection" section of the website. I find the idea of designing an intelligent "match-by-aesthetic" program could really add an additional flavor, perhaps as a "suggestions" section. That's the kind of innovation I would very much like to be a part of!
 
-function sumReduce(ints){
-  return ints.reduce((acc, next) => acc + next)
-}
+/*
+width  x scale = blank
+height x scale = maxdim
 
-function filterEvens(ints){
-  var filteredList = ints.reduce((acc, next) => {
-    if (next % 2 !== 0){
-      acc.push(next)
-    }
-      return acc
-  }, [])
-  return filteredList
-}
+1  x scale = blank
+2  x scale = 8
 
-function averageCalculator(integers) {
-  return integers.reduce((acc, next) => acc + next) / 2
-}
+scale = 8 / 2
+scale = 4
 
-function meanCalculator(listOfInts){
-  if (listOfInts.length % 2 === 0){
-    return "pass"
-  }
-  else {
-    return listOfInts[(listOfInts.length / 2) - 0.5]
-  }
-}
-function filterEvens0(ints){
-   return ints.filter(x => x % 2 !== 0)
-}
+1 x 4 = blank
+2 x 4 = 8
 
-function filterFactor(targetFactor, listOfIntegers){
-  return listOfIntegers.filter(x => x % targetFactor === 0)
-}
-// --------------------------------------------------------
-function fizzBuzzNoveau(targetRange){
-  var spicy = Array.from(Array(10)).map((e,i)=>i+1)  // [0, 1, 2...]
-  return spicy.map((element) => {
-    if (element % 2 === 0 && element % 3 === 0){
-      return "fizzBuzz"
-    }
-    else if (element % 3 === 0){
-      return "fizz"
-    }
-    else if (element % 2 === 0){
-      return "buzz"
-    }
-    else {
-      return element
-    }
-  })
-}
-// map does not mutate, it clones
-console.log(Array.from(Array(10)).map((e,i)=>i+1))
-// --------------------------------------------------------
-function objectify(listOfInts){
-  return listOfInts.map((x) => ({id:x}))
-}
-// --------------------------------------------------------
-function select(listOfObjects, target){
-  return listOfObjects.map(object => {
-    if (object.id === target){
-      return {
-        id:target,
-        selected:true
-      }
-    }
-    return {
-      id:object.id,
-      selected:false
-    }
-  })
-}
-// --------------------------------------------------------
-function selectedMover(list0, list1){
-  array0 = []
-  array1 = []
-  rearrangedArray = []
-  list0.map((object) => {
-    if (object.selected === true){ // if the object is "selected"
-      array1.push(object)
-    }
-    else {
-      array0.push(object)
-    }
-  })
-  list1.map((object) => {
-    if (object.selected === true){ // if the object is "selected"
-      array0.push(object)
-    }
-    else {
-      array1.push(object)
-    }
-  })
-  array1.push(array0)
-  return array1
-}
+4
+8
+*/
