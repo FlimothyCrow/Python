@@ -1,5 +1,6 @@
 
 
+
 def mockCase(string):
     new_quote = ""
     i = False
@@ -12,4 +13,4 @@ def mockCase(string):
             i = not i
     return new_quote
 
-print(mockCase("there's no such thing as reverse racism"))
+print(mockCase("reinstall windows"))
