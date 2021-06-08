@@ -14,25 +14,39 @@ def mockCase(string):
     return new_quote
 
 
-def returnEven(arr):
-    return list(filter(lambda x: x % 2 == 0, arr))
-
-def runningSum(nums):
-    arrayOfSums = []
-    runningSum = 0
-    for index in range(len(nums)):
-        runningSum += nums[index]
-        arrayOfSums.append(runningSum)
-    return arrayOfSums
-
-def defangingIP(address):
-    addressCopy = list(address)
-    for index in range(len(address)):
-        if address[index] == ".":
-            addressCopy[index] = "[.]"
-    return "".join(addressCopy)
-
-# print(mockCase("stab them with an icicle, it'll melt and they won't find your fingerprints"))
+# print(mockCase("given two unsorted binary trees"))
 
 
+def countNegatives(grid):
+    negativeCounter = 0
+    for arrayOfNums in grid:
+        for num in arrayOfNums:
+            if num < 0:
+                negativeCounter += 1
+    return negativeCounter
 
+def selfDividing(num):
+    for char in str(num):
+        if num % int(char) != 0:
+            return False
+    return True
+
+def countEvenLengths(nums):
+    countOfEvens = 0
+    for num in nums:
+        if len(str(num)) % 2 == 0:
+            countOfEvens += 1
+    return countOfEvens
+
+def squareIsWhite(coordinates):
+    blackStart = ["a", "c", "e", "g"]
+    if coordinates[0] in blackStart:
+        if int(coordinates[1]) % 2 == 0:
+            return True
+        else:
+            return False
+    else:
+        if int(coordinates[1]) % 2 == 0:
+            return False
+        else :
+            return True
